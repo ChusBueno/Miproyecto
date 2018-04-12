@@ -1,0 +1,463 @@
+/*NO TOCAR EXCEPTO LA TIPOGRAFIA*/
+
+* {
+    box-sizing: border-box;
+	border-radius:5px 5px;
+	font-family:candara;/*ESTA ES LA TIPOGRAFIA QUE USA LA PAGINA*/
+	
+}
+[class*="col-"] {
+    float: left;
+    padding: 10px;  
+}
+
+.fila:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/*NO TOCAR*/
+
+
+@media only screen and (min-width: 1400px){
+    /* 1920 */
+ 
+	.col-1 {
+		width: 6.23%;
+	}
+	.col-2 {
+		width: 12.5%;
+	}
+	.col-3 {
+		width: 18.75%;
+	}
+	.col-4 {
+		width: 24.92%;
+	}
+
+	.col-5 {
+		width: 31.15%;
+	}
+
+	.col-6 {
+		width: 37.38%;
+	}
+	.col-7 {
+		width: 43.61%;
+	}
+	.col-8 {
+		width: 49.84%;
+	}
+	.col-9 {
+		width: 56.07%;
+	}
+	.col-10 {
+		width: 62.3%;
+	}
+	.col-11 {
+		width: 68.53%;
+	}
+	.col-12 {
+		width: 74.76%;
+	}
+	.col-13 {
+		width: 80.99%;
+	}
+	.col-14 {
+		width: 87.22%;
+	}
+	.col-15 {
+		width: 93.45%;
+	}
+	.col-16 {
+		width: 100%;
+	}
+
+	.offset-1 {
+		margin-left: 6.25%;
+	}
+	.offset-2 {
+		margin-left: 12.5%;
+	}
+	.offset-3 {
+		margin-left: 18.75%;
+	}
+	.offset-4 {
+		margin-left: 25%;
+	}
+	.offset-5 {
+		margin-left: 31.25%;
+	}
+	.offset-6 {
+		margin-left: 37.50%;
+	}
+	.offset-7 {
+		margin-left: 43.75%;
+	}
+	.offset-8 {
+		margin-left: 50%;
+	}
+	.offset-9 {
+		margin-left: 56.25%;
+	}
+	.offset-10 {
+		margin-left: 62.5%;
+	}
+	.offset-11 {
+		margin-left: 68.75%;
+	}
+	.offset-12 {
+		margin-left: 75%;
+	}
+	.offset-13 {
+		margin-left: 81.25%;
+	}
+	.offset-14 {
+		margin-left: 87.5%;
+	}
+	.offset-15 {
+		margin-left: 93.75%;
+	}
+
+.hrmovil{
+	display:none;	
+}
+
+/*IMAGEN FONDO BODY*/
+body{
+	background-color:rgb(231, 223, 215);
+}
+
+
+
+/**********************HEADER***************************/
+
+header{
+	/*background-color: white;*/
+}
+
+
+/*Logo federacion*/
+#logo {
+	padding:0px;
+}
+#logo a{
+	background-image:url("imagenes/fcb.png");
+	height:120px;
+	display:block;
+	background-size:contain;
+	background-repeat:no-repeat;
+	
+}
+
+/*TITULO FEDERACION*/
+
+#titulo{
+	padding:0px;
+}
+#titulo h1 {
+	margin:0px;
+	color:#0F30B5;
+	text-align:center;
+	font-size:1.8em;
+}
+#titulo h1+h1{
+	margin-top:10px;
+}
+
+
+
+/******************FIN HEADER******************************************/
+
+
+/*******************MENU IZQUIERDO (NAV)********************************/
+
+nav{
+	padding-top:0px !important;
+
+}
+
+
+/*MENU*/
+
+/***************************NO TOCAR NADA******************/
+#menumovil{
+	display:none;
+}
+
+#menu {
+	padding:0px;
+	border-radius: 0px;
+}
+
+#menu ul {
+	border-radius: 0px;
+	background-color: #0F30B5; /*color entero hasta el final*/
+	display:inline-block;
+	padding:0px; /*evitar que los menus se desplacen a la derecha*/
+}
+
+#menu li{
+	float:left;
+	margin-right:10px;
+	list-style:none;
+}
+
+/*Para que el menu se desplegue en vertical*/
+#menu ul li ul li{
+	float:none;
+}
+
+	
+
+/*Para ocultar los submenus*/
+#menu  ul li  ul{
+	display:none;
+	position:absolute; /*POSICIONAMIENTO ABSOLUTO PARA QUE SE PONGA ENCIMA DEL SLIDER*/
+}
+
+
+
+/*Hacer visible submenu al pasar raton por encima. Propiedad hover*/
+
+#menu ul li:hover ul{
+	display:block;
+}
+
+/*Estilo menu*/
+
+#menu ul li a{
+	text-decoration:none;
+	color:white;/*COLOR DE LA LETRA DE LOS MENUS, PUEDES CAMBIARLO SI QUIERES*/
+	display:block;
+	padding:10px;
+	margin-bottom:1px;
+}
+
+#menu ul li a:hover{
+	opacity:0.5;
+}
+/*******HASTA AQUI NO TOCAR*********/
+
+
+
+/*ESTILO MENU ARRIBA PRINCIPAL*/
+
+.principal {
+	background-color:#0F30B5;/*COLOR DE FONDO*/
+	font-size:1em;/*TAMAÑO LETRA*/
+	border-radius: 0px;
+}
+/*ESTILO SUBMENU ARRIBA */
+.submenu{
+	background-color:#3366cc;/*COLOR DE FONDO*/
+	width:100%;/*NO TOCAR*/
+	border-radius:0px;
+	font-size:1em;/*TAMAÑO LETRA*/
+}
+
+
+
+/*****************FIN MENU IZQUIERDO (NAV)********************************/
+
+
+/*****************MENU LATERAL (ASIDE)************************************/
+
+aside{
+	padding-top:0px !important;
+}
+
+
+
+
+/*MENU IZQUIERDO*/
+/*csja que engloba a todo*/
+#menulateral{
+	clear:both;
+	padding:0px;
+}
+
+/*diseño de las cajas individuales, horario de juegos, etc*/
+.cajalateral{
+	margin-bottom:5px;
+	background-color:white;
+	border:1px solid #C8C2BC;/**************************************   COLOR BORDE "GRIS"    ****************************************/
+}
+
+/*texto de las cajas*/
+.texto{
+	margin-left:10px;
+	margin-top:10px;
+	display:block;
+	font-size:1em;
+	text-align:left;
+}
+/*enlace de las cajas*/
+.cajalateral a{
+	color:black;
+	text-decoration:none;
+}
+/*que hace cuando pasas el raton por encima*/
+.cajalateral a:hover{
+	font-weight:bold;
+	color:#0900FF;
+}
+
+/*Linea que esta dentro de la caja*/
+.cajalateral hr{
+	margin-top:0px;
+	width:90%;
+}
+/*Imagen de dentro de la caja*/
+.cajalateral img{
+	height:80px;/*TAMAÑO DE LA IMAGEN*/
+	margin-bottom:10px;
+}
+
+.cajalateral img:hover{
+	opacity:0.6;
+}
+
+
+/*****************FIN MENU LATERAL (ASIDE)*********************************/
+
+
+
+
+/***************** NOTICIAS (CENTRO PAGINA)*********************************/
+
+article{
+	padding-top:0px !important;
+}
+
+/*caja grande noticias*/
+#noticias{
+	background-color:white;
+	border:1px solid #C8C2BC;
+}
+
+.noticia{
+	text-align:center;
+	margin:0 auto;
+	margin-bottom:10px;
+}
+
+
+/*TITULO NOTICIA*/
+.noticia h3{
+	margin:0px;
+	font-size: 1.3em;
+	text-align:left;
+	color:#242323;
+}
+
+/*SUBTITULO NOTICIA*/
+.noticia h5{
+	margin:0px;
+	font-size: 1.1em;
+	color:gray;
+	text-align:left;
+	margin-bottom:20px;/*distancia hacia abajo*/
+}
+
+.imagenNoticia{
+	width:180px;
+	height:130px;
+	border-radius:0px;
+	float:left;
+	margin-right:5px;
+}
+
+
+/*PARRAFO NOTICIA*/
+.noticia p{
+	color:#434242;
+	text-align:justify;
+	font-size:1em;
+}
+
+
+
+
+
+
+/**************FIN NOTICIAS (CENTRO PAGINA)*********************************/
+
+
+/************************************FOOTER*********************************/
+
+footer{
+	padding-top:0px !important;
+	margin-bottom:10px;
+}
+
+
+
+#menu_abajo{
+	text-align:center; /*para centrar el menu**/
+	background-color: white;
+	border:1px solid #C8C2BC;
+	margin-bottom:10px;
+}
+
+#menu_abajo p{
+	text-align: left;
+	margin-left:10px;
+	margin-top:10px;
+}
+
+#menu_abajo hr{
+	margin-top:-10px;
+	color:#FFFFFF;
+	width:98%;
+}
+
+
+#menu_abajo ul{
+	list-style:none;
+	padding:10px !important;
+	display:inline-block;/*para centrar el menu*/
+}
+
+#menu_abajo li{
+	margin:10px;
+	float:left;
+	
+}
+
+
+.patrocinador{
+	display:block;
+	height:90px;
+	width:90px;
+	background-size:contain;
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+
+
+#avisoLegal{
+	padding:0px;
+}
+
+#avisoLegal a{
+	color:black;
+	text-decoration:none;
+	margin-right:10px;
+}
+
+#avisoLegal a:hover{
+	text-decoration:underline;
+	color:gray;
+}
+
+
+/************************************FOOTER*********************************/
+
+
+
+
+
+} /*fin media query grande*/
+

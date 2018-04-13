@@ -133,18 +133,14 @@ body{
 
 /**********************HEADER***************************/
 
-header{
-	/*background-color: white;*/
-}
-
 
 /*Logo federacion*/
 #logo {
 	padding:0px;
 }
 #logo a{
-	background-image:url("imagenes/fcb.png");
-	height:120px;
+	background-image:url("imagenes/logo/fcb.png");
+	height: 100px;
 	display:block;
 	background-size:contain;
 	background-repeat:no-repeat;
@@ -192,6 +188,7 @@ nav{
 }
 
 #menu ul {
+	margin:0px;
 	border-radius: 0px;
 	background-color: #0F30B5; /*color entero hasta el final*/
 	display:inline-block;
@@ -265,7 +262,7 @@ nav{
 /*****************MENU LATERAL (ASIDE)************************************/
 
 aside{
-	padding-top:0px !important;
+	clear:both;
 }
 
 
@@ -323,13 +320,145 @@ aside{
 /*****************FIN MENU LATERAL (ASIDE)*********************************/
 
 
+/*****************************SLIDER Y AGENDA********************************/
+
+
+/*ESTO ES LA CAJA DEL SLIDER, MEJOR NO TOCAR*/
+#slider{
+	/*background:radial-gradient( rgba(106,125,232,0), rgba(106,125,232,1));*/
+	/*background-color:#A3AFF2;*/
+	background-color:black;
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position:50%;
+	height:370px;
+	margin-bottom:5px;
+	border:1px solid #C8C2BC;
+}
+
+
+/*IMAGEN SLIDER*/
+#img_slider img{
+	max-width:100%;
+}
+
+/*TITULO NOTICIA SLIDER*/
+#slider h1{
+	clear:both;
+	margin-top:315px;
+	font-size:1.5em;
+	color:black;
+	text-align:center;
+}
+#slider a{
+	padding:10px;
+	color:black;
+	text-decoration:none;
+}
+
+
+
+/******************************BOTONES SLIDER ******************************/
+#botonDe{
+	height:30px;
+	width:30px;
+	float:right;
+	margin-top:160px;
+	background-image:url("imagenes/slider/backdcha.png");
+	background-size:contain;
+	background-repeat:no-repeat;
+	display:block;
+}
+
+#botonIz{
+	display:block;
+	height:30px;
+	width:30px;
+	float:left;
+	margin-top:160px;
+	background-image:url("imagenes/slider/backizda.png");
+	background-size:contain;
+	background-repeat:no-repeat;
+	
+}
+
+#slider:hover #botonDe{
+	display:block;
+}
+
+#slider:hover #botonIz{
+	display:block;
+}
+
+#botonDe:hover{
+	opacity:0.7;
+}
+
+#botonIz:hover{
+	opacity:0.7;
+}
+
+/****************************************FIN BOTONES SLIDER***************************************/
+
+
+
+
+
+/****************************************AGENDA***************************************/
+#agenda{
+	height: 370px;
+	background-color:white;
+	border:1px solid #C8C2BC;
+	overflow:scroll;
+}
+/*TITULO SUPERIOR AGENDA*/
+.agendatitulo{
+	text-decoration:none;
+	color:black;
+	font-size:1.5em;
+	margin-top:0px;
+	text-align: center;
+}
+
+
+.agenda{
+	margin-bottom:10px;
+}
+/*SUBTITULO AGENDA*/
+.agenda h5{
+	color:#242323;
+	text-align:center;
+	color:#f03c1e;
+	margin:0px;
+}
+
+
+/*PARRAFO AGENDA*/
+.agenda p{
+	margin:0px;
+	margin-left:15px;
+	color:#434242;
+
+}
+
+.resalte {
+	padding:0px;
+	margin-left:15px;
+	margin-right:15px;
+	background-color:#c6c5be;
+}
+	
+
+
+
+
+/*********************FIN SLIDER Y AGENDA*************************************/
+
+
 
 
 /***************** NOTICIAS (CENTRO PAGINA)*********************************/
 
-article{
-	padding-top:0px !important;
-}
 
 /*caja grande noticias*/
 #noticias{
@@ -388,7 +517,6 @@ article{
 /************************************FOOTER*********************************/
 
 footer{
-	padding-top:0px !important;
 	margin-bottom:10px;
 }
 

@@ -36,6 +36,7 @@ class database {
         }
     }
     
+    
     //ejecuta una sentencia sql
     public function query($sql,$params = null){
         $this->stmt = $this->conexion->prepare($sql);

@@ -5,11 +5,11 @@
 
 				<li class="principal"><a href="#">EN JUEGO</a>
 					<ul>
-						<li class="submenu"><a href="https://iframefecan.optimalwayconsulting.com">Horarios-Resultados</a></li>
-						<li class="submenu"><a href="http://competiciones.feb.es/autonomicas/?a=7">Liga EBA</a></li>
-						<li class="submenu"><a href="http://competiciones.feb.es/autonomicas/?a=7">Primera Femenina</a></li>
-						<li class="submenu"><a href="pdfs/jornada.pdf">Jornada</a></li>
-						<li class="submenu"><a href="pdfs/calbaby.pdf">Baby</a></li>
+						<li class="submenu"><a href="#">Horarios-Resultados</a></li>
+						<li class="submenu"><a href="#">Liga EBA</a></li>
+						<li class="submenu"><a href="#">Primera Femenina</a></li>
+						<li class="submenu"><a href="#">Jornada</a></li>
+						<li class="submenu"><a href="#">Baby</a></li>
 					</ul>
 				</li>
 
@@ -18,9 +18,9 @@
 						<!--<li class="submenu"><a href="menu/convocatorias.html">Convocatorias</a></li>-->
 						<li class="submenu"><a href="index.php?option=convocatorias">Convocatorias</a></li>
 						<li class="submenu"><a href="#" target="_new">Valladolid 2018</a></li>
-						<li class="submenu"><a href="index.php?option=cadetes">Cadetes</a></li>
-						<li class="submenu"><a href="index.php?option=infantiles">Infantiles</a></li>
-						<li class="submenu"><a href="index.php?option=alevines">Alevines</a></li>
+						<li class="submenu"><a href="#">Cadetes</a></li>
+						<li class="submenu"><a href="#">Infantiles</a></li>
+						<li class="submenu"><a href="#">Alevines</a></li>
 					</ul>
 				</li>
 

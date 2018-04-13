@@ -18,6 +18,7 @@
 
 		<!-- slider y agenda -->
 		<?php  include 'componentes/slider.php'; ?>
+		<?php  include 'componentes/agenda.php'; ?>
 
 		<!-- aside -->
 		<?php  include 'componentes/aside.php'; ?>
@@ -45,7 +46,7 @@
 
 
 		<!-- footer-->
-		<?php include 'componentes/footer2.php'; ?>
+		<?php include 'componentes/footer.php'; ?>
 
 	</body>
 

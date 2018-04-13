@@ -15,9 +15,16 @@
 				<h1>de Baloncesto</h1>
 			</div>
 
-			<div class="col-7">
+			<div id="login" class="col-7">
 
-				
+				<form action="#">
+
+					<input type="text" name="nombre" placeholder="Usuario">
+					<input type="text" name="contrasenia" placeholder="Contraseña">
+					<input type="submit" id="botonLogin" value="Entrar">
+
+				</form>
+
 
 			</div>
 

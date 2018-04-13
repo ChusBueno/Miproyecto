@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS noticias (
 	id_subcategoria int(10) NOT NULL,
 	titulo varchar(50) NOT NULL,
 	subtitulo varchar(50),
-	texto varchar(500) NOT NULL,
+	texto varchar(1500) NOT NULL,
 	fecha date NOT NULL,
 	imagen varchar(255)
 )ENGINE = InnoDB DEFAULT CHARSET = utf8;
@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS noticias (
 
 CREATE TABLE IF NOT EXISTS categorias (
 	id int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	nombre varchar(20) NOT NULL
+	nombre varchar(50) NOT NULL
 )ENGINE = InnoDB DEFAULT CHARSET = utf8;
 
 
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS categorias (
 CREATE TABLE IF NOT EXISTS subcategorias (
 	id int(10)  NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	id_categoria int (10) NOT NULL,
-	nombre varchar(20) NOT NULL
+	nombre varchar(50) NOT NULL
 )ENGINE = InnoDB DEFAULT CHARSET = utf8;
 
 -- -------------------------------------------------

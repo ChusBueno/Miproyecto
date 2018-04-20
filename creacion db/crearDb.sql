@@ -15,8 +15,10 @@ USE federacion;
 
 CREATE TABLE IF NOT EXISTS usuarios (
 	id int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	nombreUsuario varchar(50) NOT NULL,
 	nombre varchar(20) NOT NULL,
 	apellido varchar(30) NOT NULL,
+	contrasenia varchar(30) NOT NULL,
 	telefono int(11),
 	id_permiso int(4) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8;

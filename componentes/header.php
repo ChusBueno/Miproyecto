@@ -7,7 +7,7 @@
 		
 
 			<div id="logo" class="col-2">
-				<a href="index.html"></a>
+				<a href="#"></a>
 			</div>
 
 			<div id="titulo" class="offset-1 col-6">

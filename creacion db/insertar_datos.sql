@@ -9,12 +9,12 @@ INSERT INTO permisos (id, descripcion) VALUES
 (null, 'Usuario');
 
 -- INSERCION DATOS TABLA USUARIOS
-INSERT INTO usuarios (id,nombre,apellido,telefono,id_permiso) VALUES 
-(null, 'Jesus','Bueno',null,1),
-(null,'Redactor','Jefe',null,2),
-(null,'Redactor','sencillo',null,3),
-(null,'Redactor2','sencillo2',null,3),
-(null,'Usuario','normal',null,4);
+INSERT INTO usuarios (id,nombreUsuario,nombre,apellido,contrasenia,telefono,id_permiso) VALUES 
+(null, 'admin','Jesus','Bueno','admin',null,1),
+(null,'redac','Redactor','Jefe','admin',null,2),
+(null,'redacsen','Redactor','sencillo','admin',null,3),
+(null,'redacsen2','Redactor2','sencillo2','admin',null,3),
+(null,'usuar','Usuario','normal','admin',null,4);
 
 -- INSERCION DATOS TABLA CATEGORIAS
 

@@ -120,13 +120,185 @@
 		margin-left: 93.75%;
 	}
 
-/*IMAGEN FONDO BODY*/
-body{
-	background-color:red;
+
+
+
+/*HEADER*/
+header{
+	border:1px solid #cccccc;
+	margin-bottom: 20px;
+}
+#logo {
+	padding:0px;
+}
+#logo a{
+	background-image:url("imagenes/logo/fcb.png");
+	height: 50px;
+	display:block;
+	background-size:contain;
+	background-repeat:no-repeat;
+	
+}
+
+#titulo h2{
+	margin:0px;
+}
+
+.dato{
+	text-align: center;
+	padding: 5px;
+	margin-left: 10px;
+	background-color: #fafafa;
+	border:1px solid #cccccc;
+	display:block;
+}
+
+.dato i{
+	margin-right: 20px;
+}
+
+.dato a{
+	text-decoration: none;
+	color:black;
+}
+
+.dato:hover{
+	background-color: white;
+	border:1px solid black;
+}
+
+/*FIN HEADER*/
+
+
+
+
+/*ASIDE*/
+
+
+
+aside{
+	background-color: #f2f2f2;
+	/*border:1px solid #f0f0f0;*/
+	border:1px solid #cccccc;
+}
+
+#cmsMenu{
+	list-style: none;
+	padding:0px;
+}
+#cmsMenu li{
+	padding:20px;
+
+}
+
+#cmsMenu a{
+	text-decoration: none;
+	color:black;
+}
+
+#cmsMenu li:hover{
+	border:1px solid gray;
+	background-color: white;
 }
 
 
+/*FIN ASIDE*/
 
+
+
+/*FOOTER*/
+
+footer{
+	margin-top: 20px;
+	text-align: center;
+	background-color: #f3f1f1;
+	border:1px solid #cccccc;
+}
+footer i{
+	margin-right: 10px;
+}
+
+footer a{
+	text-decoration: none;
+}
+
+footer a:hover{
+	text-decoration:underline;
+}
+footer p{
+	display: inline;
+}
+
+footer div{
+	margin:15px;
+}
+
+/*FIN FOOTER*/
+
+
+
+
+/*pagina login*/
+
+#login{
+	background-image: url("imagenes/inicio/inicio.jpg");
+	background-size: cover;
+	background-repeat:no-repeat;
+	text-align: center;
+}
+
+
+#login div{
+	margin-top:30px;
+}
+
+
+#login img{
+	height:250px;
+	margin-bottom:30px;
+}
+
+.input{
+	padding:5px;
+	border:1px solid black;
+}
+
+.boton{
+	margin-left:5px;
+	padding: 5px;
+	padding-left:20px;
+	padding-right: 20px;
+	background-color:#ff8100;
+	border:1px solid black;
+}
+
+.boton:hover{
+	background-color:#9b361d;
+}
+
+/*fin pagina login*/
+
+
+/*pagina usuarios*/
+
+
+#usuarios table td{
+	border:1px solid black;
+}
+
+#usuarios table{
+	margin:0 auto;
+}
+
+#usuarios{
+	text-align: center;
+}
+
+/*fin pagina usuaios*/
+
+.error{
+	color:#ff0000;
+}
 
 
 } /*fin media query grande*/

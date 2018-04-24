@@ -201,6 +201,10 @@ aside{
 	background-color: white;
 }
 
+#cmsMenu a:visited{
+	background-color: red;
+}
+
 
 /*FIN ASIDE*/
 

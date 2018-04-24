@@ -28,6 +28,17 @@ class noticiasModel{
         return $permiso;
     }
 
+    public static function noticiasCategoria($id_categoria,$id_subcategoria){
+        $db = new database();
+        $sql = "SELECT * FROM noticias WHERE id_categoria = :idcategoria AND id_subcategoria = :idsubcategoria";
+        $params = array(":idcategoria" => $id_categoria,
+                        ":idsubcategoria" => $id_subcategoria);
+        $db->query($sql,$params);
+        $noticias = $db->cargaMatriz();
+        return $noticias;
+    }
+
+
 
 
 }

@@ -1,12 +1,13 @@
 <aside class="col-3">
 
-
 <?php
+
+
 
 if($_SESSION['permiso'] == 'Administrador'){
 
 	echo "<ul id='cmsMenu'>";
-	echo "<a href='admin.php?option=usuarios'><li>Usuarios</li></a>";
+	echo "<a href='admin.php?option=usuarios' onmouseover='elemento()'><li>Usuarios</li></a>";
 	echo "<a href='admin.php?option=noticias'><li>Noticias</li></a>";
 	echo "<a href='#'><li>Patrocinadores</li></a>";
 	echo "</ul>";

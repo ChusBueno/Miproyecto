@@ -1,6 +1,6 @@
 <?php
 
-class usuariosModel{
+class noticiasModel{
 
 
     public static function usuarios(){
@@ -11,12 +11,12 @@ class usuariosModel{
         return $usuarios;
     }
 
-    public static function permisos(){
+    public static function categorias(){
     	$db = new database();
-        $sql = "SELECT * FROM permisos";
+        $sql = "SELECT * FROM categorias";
         $db->query($sql);
-        $permiso = $db->cargaMatriz();
-        return $permiso;
+        $categoria = $db->cargaMatriz();
+        return $categoria;
     }
 
     public static function usuariosNivel($id_permiso){

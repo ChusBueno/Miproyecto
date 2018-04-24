@@ -19,34 +19,68 @@
 
 
 		<div id="usuarios" class="col-13">
-			<table class="col-16">
-				<tr>
-					<th>Nombre Usuario</th>
-					<th>Nombre</th>
-					<th>Apellido</th>
-					<th>Telefono</th>
-					<th>Permiso</th>
-					<th>Editar</th>
-					<th>Eliminar</th>
-				</tr>
-			<?php
 
-				foreach ($usuarios as $usuario){
-					echo "<tr>";
-					echo "<td>".$usuario['nombreUsuario']."</td>";
-					echo "<td>".$usuario['nombre']."</td>";
-					echo "<td>".$usuario['apellido']."</td>";
-					echo "<td>".$usuario['telefono']."</td>";
-					echo "<td>".$usuario['descripcion']."</td>";
-					echo "<td>Boton editar</td>";
-					echo "<td>Boton eliminar</td>";
-					echo "</tr>";
+			
+			<form method="post">
+				<select name="permisos">
+					<?php
+					foreach($permisos as $permiso){
+						echo "<option value=".$permiso['id'].">".$permiso['descripcion']."</option>";
+					}
+					?>
+
+				</select>
+
+				<input type="submit" name="buscar" value="Buscar"/>
+			</form>
+		</div>
+
+
+		<div id="resultado">
+
+			<?php 
+
+				//para no mostrar q la variable no esta iniciada
+				//error_reporting(0);
+				
+				//var_dump($usuariosNivel);
+				if(isset($usuariosNivel)){
+					
+					echo "<table>
+							<tr>
+								<th>Nombre Usuario </th>
+								<th>Nombre </th>
+								<th>Apellido </th>
+								<th>Telefono </th>
+								<th>Editar </th>
+								<th>Borrar </th>
+							</tr>";
+
+
+					foreach ($usuariosNivel as $usuarioNivel){
+						echo "<tr>";
+						echo "<td>".$usuarioNivel['nombreUsuario']."</td>";
+						echo "<td>".$usuarioNivel['nombre']."</td>";
+						echo "<td>".$usuarioNivel['apellido']."</td>";
+						echo "<td>".$usuarioNivel['telefono']."</td>";					
+						echo "<td>Boton editar</td>";
+						echo "<td>Boton eliminar</td>";
+						echo "</tr>";
+					}
+
+					echo "</table>";
+
+
+
+
 				}
 
 			?>
 
-			</table>
 		</div>
+
+
+		<!--
 
 		<div style="text-align: center;">
 
@@ -58,7 +92,7 @@
 
 		</div>
 
-
+	-->
 		<!-- footer-->
 		<?php include 'cms/componentes/footer.php'; ?>
 

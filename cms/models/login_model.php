@@ -18,7 +18,7 @@ class loginModel{
 
     public static function datosUsuario($nombre){
         $db = new database();
-        $sql = "SELECT usuarios.nombre,usuarios.apellido,permisos.descripcion FROM usuarios,permisos WHERE usuarios.nombreUsuario = :nombre AND usuarios.id_permiso = permisos.id";
+        $sql = "SELECT usuarios.id,usuarios.nombre,usuarios.apellido,permisos.descripcion FROM usuarios,permisos WHERE usuarios.nombreUsuario = :nombre AND usuarios.id_permiso = permisos.id";
         $params = array(":nombre" => $nombre);
         $db->query($sql,$params);
 

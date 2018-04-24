@@ -17,7 +17,7 @@
 
 			<form action="admin.php" method="post">
 
-				<input class="input" type="text" name="usuario" placeholder="Usuario"/>
+				<input class="input" type="text" name="usuario" placeholder="Usuario" autofocus/>
 				<input class="input" type="password" name="contrasenia" placeholder="Contraseña"/>
 
 				<input type="submit" class="boton" name="entrar" value="Entrar" />

@@ -13,6 +13,7 @@ if (isset($_POST['entrar'])){
     	$datos = loginModel::datosUsuario($usuario);
 
     	 //variables de sesion
+        $_SESSION['idusuario'] = $datos[0]['id'];
     	$_SESSION['nombre'] = $datos[0]['nombre'];
     	$_SESSION['apellido'] = $datos[0]['apellido'];
     	$_SESSION['permiso'] = $datos[0]['descripcion'];

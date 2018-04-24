@@ -20,6 +20,7 @@
 
 		<div id="usuarios" class="col-13">
 
+			<h2> Usuarios</h2>
 			
 			<form method="post">
 				<select name="permisos">

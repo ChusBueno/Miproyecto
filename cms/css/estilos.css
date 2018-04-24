@@ -217,6 +217,7 @@ footer{
 	text-align: center;
 	background-color: #f3f1f1;
 	border:1px solid #cccccc;
+	clear:both;
 }
 footer i{
 	margin-right: 10px;

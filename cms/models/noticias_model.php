@@ -38,6 +38,15 @@ class noticiasModel{
         return $noticias;
     }
 
+        public static function noticiasRedactor($id_usuario){
+        $db = new database();
+        $sql = "SELECT * FROM noticias WHERE id_usuario = :idusuario";
+        $params = array(":idusuario" => $id_usuario);
+        $db->query($sql,$params);
+        $noticias = $db->cargaMatriz();
+        return $noticias;
+    }
+
 
 
 

@@ -8,9 +8,10 @@
 		<link rel="stylesheet" href="css/iconos/css/fontawesome-all.css">
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 		<script type="text/javascript" src="librerias/jquery/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="cms/js/colorAside.js"></script>
 	</head>
 
-	<body>
+	<body onload="colorAsideActivo()">
 
 
 		<!-- header -->
@@ -21,11 +22,10 @@
 
 		<div id="patrocinadores" class="col-13">
 
-			<h2>Patrocinadores</h2>
 
 			<?php
 
-				echo "<table>
+				echo "<table class='tabla'>
 							<tr>
 								<th>Id</th>
 								<th>Nombre </th>
@@ -41,8 +41,8 @@
 					echo "<td>".$patrocinador['nombre']."</td>";
 					echo "<td>".$patrocinador['url']."</td>";
 					echo "<td>".$patrocinador['imagen']."</td>";
-					echo "<td>Boton Editar</td>";
-					echo "<td>Boton Borrar</td>";
+					echo "<td><i class='fas fa-edit'></i></td>";
+					echo "<td><i class='fas fa-trash-alt'></i></td>";
 					echo "</tr>";
 				}
 

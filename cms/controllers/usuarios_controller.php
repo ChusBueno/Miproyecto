@@ -5,6 +5,14 @@ include 'cms/models/usuarios_model.php';
 $usuarios = usuariosModel::usuarios();
 $permisos = usuariosModel::permisos();
 
+//para comprobar que es administrador, en caso de q cambien la url
+
+if($_SESSION['permiso'] != "Administrador"){
+
+	session_destroy();
+	header("Location: admin.php");
+
+}
 
 if (isset($_POST['buscar'])){
 

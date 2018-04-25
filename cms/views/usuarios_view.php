@@ -7,9 +7,10 @@
 		<link rel="stylesheet" href="cms/css/estilos.css">
 		<link rel="stylesheet" href="css/iconos/css/fontawesome-all.css">
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<script type="text/javascript" src="cms/js/colorAside.js"></script>
 	</head>
 
-	<body>
+	<body onload="colorAsideActivo()">
 
 
 		<!-- header -->
@@ -20,10 +21,9 @@
 
 		<div id="usuarios" class="col-13">
 
-			<h2> Usuarios</h2>
 			
 			<form method="post">
-				<select name="permisos">
+				Tipo de usuario: <select name="permisos">
 					<?php
 					foreach($permisos as $permiso){
 						echo "<option value=".$permiso['id'].">".$permiso['descripcion']."</option>";
@@ -34,10 +34,6 @@
 
 				<input type="submit" name="buscar" value="Buscar"/>
 			</form>
-		</div>
-
-
-		<div id="resultado">
 
 			<?php 
 
@@ -47,7 +43,7 @@
 				//var_dump($usuariosNivel);
 				if(isset($usuariosNivel)){
 					
-					echo "<table>
+					echo "<table class='tabla'>
 							<tr>
 								<th>Nombre Usuario </th>
 								<th>Nombre </th>
@@ -64,8 +60,8 @@
 						echo "<td>".$usuarioNivel['nombre']."</td>";
 						echo "<td>".$usuarioNivel['apellido']."</td>";
 						echo "<td>".$usuarioNivel['telefono']."</td>";					
-						echo "<td>Boton editar</td>";
-						echo "<td>Boton eliminar</td>";
+						echo "<td><i class='fas fa-edit'></i></td>";
+						echo "<td><i class='fas fa-trash-alt'></i></td>";
 						echo "</tr>";
 					}
 
@@ -78,7 +74,19 @@
 
 			?>
 
+
+
+
+
+
 		</div>
+
+
+		
+
+
+
+
 
 
 		<!--

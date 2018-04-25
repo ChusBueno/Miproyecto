@@ -201,9 +201,6 @@ aside{
 	background-color: white;
 }
 
-#cmsMenu a:visited{
-	background-color: red;
-}
 
 
 /*FIN ASIDE*/
@@ -217,7 +214,6 @@ footer{
 	text-align: center;
 	background-color: #f3f1f1;
 	border:1px solid #cccccc;
-	clear:both;
 }
 footer i{
 	margin-right: 10px;
@@ -289,7 +285,35 @@ footer div{
 
 
 
+
 /*fin pagina usuaios*/
+
+
+
+
+/*ESTILO TABLAS */
+
+
+
+
+.tabla{
+	margin:0 auto;
+	margin-top:20px;
+}
+
+.tabla tr:nth-child(odd) {
+	 background-color:#f2f2f2;
+}
+
+.tabla tr:nth-child(even) {
+	 background-color:#fbfbfb;
+}
+
+.tabla tr td i{
+	margin-left: 15px;
+}
+
+/*FIN ESTILOS TABLAS*/
 
 .error{
 	color:#ff0000;

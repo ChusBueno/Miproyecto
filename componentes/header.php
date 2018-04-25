@@ -17,7 +17,7 @@
 
 			<div id="login" class="col-7">
 
-				<form action="#">
+				<form action="#" method="post">
 
 					<input type="text" name="nombre" placeholder="Usuario">
 					<input type="text" name="contrasenia" placeholder="Contraseña">

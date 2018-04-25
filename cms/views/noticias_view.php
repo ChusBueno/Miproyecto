@@ -8,9 +8,10 @@
 		<link rel="stylesheet" href="css/iconos/css/fontawesome-all.css">
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 		<script type="text/javascript" src="librerias/jquery/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="cms/js/colorAside.js"></script>
 	</head>
 
-	<body>
+	<body onload="colorAsideActivo()">
 
 
 		<!-- header -->
@@ -21,7 +22,6 @@
 
 		<div id="noticias" class="col-13">
 
-			<h2>Noticias</h2>
 
 			<?php 
 			//El redactor normal solo puede ver sus noticias.
@@ -34,7 +34,7 @@
 		    	if(isset($noticiasRedactor)){
 
 
-	    			echo "<table>
+	    			echo "<table class='tabla'>
 							<tr>
 								<th>Id</th>
 								<th>IdUsuario</th>
@@ -55,8 +55,8 @@
 						echo "<td>".$noticia['subtitulo']."</td>";
 						echo "<td>".$noticia['texto']."</td>";
 						echo "<td>".$noticia['fecha']."</td>";							
-						echo "<td>Boton editar</td>";
-						echo "<td>Boton eliminar</td>";
+						echo "<td><i class='fas fa-edit'></i></td>";
+						echo "<td><i class='fas fa-trash-alt'></i></td>";
 						echo "</tr>";
 					}
 
@@ -71,10 +71,6 @@
 				?>
 
 
-
-
-
-			
 				<form method="post">
 					<select id="categorias" name="categorias">
 						<?php
@@ -139,33 +135,39 @@
 			    <?php
 			    	if(isset($noticias)){
 
-
-		    			echo "<table>
-								<tr>
-									<th>Id</th>
-									<th>Titulo </th>
-									<th>Subtitulo</th>
-									<th>Texto</th>
-									<th>Fecha</th>
-									<th>Editar </th>
-									<th>Borrar </th>
-								</tr>";
+			    		if(count($noticias) == 0){
+			    			echo "No hay noticias";
+			    			
+			    		}else{
 
 
-						foreach ($noticias as $noticia){
-							echo "<tr>";
-							echo "<td>".$noticia['id']."</td>";
-							echo "<td>".$noticia['titulo']."</td>";
-							echo "<td>".$noticia['subtitulo']."</td>";
-							echo "<td>".$noticia['texto']."</td>";
-							echo "<td>".$noticia['fecha']."</td>";							
-							echo "<td>Boton editar</td>";
-							echo "<td>Boton eliminar</td>";
-							echo "</tr>";
+			    			echo "<table class='tabla'>
+									<tr>
+										<th>Id</th>
+										<th>Titulo </th>
+										<th>Subtitulo</th>
+										<th>Texto</th>
+										<th>Fecha</th>
+										<th>Editar </th>
+										<th>Borrar </th>
+									</tr>";
+
+
+							foreach ($noticias as $noticia){
+								echo "<tr>";
+								echo "<td>".$noticia['id']."</td>";
+								echo "<td>".$noticia['titulo']."</td>";
+								echo "<td>".$noticia['subtitulo']."</td>";
+								echo "<td>".$noticia['texto']."</td>";
+								echo "<td>".$noticia['fecha']."</td>";
+								echo "<td><i class='fas fa-edit'></i></td>";
+								echo "<td><i class='fas fa-trash-alt'></i></td>";							
+								echo "</tr>";
+							}
+
+							echo "</table>";
+
 						}
-
-						echo "</table>";
-
 
 			    }
 

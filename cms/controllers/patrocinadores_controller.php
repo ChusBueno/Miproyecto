@@ -15,6 +15,22 @@ if($_SESSION['permiso'] != "Administrador"){
 }
 
 
+//borrar patrocinador
+if(isset($_GET['borrar'])){
+
+	$id = $_GET['borrar'];
+
+	$filas = patrocinadoresModel::borrarPatrocinador($id);
+
+	//echo "filas afectadas: ".$filas;
+
+	//recargamos la pagina
+
+	header("location: admin.php?option=patrocinadores");
+
+}
+
+
 include 'cms/views/patrocinadores_view.php';
 
 

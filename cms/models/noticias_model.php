@@ -38,13 +38,24 @@ class noticiasModel{
         return $noticias;
     }
 
-        public static function noticiasRedactor($id_usuario){
+    public static function noticiasRedactor($id_usuario){
         $db = new database();
         $sql = "SELECT * FROM noticias WHERE id_usuario = :idusuario";
         $params = array(":idusuario" => $id_usuario);
         $db->query($sql,$params);
         $noticias = $db->cargaMatriz();
         return $noticias;
+    }
+
+
+    public static function borrarNoticia($id_noticia){
+        $db = new database();
+        $sql = "DELETE FROM noticias WHERE id = :idnoticia";
+        $params = array(":idnoticia" => $id_noticia);
+        $db->query($sql,$params);
+        $filas = $db->affectedRows();
+        return $filas;
+
     }
 
 

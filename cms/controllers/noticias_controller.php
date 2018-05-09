@@ -25,6 +25,20 @@ if(isset($_POST['buscar'])){
 
 $noticiasRedactor = noticiasModel::noticiasRedactor($_SESSION['idusuario']);
 
+
+//borrar noticias
+
+if(isset($_GET['borrar'])){
+
+	$borrar = $_GET['borrar'];
+	$filas = noticiasModel::borrarNoticia($borrar);
+
+
+	//recargamos pagina
+
+	header("location: admin.php?option=noticias");
+}
+
 include 'cms/views/noticias_view.php';
 
 

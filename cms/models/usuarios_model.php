@@ -29,6 +29,16 @@ class usuariosModel{
     }
 
 
+    public static function borrarUsuario($id_usuario){
+        $db = new database();
+        $sql = "DELETE FROM usuarios WHERE id = :idusuario";
+        $params = array(":idusuario" => $id_usuario);
+        $db->query($sql,$params);
+        $usuario = $db->affectedRows();
+        return $usuario;
+    }
+
+
 
 }
 

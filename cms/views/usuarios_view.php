@@ -5,7 +5,7 @@
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 		<title> Federación Cántabra de Baloncesto CMS </title>
 		<link rel="stylesheet" href="cms/css/estilos.css">
-		<link rel="stylesheet" href="css/iconos/css/fontawesome-all.css">
+		<link rel="stylesheet" href="css/iconos/css/fontawesome-all.min.css">
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 		<script type="text/javascript" src="cms/js/colorAside.js"></script>
 	</head>
@@ -61,11 +61,12 @@
 						echo "<td>".$usuarioNivel['apellido']."</td>";
 						echo "<td>".$usuarioNivel['telefono']."</td>";					
 						echo "<td><i class='fas fa-edit'></i></td>";
-						echo "<td><i class='fas fa-trash-alt'></i></td>";
+						echo "<td><a href='admin.php?option=usuarios&borrarUsuario=".$usuarioNivel['id']."'><i class='fas fa-trash-alt'></i></a></td>";
 						echo "</tr>";
 					}
 
 					echo "</table>";
+
 
 
 

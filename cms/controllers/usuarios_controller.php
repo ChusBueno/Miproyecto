@@ -31,6 +31,19 @@ if (isset($_POST['buscar'])){
 
 }
 
+//Borrar Usuarios
+if (isset($_GET['borrarUsuario'])){
+
+ 	$borrar = $_GET['borrarUsuario'];
+	echo "antes de borrar: ". $borrar;
+	$filas = usuariosModel::borrarUsuario($borrar);
+	echo "<br>filas afectadas: ".$filas;
+
+	//recargamos pagina
+
+	header("location: admin.php?option=usuarios");
+}
+
 
 include 'cms/views/usuarios_view.php';
 

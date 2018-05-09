@@ -14,7 +14,13 @@ INSERT INTO usuarios (id,nombreUsuario,nombre,apellido,contrasenia,telefono,id_p
 (null,'redac','Redactor','Jefe','admin',null,2),
 (null,'redacsen','Redactor','sencillo','admin',null,3),
 (null,'redacsen2','Redactor2','sencillo2','admin',null,3),
-(null,'usuar','Usuario','normal','admin',null,4);
+(null,'usuar','Usuario','normal','admin',null,4),
+(null,'usuar','Prueba1','normal','admin',null,4),
+(null,'usuar','Prueba2','normal','admin',null,4),
+(null,'usuar','Prueba3','normal','admin',null,4),
+(null,'usuar','Prueba4','normal','admin',null,4),
+(null,'usuar','Prueba5','normal','admin',null,4),
+(null,'usuar','Prueba6','normal','admin',null,4);
 
 -- INSERCION DATOS TABLA CATEGORIAS
 

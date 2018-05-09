@@ -83,6 +83,21 @@ CREATE TABLE IF NOT EXISTS patrocinadores(
 
 -- -------------------------------------------------
 
+-- TABLA COMENTARIOS -- 
+
+
+CREATE TABLE IF NOT EXISTS comentarios(
+	id int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	id_noticia int(10) NOT NULL,
+	id_usuario int(10) NOT NULL,
+	texto varchar (500) NOT NULL,
+	fecha date NOT NULL
+)ENGINE =InnoDB DEFAULT CHARSET = utf8;
+
+
+
+-- ---------------------------------------------------
+
 
 -- FOREIGN KEYS --
 
@@ -102,6 +117,11 @@ ALTER TABLE noticias
 -- -------------------------------------
 
 
+-- TABLA COMENTARIOS --
+
+ALTER TABLE comentarios
+	ADD CONSTRAINT comentarios_fk1 FOREIGN KEY (id_usuario) REFERENCES usuarios (id) ON UPDATE CASCADE,
+	ADD CONSTRAINT comentarios_fk2 FOREIGN KEY (id_noticia) REFERENCES noticias (id) ON UPDATE CASCADE;
 
 -- FINAL TABLAS CMS ---------------------------------
 

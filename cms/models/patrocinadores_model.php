@@ -12,6 +12,18 @@ class patrocinadoresModel{
     }
 
 
+    public static function borrarPatrocinador($id_patrocinador){
+
+        $db = new database();
+        $sql = "DELETE FROM patrocinadores WHERE id = :id";
+        $params = array(":id" => $id_patrocinador);
+        $db->query($sql,$params);
+        $filas = $db->affectedRows();
+        return $filas;
+
+
+    }
+
 
 
 }

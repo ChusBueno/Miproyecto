@@ -4,7 +4,6 @@
 CREATE DATABASE IF NOT EXISTS 2017p_jesusbueno DEFAULT CHARACTER SET utf8;
 USE 2017p_jesusbueno;
 
-
 -- Crear tablas --
 
 
@@ -15,8 +14,10 @@ USE 2017p_jesusbueno;
 
 CREATE TABLE IF NOT EXISTS usuarios (
 	id int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	nombreUsuario varchar(50) NOT NULL,
 	nombre varchar(20) NOT NULL,
 	apellido varchar(30) NOT NULL,
+	contrasenia varchar(30) NOT NULL,
 	telefono int(11),
 	id_permiso int(4) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
@@ -81,6 +82,21 @@ CREATE TABLE IF NOT EXISTS patrocinadores(
 
 -- -------------------------------------------------
 
+-- TABLA COMENTARIOS -- 
+
+
+CREATE TABLE IF NOT EXISTS comentarios(
+	id int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	id_noticia int(10) NOT NULL,
+	id_usuario int(10) NOT NULL,
+	texto varchar (500) NOT NULL,
+	fecha date NOT NULL
+)ENGINE =InnoDB DEFAULT CHARSET = utf8;
+
+
+
+-- ---------------------------------------------------
+
 
 -- FOREIGN KEYS --
 
@@ -100,14 +116,15 @@ ALTER TABLE noticias
 -- -------------------------------------
 
 
+-- TABLA COMENTARIOS --
+
+ALTER TABLE comentarios
+	ADD CONSTRAINT comentarios_fk1 FOREIGN KEY (id_usuario) REFERENCES usuarios (id) ON UPDATE CASCADE,
+	ADD CONSTRAINT comentarios_fk2 FOREIGN KEY (id_noticia) REFERENCES noticias (id) ON UPDATE CASCADE;
 
 -- FINAL TABLAS CMS ---------------------------------
 
-
-
--- INSERCION DE DATOS --------------------------------
-
-
+-- INSERCION DATOS ----------------------------------------------------------------------------------------------------------------------
 
 
 -- INSERCION DATOS TABLA PERMISOS
@@ -118,12 +135,12 @@ INSERT INTO permisos (id, descripcion) VALUES
 (null, 'Usuario');
 
 -- INSERCION DATOS TABLA USUARIOS
-INSERT INTO usuarios (id,nombre,apellido,telefono,id_permiso) VALUES 
-(null, 'Jesus','Bueno',null,1),
-(null,'Redactor','Jefe',null,2),
-(null,'Redactor','sencillo',null,3),
-(null,'Redactor2','sencillo2',null,3),
-(null,'Usuario','normal',null,4);
+INSERT INTO usuarios (id,nombreUsuario,nombre,apellido,contrasenia,telefono,id_permiso) VALUES 
+(null, 'admin','Jesus','Bueno','admin',null,1),
+(null,'redac','Redactor','Jefe','admin',null,2),
+(null,'redacsen','Redactor','sencillo','admin',null,3),
+(null,'redacsen2','Redactor2','sencillo2','admin',null,3),
+(null,'usuar','Usuario','normal','admin',null,4);
 
 -- INSERCION DATOS TABLA CATEGORIAS
 

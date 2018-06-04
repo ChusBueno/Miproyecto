@@ -15,7 +15,7 @@ USE federacion;
 
 CREATE TABLE IF NOT EXISTS usuarios (
 	id int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	nombreUsuario varchar(50) NOT NULL,
+	nombreUsuario varchar(50) NOT NULL UNIQUE,
 	nombre varchar(20) NOT NULL,
 	apellido varchar(30) NOT NULL,
 	contrasenia varchar(30) NOT NULL,

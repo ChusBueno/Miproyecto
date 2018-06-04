@@ -37,6 +37,34 @@ class usuariosModel{
         $usuario = $db->affectedRows();
         return $usuario;
     }
+    
+
+    public static function datosUsuario($id_usuario){
+        $db = new database();
+        $sql = "SELECT * FROM usuarios WHERE id = :idusuario";
+        $params = array(":idusuario" => $id_usuario);
+        $db->query($sql,$params);
+        $usuario = $db->cargaFila();
+        return $usuario;
+    }
+    
+
+    public static function insertarUsuario($nombreUsuario,$nombre, $apellido,$contrasenia,$tlf,$permiso){
+        $db = new database();
+        $sql = 'INSERT INTO usuarios VALUES(NULL,:nombreUsuario ,:nombre, :apellido,:contrasenia, :tlf, :permiso)';
+        $params = array(
+            ':nombreUsuario'   => $nombreUsuario,
+            ':nombre'     => $nombre,
+            ':apellido'     => $apellido,
+            ':contrasenia'    => $contrasenia,
+            ':tlf' => $tlf,
+            ':permiso' => $permiso
+        );
+        $db->query($sql, $params);
+        $filas = $db->affectedRows(); 
+        return $filas;
+    }
+
 
 
 

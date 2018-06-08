@@ -66,9 +66,11 @@ if(isset($_GET['editarUsuario'])){
 	//recoger id usuario de la ruta
 	$usuario = $_GET['editarUsuario'];
 	$datosUsuario = usuariosModel::datosUsuario($usuario);
-	//boton submit del modal editar
+	
 
 }
+
+//boton submit del modal editar
 
 if(isset($_POST['EditarUsuario'])){
 

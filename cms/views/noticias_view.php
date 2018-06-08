@@ -314,7 +314,6 @@
 		<?php
 
 		 	if (isset($editar) == 1){
-			
 		?>
 
 				<script>snackbar("Editado Correctamente","green");</script>
@@ -342,7 +341,7 @@
 
 
 		 	if (isset($borrar) == 1){
-			
+
 		?>
 
 				<script>snackbar("Borrado Correctamente","green");</script>

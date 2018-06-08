@@ -99,7 +99,7 @@ if(isset($_POST['EditarPatrocinador'])){
 
 	/*comprobacion imagen y mover imagen */
 	if (file_exists("css/imagenes/patrocinadores/" . $_FILES["fichero"]["name"])){
-		echo "Ya existe una imagen con ese nombre";
+		//echo "Ya existe una imagen con ese nombre";
 	}else{
 		//si se sube una imagen nueva, borrar la anterior
 		unlink('css/imagenes/patrocinadores/'.$nombreImagen);
@@ -108,7 +108,7 @@ if(isset($_POST['EditarPatrocinador'])){
 
 	//edicion
 	$editar = patrocinadoresModel::editarPatrocinador($id,$nombre,$url,$imagen);
-	
+
 	/*
 	if($editar == 1){
 		echo "Patrocinador editado";
@@ -120,6 +120,7 @@ if(isset($_POST['EditarPatrocinador'])){
 	
 
 	header("Refresh:1; url= admin.php?option=patrocinadores");
+	//header("Location: admin.php?option=patrocinadores");
 
 
 }

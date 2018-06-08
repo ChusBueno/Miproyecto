@@ -144,24 +144,16 @@
 		</div>
 
 
+
+
 		<div id="snackbar">
-
-			<?php
-
-				//en teoria es la respuesta
-
-			 ?>
-
-		</div>
-
-			<div id="snackbar">
 
 
 		</div>
 
 			
 		<?php
-		//var_dump($editar);
+		//var_dump($insertar);
 		// SNACKBAR RESPUESTA, INSERTAR,EDITAR,BORRAR
 
 		 	if (isset($insertar) == 1){
@@ -219,7 +211,6 @@
 
 
 		 	if (isset($borrar) == 1){
-			
 		?>
 
 				<script>snackbar("Borrado Correctamente","green");</script>
@@ -240,8 +231,6 @@
 		<?php
 
 		 	}}?>
-		 	
-
 		<!-- footer-->
 		<?php include 'cms/componentes/footer.php'; ?>
 

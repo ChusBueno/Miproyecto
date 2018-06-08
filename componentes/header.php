@@ -4,8 +4,6 @@
 
 		<!-- Cabecera-->
 
-		
-
 			<div id="logo" class="col-2">
 				<a href="#"></a>
 			</div>
@@ -17,11 +15,11 @@
 
 			<div id="login" class="col-7">
 
-				<form action="#" method="post">
+				<form  method="post">
 
 					<input type="text" name="nombre" placeholder="Usuario">
 					<input type="text" name="contrasenia" placeholder="Contraseña">
-					<input type="submit" id="botonLogin" value="Entrar">
+					<input type="submit" name="botonLogin" value="Entrar">
 
 				</form>
 

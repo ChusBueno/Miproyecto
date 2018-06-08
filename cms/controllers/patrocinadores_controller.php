@@ -33,38 +33,31 @@ if(isset($_POST['crearPatrocinador'])){
 
 	$imagen = $_FILES["fichero"]["name"];
 
+	/*comprobacion imagen y mover imagen */
+	if (file_exists("css/imagenes/patrocinadores/" . $_FILES["fichero"]["name"])){
+		echo "Ya existe una imagen con ese nombre";
+	}else{
+		move_uploaded_file($_FILES["fichero"]["tmp_name"], "css/imagenes/patrocinadores/".$_FILES['fichero']['name']);
+	}
+
+	//insercion
+
 	$insertar = patrocinadoresModel::insertarPatrocinador($nombre,$url,$imagen);
-	
+
+	/*
 	if($insertar == 1){
 		echo "Nuevo patrocinador añadido";
 	}else{
 		echo "No se ha añadido el patrocinador!";
 	}
 
-	header("Refresh:2; url= admin.php?option=patrocinadores");
+	*/
 
 
 
-
-/***************************PROBANDO****************/
-
-
-echo $_FILES["fichero"]["name"];
-
-move_uploaded_file($_FILES["fichero"]["tmp_name"], "css/imagenes/patrocinadores/".$_FILES['fichero']['name']);
+	header("Refresh:1; url= admin.php?option=patrocinadores");
 
 
-
-
-
-//$nombreArchivo= $_FILES['fichero']['name'];
-//echo "<br><br> <img src='css/imagenes/patrocinadores/$nombreArchivo'>";
-
-
-
-
-
-/**********************************************************/
  
 
 
@@ -89,11 +82,7 @@ if(isset($_GET['editar'])){
 if(isset($_POST['EditarPatrocinador'])){
 
 	
-	
-	//var_dump($datosUsuario);
-
-	//identificador para el update
-
+	//recogida datos
 	$id = $_POST['id'];
 
 	$nombre = $_POST['nombreEditar'];
@@ -102,18 +91,33 @@ if(isset($_POST['EditarPatrocinador'])){
 
 	$imagen = $_FILES["fichero"]["name"];
 
-	//echo "Valor del textarea: ".$texto."<br>Valor de imagen: ".$imagen;
+	//nombre imagen viejo
+	$datos = patrocinadoresModel::datosPatrocinador($id);
 
+	$nombreImagen = $datos['imagen'];
+
+
+	/*comprobacion imagen y mover imagen */
+	if (file_exists("css/imagenes/patrocinadores/" . $_FILES["fichero"]["name"])){
+		echo "Ya existe una imagen con ese nombre";
+	}else{
+		//si se sube una imagen nueva, borrar la anterior
+		unlink('css/imagenes/patrocinadores/'.$nombreImagen);
+		move_uploaded_file($_FILES["fichero"]["tmp_name"], "css/imagenes/patrocinadores/".$_FILES['fichero']['name']);
+	}
+
+	//edicion
 	$editar = patrocinadoresModel::editarPatrocinador($id,$nombre,$url,$imagen);
-
+	
+	/*
 	if($editar == 1){
 		echo "Patrocinador editado";
 	}else{
 		echo "Error, no se ha podido editar el patrocinador!";
 	}
 
-/*falta añadir verificar q no exista el fichero*/
-	move_uploaded_file($_FILES["fichero"]["tmp_name"], "css/imagenes/patrocinadores/".$_FILES['fichero']['name']);
+	*/
+	
 
 	header("Refresh:1; url= admin.php?option=patrocinadores");
 
@@ -137,15 +141,33 @@ if (isset($_POST['borrarPatrocinador'])){
 
 	$id = $_POST['idBorrar'];
 
-	$borrar = patrocinadoresModel::borrarPatrocinador($id);
 
+
+	//para saber el nombre de la imagen, consulto los datos del patrocinador
+
+	$datos = patrocinadoresModel::datosPatrocinador($id);
+
+	$nombreImagen = $datos['imagen'];
+
+	//borrar imagen directorio
+
+	unlink('css/imagenes/patrocinadores/'.$nombreImagen);
+
+
+
+	//borrado bd
+	$borrar = patrocinadoresModel::borrarPatrocinador($id);
+	/*
 	if($borrar == 1){
-		echo "Patrocindor borrado";
+		echo "Patrocinador borrado";
 	}else{
 		echo "Error, no se ha podido borrar el patrocinador!";
 	}
 
-	header("Refresh:2; url= admin.php?option=patrocinadores");
+	*/
+
+
+	header("Refresh:1; url= admin.php?option=patrocinadores");
 
 
 
@@ -155,7 +177,7 @@ if (isset($_POST['borrarPatrocinador'])){
 
 if(isset($_POST['cancelarBorrar'])){
 
-	header("Refresh:2; url= admin.php?option=patrocinadores");
+	header("Refresh:1; url= admin.php?option=patrocinadores");
 
 }
 

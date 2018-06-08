@@ -22,6 +22,30 @@ class modelMain{
     }
 
 
+        public static function verifLog($nombre, $password){
+        $db = new database();
+        $sql = 'SELECT * FROM usuarios WHERE nombreUsuario = :nombre AND contrasenia = :password';
+        $params = array(
+            ':nombre'   => $nombre,
+            ':password' => $password
+        );
+        $db->query($sql, $params);
+        $filas= $db->affectedRows();
+        
+        return $filas;
+    }
+
+    public static function datosUsuario($nombre){
+        $db = new database();
+        $sql = "SELECT usuarios.id,usuarios.nombre,usuarios.apellido,permisos.descripcion FROM usuarios,permisos WHERE usuarios.nombreUsuario = :nombre AND usuarios.id_permiso = permisos.id";
+        $params = array(":nombre" => $nombre);
+        $db->query($sql,$params);
+
+        $datos = $db->cargaFila();
+        return $datos;
+    }
+
+
 
 }
 

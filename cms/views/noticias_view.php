@@ -101,24 +101,24 @@
 
 
 			    			echo "<table class='tabla'>
-									<tr>
-										<th>Id</th>
+									<tr>										
 										<th>Titulo </th>
 										<th>Subtitulo</th>
 										<th>Texto</th>
 										<th>Fecha</th>
+										<th>Imagen</th>
 										<th>Editar </th>
 										<th>Borrar </th>
 									</tr>";
 
 
 							foreach ($noticias as $noticia){
-								echo "<tr>";
-								echo "<td>".$noticia['id']."</td>";
+								echo "<tr>";								
 								echo "<td>".$noticia['titulo']."</td>";
 								echo "<td>".$noticia['subtitulo']."</td>";
 								echo "<td>".$noticia['texto']."</td>";
 								echo "<td>".$noticia['fecha']."</td>";
+								echo "<td><img src='css/imagenes/noticias/".$noticia['imagen']."'></td>";
 								echo '<td><a href="admin.php?option=noticias&editarNoticia='.$noticia['id'].'"><i class="fas fa-edit" ></i></a></td>';
 								echo "<td><a href='admin.php?option=noticias&borrarNoticia=".$noticia['id']."'><i class='fas fa-trash-alt'></i></a></td>";
 								echo "</tr>";
@@ -144,7 +144,7 @@
 				<i id="cerrarAnadir" onmouseover="cerrarHover('cerrarAnadir')" onclick="cerrarModal('modalAnadir','noticias')" onmouseout="cerrarOut('cerrarAnadir')" class="cerrar far fa-times-circle"></i>
 
 				<h2 style="text-align:center;">Añadir Noticia:</h2>
-				<form method="post">
+				<form method="post" enctype="multipart/form-data">
 				   	
 				       	<label for="titulo">Titulo:</label>
 				       	<input type="text" name="tituloNoticia" id="tituloNoticia" />
@@ -177,7 +177,7 @@
 
 				       	<label for="imagen">Imagen: </label>
 
-				       	<input type="file" name="imagen"/>
+				       	<input type="file" name="fichero"/>
 
 
 							     
@@ -201,7 +201,7 @@
 				<i id="cerrarEditar" onmouseover="cerrarHover('cerrarEditar')" onclick="cerrarModal('modalEditar','noticias')" onmouseout="cerrarOut('cerrarEditar')" class="cerrar far fa-times-circle"></i>
 
 				<h2 style="text-align:center;">Editar Noticia:</h2>
-				<form method="post">
+				<form method="post" enctype="multipart/form-data">
 				   		
 				   		<input type="hidden" name="idNoticia" value="<?php echo $datosNoticia['id'] ?>"/>
 				       	<label for="titulo">Titulo:</label>
@@ -235,7 +235,7 @@
 
 				       	<label for="imagen">Imagen: </label>
 
-				       <!--	<input type="file" name="imagenEditar"/>-->
+				       <input type="file" name="fichero"/>
 
 
 							     
@@ -262,7 +262,7 @@
 				<h2 style="text-align:center;">Borrar Noticia</h2>
 				<form action="admin.php?option=noticias" method="post">
 					<p style="text-align:center;">¿Esta seguro de querer borrar la noticia?</p>
-					<input type="hidden" name="idBorrar" value="<?php echo $borrar ?>">
+					<input type="hidden" name="idBorrar" value="<?php echo $id ?>">
 					<input type="submit" class="borrarAceptar" name="borrarNoticia" value="Borrar Noticia"/>
 					<input type="submit" class="borrarCancelar" name="cancelarBorrar" value="Cancelar">				   				     					
 				       				 
@@ -274,6 +274,99 @@
 
 		</div>
 </div><!-- cierre div noticias -->
+
+
+
+		<div id="snackbar">
+
+
+		</div>
+
+			
+		<?php
+		//var_dump($editar);
+		// SNACKBAR RESPUESTA, INSERTAR,EDITAR,BORRAR
+
+		 	if (isset($insertar) == 1){
+			
+		?>
+
+				<script>snackbar("Insertado Correctamente","green");</script>
+		<?php
+
+		 	}?>
+		<?php
+		
+		//comprobar que existe, despues comprobar que esta vacia
+
+		//daba error con isnull y con  == 0
+			if(isset($insertar)){
+		 	if (empty($insertar)){
+			
+		?>
+
+				<script>snackbar("Nombre repetido, no se puede insertar","red");</script>
+		<?php
+
+		 	}}?>
+
+
+		<?php
+
+		 	if (isset($editar) == 1){
+			
+		?>
+
+				<script>snackbar("Editado Correctamente","green");</script>
+		<?php
+
+		 	}?>
+		<?php
+		
+		//comprobar que existe, despues comprobar que esta vacia
+
+		//daba error con isnull y con  == 0
+			if(isset($editar)){
+		 	if (empty($editar)){
+			
+		?>
+
+				<script>snackbar("No se ha editado","red");</script>
+		<?php
+
+		 	}}?>
+
+
+
+		<?php
+
+
+		 	if (isset($borrar) == 1){
+			
+		?>
+
+				<script>snackbar("Borrado Correctamente","green");</script>
+		<?php
+
+		 	}?>
+		<?php
+		
+		//comprobar que existe, despues comprobar que esta vacia
+
+		//daba error con isnull y con  == 0
+			if(isset($borrar)){
+		 	if (empty($borrar)){
+			
+		?>
+
+				<script>snackbar("No se puede borrar","red");</script>
+		<?php
+
+		 	}}?>
+
+
+
+
 
 
 		<!-- footer-->

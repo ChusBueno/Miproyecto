@@ -188,7 +188,7 @@
 				<h2 style="text-align:center;">Borrar Usuario</h2>
 				<form action="admin.php?option=usuarios" method="post">
 					<p style="text-align:center;">¿Esta seguro de querer borrar el usuario?</p>
-					<input type="hidden" name="idBorrar" value="<?php echo $borrar ?>">
+					<input type="hidden" name="idBorrar" value="<?php echo $id ?>">
 					<input type="submit" class="borrarAceptar" name="borrarUsuario" value="Borrar Usuario"/>
 					<input type="submit" class="borrarCancelar" name="cancelarBorrar" value="Cancelar">				   				     					
 				       				 
@@ -199,6 +199,98 @@
 
 
 		</div>
+
+
+
+
+		<div id="snackbar">
+
+
+		</div>
+
+			
+		<?php
+		//var_dump($insertar);
+		// SNACKBAR RESPUESTA, INSERTAR,EDITAR,BORRAR
+
+		 	if (isset($insertar) == 1){
+			
+		?>
+
+				<script>snackbar("Insertado Correctamente","green");</script>
+		<?php
+
+		 	}?>
+		<?php
+		
+		//comprobar que existe, despues comprobar que esta vacia
+
+		//daba error con isnull y con  == 0
+			if(isset($insertar)){
+		 	if (empty($insertar)){
+			
+		?>
+
+				<script>snackbar("Nombre repetido, no se puede insertar","red");</script>
+		<?php
+
+		 	}}?>
+
+
+		<?php
+
+		 	if (isset($editar) == 1){
+			
+		?>
+
+				<script>snackbar("Editado Correctamente","green");</script>
+		<?php
+
+		 	}?>
+		<?php
+		
+		//comprobar que existe, despues comprobar que esta vacia
+
+		//daba error con isnull y con  == 0
+			if(isset($editar)){
+		 	if (empty($editar)){
+			
+		?>
+
+				<script>snackbar("No se ha editado","red");</script>
+		<?php
+
+		 	}}?>
+
+
+
+		<?php
+
+
+		 	if (isset($borrar) == 1){
+			
+		?>
+
+				<script>snackbar("Borrado Correctamente","green");</script>
+		<?php
+
+		 	}?>
+		<?php
+		
+		//comprobar que existe, despues comprobar que esta vacia
+
+		//daba error con isnull y con  == 0
+			if(isset($borrar)){
+		 	if (empty($borrar)){
+			
+		?>
+
+				<script>snackbar("No se puede borrar","red");</script>
+		<?php
+
+		 	}}?>
+
+
 
 
 		

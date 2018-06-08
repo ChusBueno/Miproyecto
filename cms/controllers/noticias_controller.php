@@ -32,7 +32,7 @@ if (isset($_GET['borrarNoticia'])){
 
 
 	//id noticia
- 	$borrar = $_GET['borrarNoticia'];
+ 	$id = $_GET['borrarNoticia'];
 
 }
 
@@ -43,15 +43,27 @@ if (isset($_POST['borrarNoticia'])){
 
 	$id = $_POST['idBorrar'];
 
-	$borrar = noticiasModel::borrarNoticia($id);
 
+	//para saber el nombre de la imagen, consulto los datos del patrocinador
+
+	$datos = noticiasModel::datosNoticia($id);
+
+	$nombreImagen = $datos['imagen'];
+
+	//borrar imagen directorio
+
+	unlink('css/imagenes/noticias/'.$nombreImagen);
+
+
+	$borrar = noticiasModel::borrarNoticia($id);
+	/*
 	if($borrar == 1){
 		echo "Noticia borrada";
 	}else{
 		echo "Error, no se ha podido borrar la noticia!";
 	}
-
-	header("Refresh:2; url= admin.php?option=noticias");
+	*/
+	header("Refresh:1; url= admin.php?option=noticias");
 
 
 
@@ -61,7 +73,7 @@ if (isset($_POST['borrarNoticia'])){
 
 if(isset($_POST['cancelarBorrar'])){
 
-	header("Refresh:2; url= admin.php?option=noticias");
+	header("Refresh:1; url= admin.php?option=noticias");
 
 }
 
@@ -99,22 +111,38 @@ if(isset($_POST['EditarNoticia'])){
 	$id_subcategoria = $_POST['subcategoriasEditar'];
 	$texto = $_POST['textoEditar'];
 	$fecha = date("Y-m-d"); 
-	//$imagen = $_POST['imagenEditar'];
+	
 
-	$imagen = null;
+	$imagen = $_FILES["fichero"]["name"];
 
-	//echo "Valor del textarea: ".$texto."<br>Valor de imagen: ".$imagen;
+
+	//nombre imagen viejo
+	$datos = noticiasModel::datosNoticia($id);
+
+	$nombreImagen = $datos['imagen'];
+
+
+	/*comprobacion imagen y mover imagen */
+	if (file_exists("css/imagenes/noticias/" . $_FILES["fichero"]["name"])){
+		//echo "Ya existe una imagen con ese nombre";
+	}else{
+		//si se sube una imagen nueva, borrar la anterior
+		unlink('css/imagenes/noticias/'.$nombreImagen);
+		move_uploaded_file($_FILES["fichero"]["tmp_name"], "css/imagenes/noticias/".$_FILES['fichero']['name']);
+	}
+
+
 
 	$editar = noticiasModel::editarNoticia($id,$id_usuario,$id_categoria,$id_subcategoria,$titulo,$subtitulo,$texto,$fecha,$imagen);
-
+	/*
 	if($editar == 1){
 		echo "noticia editada";
 	}else{
 		echo "Error, no se ha podido editar la noticia!";
 	}
+	*/
 	
-
-	header("Refresh:2; url= admin.php?option=noticias");
+	header("Refresh:1; url= admin.php?option=noticias");
 
 
 }
@@ -138,20 +166,27 @@ if(isset($_POST['crearNoticia'])){
 	$id_subcategoria = $_POST['subcategoriasAnadir'];
 	$texto = $_POST['texto'];
 	$fecha = date("Y-m-d"); 
-	//$imagen = $_POST['imagenEditar'];
 
-	$imagen = null;
+	$imagen = $_FILES["fichero"]["name"];
+
+
+	/*comprobacion imagen y mover imagen */
+	if (file_exists("css/imagenes/noticias/" . $_FILES["fichero"]["name"])){
+		echo "Ya existe una imagen con ese nombre";
+	}else{
+		move_uploaded_file($_FILES["fichero"]["tmp_name"], "css/imagenes/noticias/".$_FILES['fichero']['name']);
+	}
 
 
 	$insertar = noticiasModel::insertarNoticia($id_usuario,$id_categoria,$id_subcategoria,$titulo,$subtitulo,$texto,$fecha,$imagen);
-
+	/*
 	if($insertar == 1){
 		echo "Nueva noticia añadida";
 	}else{
 		echo "No se ha añadido la noticia!";
 	}
-
-	header("Refresh:2; url= admin.php?option=noticias");
+	*/
+	header("Refresh:1; url= admin.php?option=noticias");
 
 
 

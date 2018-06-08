@@ -143,7 +143,104 @@
 
 		</div>
 
-	
+
+		<div id="snackbar">
+
+			<?php
+
+				//en teoria es la respuesta
+
+			 ?>
+
+		</div>
+
+			<div id="snackbar">
+
+
+		</div>
+
+			
+		<?php
+		//var_dump($editar);
+		// SNACKBAR RESPUESTA, INSERTAR,EDITAR,BORRAR
+
+		 	if (isset($insertar) == 1){
+			
+		?>
+
+				<script>snackbar("Insertado Correctamente","green");</script>
+		<?php
+
+		 	}?>
+		<?php
+		
+		//comprobar que existe, despues comprobar que esta vacia
+
+		//daba error con isnull y con  == 0
+			if(isset($insertar)){
+		 	if (empty($insertar)){
+			
+		?>
+
+				<script>snackbar("Nombre repetido, no se puede insertar","red");</script>
+		<?php
+
+		 	}}?>
+
+
+		<?php
+
+		 	if (isset($editar) == 1){
+			
+		?>
+
+				<script>snackbar("Editado Correctamente","green");</script>
+		<?php
+
+		 	}?>
+		<?php
+		
+		//comprobar que existe, despues comprobar que esta vacia
+
+		//daba error con isnull y con  == 0
+			if(isset($editar)){
+		 	if (empty($editar)){
+			
+		?>
+
+				<script>snackbar("No se ha editado","red");</script>
+		<?php
+
+		 	}}?>
+
+
+
+		<?php
+
+
+		 	if (isset($borrar) == 1){
+			
+		?>
+
+				<script>snackbar("Borrado Correctamente","green");</script>
+		<?php
+
+		 	}?>
+		<?php
+		
+		//comprobar que existe, despues comprobar que esta vacia
+
+		//daba error con isnull y con  == 0
+			if(isset($borrar)){
+		 	if (empty($borrar)){
+			
+		?>
+
+				<script>snackbar("No se puede borrar","red");</script>
+		<?php
+
+		 	}}?>
+		 	
 
 		<!-- footer-->
 		<?php include 'cms/componentes/footer.php'; ?>

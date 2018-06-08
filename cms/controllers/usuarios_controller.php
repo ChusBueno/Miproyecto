@@ -45,13 +45,13 @@ if(isset($_POST['CrearUsuario'])){
 	$permiso = $_POST['permisosGuardar'];
 
 	$insertar = usuariosModel::insertarUsuario($nombreUsuario,$nombre,$apellido,$contrasenia,$tlf,$permiso);
-
+	/*
 	if($insertar == 1){
 		echo "Nuevo usuario añadido";
 	}else{
 		echo "No se ha añadido el usuario. Nombre de usuario repetido!";
 	}
-
+	*/
 	header("Refresh:2; url= admin.php?option=usuarios");
 
 
@@ -89,14 +89,14 @@ if(isset($_POST['EditarUsuario'])){
 	$permiso = $_POST['permisosEditar'];
 
 	$editar = usuariosModel::editarUsuario($id,$nombreUsuario,$nombre,$apellido,$contrasenia,$tlf,$permiso);
-
+	/*
 	if($editar == 1){
 		echo "Usuario editado";
 	}else{
 		echo "Error, no se ha podido editar el usuario!";
 	}
-
-	header("Refresh:2; url= admin.php?option=usuarios");
+	*/
+	header("Refresh:1; url= admin.php?option=usuarios");
 }
 
 
@@ -106,7 +106,7 @@ if (isset($_GET['borrarUsuario'])){
 
 
 	//id del usuario
- 	$borrar = $_GET['borrarUsuario'];
+ 	$id = $_GET['borrarUsuario'];
 
 }
 
@@ -119,13 +119,14 @@ if (isset($_POST['borrarUsuario'])){
 
 	$borrar = usuariosModel::borrarUsuario($id);
 
+	/*
 	if($borrar == 1){
 		echo "Usuario borrado";
 	}else{
 		echo "Error, no se ha podido borrar el usuario!";
 	}
-
-	header("Refresh:2; url= admin.php?option=usuarios");
+	*/
+	header("Refresh:1; url= admin.php?option=usuarios");
 
 
 
@@ -136,7 +137,7 @@ if (isset($_POST['borrarUsuario'])){
 
 if(isset($_POST['cancelarBorrar'])){
 
-	header("Refresh:2; url= admin.php?option=usuarios");
+	header("Refresh:1; url= admin.php?option=usuarios");
 
 }
 

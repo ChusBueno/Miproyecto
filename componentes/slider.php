@@ -25,7 +25,7 @@ $imagenes = modelMain::obtenNoticias('slider','noticias_slider');
 
 			function cambiarImagenes(){
 				//console.log(images[contador].imagen);
-				document.getElementById("slider").style.backgroundImage="url(css/imagenes/slider/"+images[contador].imagen+")";
+				document.getElementById("slider").style.backgroundImage="url(css/imagenes/noticias/"+images[contador].imagen+")";
 				document.getElementById("h1").innerHTML=images[contador].titulo;
 				//document.getElementById("h1").href=direccion[contador];
 			

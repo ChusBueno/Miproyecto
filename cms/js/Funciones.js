@@ -159,6 +159,26 @@ function solucionEditar(){
 
 
 
+function snackbar(texto,color){
+
+    // Get the snackbar DIV
+    var x = document.getElementById("snackbar");
+
+    // Add the "show" class to DIV
+    x.className = "show";
+
+    x.innerHTML = texto;
+
+    x.style.backgroundColor = color;
+
+
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+
+
+}
+
+
 //funcion lanzadera, para lanzar las 2 funciones en el onload
 
 function lanzadera(){

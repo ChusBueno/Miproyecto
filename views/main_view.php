@@ -81,10 +81,13 @@
 	        	<?php
 
 		        foreach($noticias as $noticia){
+		        	//cortar texto para que sean iguales todas
+		        	$textoCortado = substr($noticia['texto'],0,400);
 		            echo "<div class='noticia col-8'>";
 		            echo "<h3>".$noticia['titulo']."</h3>";
 		            echo "<h5>".$noticia['subtitulo']."</h5>";
-		            echo "<p> <img class='imagenNoticia' src='css/imagenes/noticias/".$noticia['imagen']."' /> ".$noticia['texto']."</p>";
+		            //echo "<p> <img class='imagenNoticia' src='css/imagenes/noticias/".$noticia['imagen']."' /> ".$noticia['texto']."</p>";
+		            echo "<p> <img class='imagenNoticia' src='css/imagenes/noticias/".$noticia['imagen']."' /> ".$textoCortado."<a href='#'>...</a></p>";		      
 		            echo "</div>";
 		        } ?>
 
@@ -103,3 +106,6 @@
 
 
 </html>
+
+
+

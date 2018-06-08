@@ -65,6 +65,25 @@ class usuariosModel{
         return $filas;
     }
 
+    public static function editarUsuario($id,$nombreUsuario,$nombre, $apellido,$contrasenia,$tlf,$permiso){
+        $db = new database();
+        $sql = 'UPDATE usuarios SET nombreUsuario = :nombreUsuario, nombre = :nombre, apellido = :apellido, contrasenia = :contrasenia, telefono = :tlf, id_permiso = :permiso WHERE id = :id';
+        $params = array(
+            ':id' => $id,
+            ':nombreUsuario'   => $nombreUsuario,
+            ':nombre'     => $nombre,
+            ':apellido'     => $apellido,
+            ':contrasenia'    => $contrasenia,
+            ':tlf' => $tlf,
+            ':permiso' => $permiso
+        );
+        $db->query($sql, $params);
+        $filas = $db->affectedRows(); 
+        return $filas;
+    }
+
+
+
 
 
 

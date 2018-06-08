@@ -178,6 +178,11 @@ footer div{
 	margin:0 auto;
 	margin-top:20px;
 	width:90%;
+	text-align: center;
+}
+
+.tabla img{
+	width: 80px;
 }
 
 .tabla tr:nth-child(odd) {
@@ -199,11 +204,17 @@ footer div{
 }
 
 
-#add{
+.add{
 	font-size: 1.5em;
-	color:purple;
+	color:#444444;
 	cursor:pointer;
 	margin-left:10px;
+}
+
+
+.left{
+	float:left;
+	margin-right: 10px;
 }
 
 .modal{
@@ -233,15 +244,19 @@ footer div{
 	display: inline-block;
 }
 
-.modal-data input, .modal-data select{
+.modal-data input, .modal-data select, .modal-data textarea{
 	width:45%;
 	margin-top:10px;
 	
 }
 
+.modal-data textarea{
+	resize:none;
+}
 
 
-#aceptar{
+
+.aceptar{
 	background-color: #06af20;
 	border:1px solid #cccccc;
 	margin-top:50px !important;
@@ -254,7 +269,7 @@ footer div{
 	padding-bottom: 10px;
 }
 
-#aceptar:hover{
+.aceptar:hover{
 	opacity: 0.8;
 }
 
@@ -263,6 +278,35 @@ footer div{
 	float:right;
 	font-size:1.5em;
 }
+
+.borrarAceptar{
+	background-color: #06af20;
+	border:1px solid #cccccc;
+	margin-top:50px !important;
+	width:30% !important;
+	border:3px solid black;
+	border-radius: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-left:20%;
+}
+
+.borrarAceptar:hover, .borrarCancelar:hover{
+	opacity:0.8;
+}
+
+.borrarCancelar{
+	background-color: #da1717;
+	border:1px solid #cccccc;
+	margin-top:50px !important;
+	width:30% !important;
+	border:3px solid black;
+	border-radius: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
 
 
 /*GRID*/

@@ -30,7 +30,7 @@ class noticiasModel{
 
     public static function noticiasCategoria($id_categoria,$id_subcategoria){
         $db = new database();
-        $sql = "SELECT * FROM noticias WHERE id_categoria = :idcategoria AND id_subcategoria = :idsubcategoria";
+        $sql = "SELECT * FROM noticias WHERE id_categoria = :idcategoria AND id_subcategoria = :idsubcategoria ORDER BY fecha DESC";
         $params = array(":idcategoria" => $id_categoria,
                         ":idsubcategoria" => $id_subcategoria);
         $db->query($sql,$params);
@@ -40,7 +40,7 @@ class noticiasModel{
 
     public static function noticiasRedactor($id_usuario){
         $db = new database();
-        $sql = "SELECT * FROM noticias WHERE id_usuario = :idusuario";
+        $sql = "SELECT * FROM noticias WHERE id_usuario = :idusuario ORDER BY fecha DESC";
         $params = array(":idusuario" => $id_usuario);
         $db->query($sql,$params);
         $noticias = $db->cargaMatriz();
@@ -58,6 +58,54 @@ class noticiasModel{
 
     }
 
+
+        public static function datosNoticia($id_noticia){
+        $db = new database();
+        $sql = "SELECT * FROM noticias WHERE id = :idnoticia";
+        $params = array(":idnoticia" => $id_noticia);
+        $db->query($sql,$params);
+        $noticia = $db->cargaFila();
+        return $noticia;
+    }
+
+
+        public static function editarNoticia($id,$id_usuario,$id_categoria,$id_subcategoria,$titulo,$subtitulo,$texto,$fecha,$imagen){
+        $db = new database();
+        $sql = 'UPDATE noticias SET id_usuario = :idusuario, id_categoria = :idcategoria, id_subcategoria = :idsubcategoria, titulo = :titulo, subtitulo = :subtitulo, texto = :texto, fecha = :fecha, imagen = :imagen WHERE id = :id';
+        $params = array(
+            ':id' => $id,
+            ':idusuario'   => $id_usuario,
+            ':idcategoria'     => $id_categoria,
+            ':idsubcategoria'     => $id_subcategoria,
+            ':titulo'    => $titulo,
+            ':subtitulo' => $subtitulo,
+            ':texto' => $texto,
+            ':fecha'=>$fecha,
+            ':imagen'=>$imagen
+        );
+        $db->query($sql, $params);
+        $filas = $db->affectedRows(); 
+        return $filas;
+    }
+
+
+    public static function insertarNoticia($id_usuario,$id_categoria,$id_subcategoria,$titulo,$subtitulo,$texto,$fecha,$imagen){
+        $db = new database();
+        $sql = 'INSERT INTO noticias VALUES(NULL,:idusuario ,:idcategoria, :idsubcategoria,:titulo, :subtitulo, :texto, :fecha, :imagen)';
+        $params = array(
+            ':idusuario'   => $id_usuario,
+            ':idcategoria'     => $id_categoria,
+            ':idsubcategoria'     => $id_subcategoria,
+            ':titulo'    => $titulo,
+            ':subtitulo' => $subtitulo,
+            ':texto' => $texto,
+            ':fecha'=>$fecha,
+            ':imagen'=>$imagen
+        );
+        $db->query($sql, $params);
+        $filas = $db->affectedRows(); 
+        return $filas;
+    }
 
 
 

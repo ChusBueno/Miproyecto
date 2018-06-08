@@ -8,10 +8,10 @@
 		<link rel="stylesheet" href="css/iconos/css/fontawesome-all.min.css">
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 		<script type="text/javascript" src="librerias/jquery/jquery-3.3.1.min.js"></script>
-		<script type="text/javascript" src="cms/js/colorAside.js"></script>
+		<script type="text/javascript" src="cms/js/funciones.js"></script>
 	</head>
 
-	<body onload="colorAsideActivo()">
+	<body>
 
 
 		<!-- header -->
@@ -21,6 +21,7 @@
 
 
 		<div id="patrocinadores" class="col-13">
+		<i  onclick='abrirModal("modalAnadir")' class='add fas fa-plus'> <span class="left">Añadir Patrocinador</span></i>
 
 
 			<?php
@@ -40,8 +41,8 @@
 					echo "<td>".$patrocinador['id']."</td>";
 					echo "<td>".$patrocinador['nombre']."</td>";
 					echo "<td>".$patrocinador['url']."</td>";
-					echo "<td>".$patrocinador['imagen']."</td>";
-					echo "<td><i class='fas fa-edit'></i></td>";
+					echo "<td><img src='css/imagenes/patrocinadores/".$patrocinador['imagen']."'></td>";
+					echo '<td><a href="admin.php?option=patrocinadores&editar='.$patrocinador['id'].'"><i class="fas fa-edit" ></i></a></td>';
 					echo "<td><a href='admin.php?option=patrocinadores&borrar=".$patrocinador['id']."'><i class='fas fa-trash-alt'></i></a></td>";
 					echo "</tr>";
 				}
@@ -51,7 +52,96 @@
 
 		</div>
 
-	
+
+		<div id="modalAnadir" class="modal">
+
+			<div class="modal-data">
+				<i id="cerrarAnadir" onmouseover="cerrarHover('cerrarAnadir')" onclick="cerrarModal('modalAnadir','patrocinadores')" onmouseout="cerrarOut('cerrarAnadir')" class="cerrar far fa-times-circle"></i>
+
+				<h2 style="text-align:center;">Añadir Patrocinador:</h2>
+				<form method="post" enctype="multipart/form-data">
+
+				   		
+				       	<label for="Nombre">Nombre:</label>
+				       	<input type="text" name="nombre" id="nombre" />
+
+						<label for="url">Pagina web:</label>
+				       	<input type="text" name="url" id="url" />
+
+				       	<label for="imagen">Imagen: </label>
+
+				       	<input type="file" name="fichero"/>
+
+
+							     
+						
+
+						<input type="submit" class="aceptar" name="crearPatrocinador" value="Insertar Patrocinador"/>
+				       
+				   	
+
+				</form>
+		
+			</div>
+
+
+		</div>
+
+		<div id="modalEditar" class="modal">
+
+			<div class="modal-data">
+				<i id="cerrarEditar" onmouseover="cerrarHover('cerrarEditar')" onclick="cerrarModal('modalEditar','patrocinadores')" onmouseout="cerrarOut('cerrarEditar')" class="cerrar far fa-times-circle"></i>
+
+				<h2 style="text-align:center;">Editar Patrocinador:</h2>
+				<form method="post" enctype="multipart/form-data">
+				   		
+				   		<input type="hidden" name="id" value="<?php echo $datosPatrocinador['id'] ?>"/>
+				       	<label for="Nombre">Nombre:</label>
+				       	<input type="text" name="nombreEditar" id="nombreEditar"  value="<?php echo $datosPatrocinador['nombre'] ?>" />
+
+						<label for="url">Pagina web:</label>
+				       	<input type="text" name="urlEditar" id="urlEditar"  value="<?php echo $datosPatrocinador['url'] ?>"/>
+
+				       	<label for="imagen">Imagen: </label>
+
+				       	<input type="file" name="fichero"/>
+
+							     
+						
+
+						<input type="submit" class="aceptar" name="EditarPatrocinador" value="Editar Patrocinador"/>
+				       
+				   	
+
+				</form>
+		
+			</div>
+
+
+		</div>
+
+
+
+
+		<div id="modalBorrar" class="modal">
+
+			<div class="modal-data">
+				<i id="cerrarBorrar" onmouseover="cerrarHover('cerrarBorrar')" onclick="cerrarModal('modalBorrar','patrocinadores')" onmouseout="cerrarOut('cerrarBorrar')" class="cerrar far fa-times-circle"></i>
+
+				<h2 style="text-align:center;">Borrar Patrocinador</h2>
+				<form action="admin.php?option=patrocinadores" method="post">
+					<p style="text-align:center;">¿Esta seguro de querer borrar el patrocinador?</p>
+					<input type="hidden" name="idBorrar" value="<?php echo $id ?>">
+					<input type="submit" class="borrarAceptar" name="borrarPatrocinador" value="Borrar Patrocinador"/>
+					<input type="submit" class="borrarCancelar" name="cancelarBorrar" value="Cancelar">				   				     					
+				       				 
+
+				</form>
+				
+			</div>
+
+
+		</div>
 
 	
 

@@ -62,10 +62,10 @@ function abrirModal(id){
 
 
 
-function cerrarModal(id){
+function cerrarModal(id,pagina){
 	document.getElementById(id).style.display = 'none';
 	//cambiar url
-	location.href="admin.php?option=usuarios";
+	location.href="admin.php?option="+pagina;
 }
 
 
@@ -104,5 +104,66 @@ function cerrarOut(id){
 }
 
 function solucionEditar(){
+
+	var url = window.location.search;
+	//alert(url);
+
+	//Si acorto desde el final no siempre funcionara, cuando sea el numero 10, tendra q cortar mas
+	//var acortada = url.substr(-24,22);
+
+	var acortada = url.substr(8,22);
+
+	//alert(acortada);
+	//var cadena = "usuarios&editarUsuario";
+	/*
+	if (acortada == cadena){
+		
+		alert("estas en editar");
+		
+		document.getElementById("modalEditar").style.display="block";
+	}
+	*/
+	switch(acortada){
+
+		case "usuarios&editarUsuario":
+			document.getElementById("modalEditar").style.display="block";
+			break;
+
+
+		case "noticias&editarNoticia":
+			document.getElementById("modalEditar").style.display="block";
+			break;
+
+		case "patrocinadores&editar=":
+			document.getElementById("modalEditar").style.display="block";
+			break;
+
+
+		case "usuarios&borrarUsuario":
+			document.getElementById("modalBorrar").style.display="block";
+			break;
+
+
+		case "noticias&borrarNoticia":
+			document.getElementById("modalBorrar").style.display="block";
+			break;
+
+
+		case "patrocinadores&borrar=":
+			document.getElementById("modalBorrar").style.display="block";
+			break;
+	}
+				
 	
 }
+
+
+
+//funcion lanzadera, para lanzar las 2 funciones en el onload
+
+function lanzadera(){
+	colorAsideActivo();
+	solucionEditar();
+}
+
+window.onload = lanzadera;

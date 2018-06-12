@@ -3,21 +3,21 @@
 		
 			<div id="menulateral">
 				<div  class="cajalateral " align="center">
-					<a class="texto" href="https://iframefecan.optimalwayconsulting.com" class="nav" target="_new">En Juego</a>
+					<a class="texto" href="https://iframefecan.optimalwayconsulting.com" target="_new">En Juego</a>
 					<hr>
-					<a href="#" class="nav" target="_new"><img src="css/imagenes/aside/EJ.png" alt="Calendario" /></a>
+					<a href="https://iframefecan.optimalwayconsulting.com" target="_new"><img src="css/imagenes/aside/EJ.png" alt="Calendario" /></a>
 				</div>
 
 				<div class="cajalateral " align="center">
-					<a class="texto"  href="menuizdo/horariosdejuego.html">Jornada Completa</a>
+					<a class="texto"  href="index.php?option=jornada">Jornada Completa</a>
 					<hr>
-					<a href="#"><img src="css/imagenes/aside/horarios-de-juego.gif" alt="Noticias" /></a>
+					<a href="index.php?option=jornada"><img src="css/imagenes/aside/horarios-de-juego.gif" alt="Noticias" /></a>
 				</div>
 
 				<div class="cajalateral " align="center">
-					<a class="texto"  href="menuizdo/resultados.html">Última Jornada resultados</a>
+					<a class="texto"  href="index.php?option=ultimaJornada">Última Jornada resultados</a>
 					<hr>
-					<a href="#"><img src="css/imagenes/aside/resultados.gif" alt="Resultados" /></a>
+					<a href="index.php?option=ultimaJornada"><img src="css/imagenes/aside/resultados.gif" alt="Resultados" /></a>
 				</div>
 
 
@@ -28,9 +28,9 @@
 				</div>
 
 				<div class="cajalateral " align="center">
-					<a class="texto"  href="menuizdo/segurdepor.html">Seguro deportivo</a>
+					<a class="texto"  href="index.php?option=seguroDeportivo">Seguro deportivo</a>
 					<hr>
-					<a href="#"><img src="css/imagenes/aside/seguro-deportivo.gif" alt="Seguro Deportivo" /></a>
+					<a href="index.php?option=seguroDeportivo"><img src="css/imagenes/aside/seguro-deportivo.gif" alt="Seguro Deportivo" /></a>
 
 				</div>
 

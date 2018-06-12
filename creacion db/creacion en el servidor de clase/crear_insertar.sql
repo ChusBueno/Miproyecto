@@ -14,7 +14,7 @@ USE 2017p_jesusbueno;
 
 CREATE TABLE IF NOT EXISTS usuarios (
 	id int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	nombreUsuario varchar(50) NOT NULL,
+	nombreUsuario varchar(50) NOT NULL UNIQUE,
 	nombre varchar(20) NOT NULL,
 	apellido varchar(30) NOT NULL,
 	contrasenia varchar(30) NOT NULL,
@@ -124,6 +124,8 @@ ALTER TABLE comentarios
 
 -- FINAL TABLAS CMS ---------------------------------
 
+
+
 -- INSERCION DATOS ----------------------------------------------------------------------------------------------------------------------
 
 
@@ -140,7 +142,8 @@ INSERT INTO usuarios (id,nombreUsuario,nombre,apellido,contrasenia,telefono,id_p
 (null,'redac','Redactor','Jefe','admin',null,2),
 (null,'redacsen','Redactor','sencillo','admin',null,3),
 (null,'redacsen2','Redactor2','sencillo2','admin',null,3),
-(null,'usuar','Usuario','normal','admin',null,4);
+(null,'usuar','Usuario','normal','admin',null,4),
+(null,'usuar2','Prueba1','normal','admin',null,4);
 
 -- INSERCION DATOS TABLA CATEGORIAS
 
@@ -206,4 +209,3 @@ INSERT INTO patrocinadores (id,nombre,url,imagen) VALUES
 (null,"patrocinador11","http://www.google.es","lostal.png"),
 (null,"patrocinador12","http://www.google.es","lupefer.png"),
 (null,"patrocinador13","http://www.google.es","seur.png");
-

@@ -24,6 +24,7 @@ INSERT INTO categorias (id, nombre) VALUES
 (null,"selecciones"),
 (null,"clubes"),
 (null,"entrevistas"),
+(null,"arbitros"),
 (null,"slider"),
 (null,"agenda");
 
@@ -40,8 +41,9 @@ INSERT INTO subcategorias (id,id_categoria,nombre) VALUES
 (null,3,"nuestros_clubes"),
 (null,4,"entrenadores_entrevistas"),
 (null,4,"jugadores_entrevistas"),
-(null,5,"noticias_slider"),
-(null,6,"noticias_agenda");
+(null,5,"charlas_arbitros"),
+(null,6,"noticias_slider"),
+(null,7,"noticias_agenda");
 
 -- INSERCION DATOS TABLA NOTICIAS
 

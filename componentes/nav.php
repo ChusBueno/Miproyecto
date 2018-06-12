@@ -14,35 +14,33 @@
 				</li>
 
 				<li class="principal"><a href="#">SELECCIONES</a>
-					<ul>
-						<!--<li class="submenu"><a href="menu/convocatorias.html">Convocatorias</a></li>-->
-						<li class="submenu"><a href="index.php?option=convocatorias">Convocatorias</a></li>
-						<li class="submenu"><a href="#" target="_new">Valladolid 2018</a></li>
-						<li class="submenu"><a href="#">Cadetes</a></li>
-						<li class="submenu"><a href="#">Infantiles</a></li>
-						<li class="submenu"><a href="#">Alevines</a></li>
+					<ul>						
+						<li class="submenu"><a href="index.php?option=convocatorias">Convocatorias</a></li>					
+						<li class="submenu"><a href="index.php?option=cadetes">Cadetes</a></li>
+						<li class="submenu"><a href="index.php?option=infantiles">Infantiles</a></li>
+						<li class="submenu"><a href="index.php?option=alevines">Alevines</a></li>
 					</ul>
 				</li>
 
 				<li class="principal"><a href="#">CLUBES</a>
 					<ul>
-						<li class="submenu"><a href="#">Noticias</a></li>
-						<li class="submenu"><a href="#">Nuestros Clubes</a></li>
+						<li class="submenu"><a href="index.php?option=noticiasClubes">Noticias</a></li>
+						<li class="submenu"><a href="index.php?option=nuestrosClubes">Nuestros Clubes</a></li>
 					</ul>
 				</li>
 
 
 				<li class="principal"><a href="#">ENTREVISTAS</a>
 					<ul>
-						<li class="submenu"><a href="#">Entrenadores</a></li>
-						<li class="submenu"><a href="#">Jugadores</a></li>					
+						<li class="submenu"><a href="index.php?option=entrenadoresEntrevistas">Entrenadores</a></li>
+						<li class="submenu"><a href="index.php?option=jugadoresEntrevistas">Jugadores</a></li>					
 					</ul>
 				</li>
 
 
 				<li class="principal"><a href="#">ARBITROS</a>
 					<ul>
-						<li class="submenu"><a href="#" target="_new">Cursos y Charlas</a></li>
+						<li class="submenu"><a href="index.php?option=charlasArbitros">Cursos y Charlas</a></li>
 						<li class="submenu"><a href="#">Club del árbitro</a></li>
 						<li class="submenu"><a href="#" target="_new">Hazte árbitro</a></li>
 					</ul>

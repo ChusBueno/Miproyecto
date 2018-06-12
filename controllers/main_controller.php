@@ -29,5 +29,18 @@ if (isset($_POST['botonLogin'])){
 
 
 
-include 'views/main_view.php';
+if(isset($_GET['verNoticia'])){
+    //recoger id usuario de la ruta
+    $idnoticia = $_GET['verNoticia'];
+    $datosNoticia = modelMain::datosNoticia($idnoticia);
+
+    $comentarios = modelMain::comentariosNoticia($idnoticia);
+
+    include 'views/NoticiaIndividual_view.php';
+
+
+}else{
+    include 'views/main_view.php';
+}
+
 ?>

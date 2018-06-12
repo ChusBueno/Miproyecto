@@ -350,17 +350,25 @@ aside{
 	height:400px;
 }
 
+.noticiaInd{
+	text-align:center;
+	margin:0 auto;
+	margin-bottom:0px;
+}
+
 
 /*TITULO NOTICIA*/
-.noticia h3{
+.noticia h3, .noticiaInd h3{
 	margin:0px;
 	font-size: 1.3em;
 	text-align:left;
 	color:#242323;
 }
 
+.noticia h3 a, .noticiaInd h3 a{text-decoration: none;color:black;}
+
 /*SUBTITULO NOTICIA*/
-.noticia h5{
+.noticia h5, .noticiaInd h5{
 	margin:0px;
 	font-size: 1.1em;
 	color:gray;
@@ -378,11 +386,42 @@ aside{
 
 
 /*PARRAFO NOTICIA*/
-.noticia p{
+.noticia p, .noticiaInd p{
 	color:#434242;
 	text-align:justify;
 	font-size:1em;
 	margin-bottom:0px;
+}
+
+.comentarios h5{
+	font-size:1.1em;
+	text-align: center;
+}
+
+
+.comentarios div:nth-child(odd) {
+	 background-color:#7b7b7b;
+}
+
+.comentarios div:nth-child(even) {
+	 background-color:#c7c7c7;
+}
+
+
+.comentario {
+	margin-bottom:10px;
+}
+
+.comentario p{
+	text-align: center;
+	margin-bottom:5px;
+	margin-top:0px;
+}
+
+
+span.datos{
+	color:white !important;
+	float:right !important;
 }
 
 

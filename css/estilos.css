@@ -424,7 +424,66 @@ span.datos{
 	float:right !important;
 }
 
+span.textosiguenos{
+	margin-right:20px;
+	line-height: 30px;
+}
 
+.siguenos{
+	font-weight: bold;
+	float:right;
+	display: inline-block;
+}
+
+
+.twitter{
+	background-image:url(imagenes/sociales/twitter.png);
+	background-size:cover;
+	float:right;
+	display:block;
+	width:30px;
+	height:30px;
+	margin-left:5px;
+}
+
+.twitter:hover{
+	opacity:0.5;
+}
+
+.facebook{
+	background-image:url(imagenes/sociales/facebook.png);
+	background-size:contain;
+	background-repeat:no-repeat;
+	float:right;
+	display:block;
+	width:30px;
+	height:30px;
+}
+
+.facebook:hover{
+	opacity:0.5;
+}
+
+.jornada{
+	padding:50px !important;
+}
+
+.jornada img{
+	height:150px;
+	margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.jornada img:hover{opacity:0.6;}
+
+.seguro{
+	text-align: center;
+}
+
+h5.seguro{
+	color:gray;
+}
 
 
 

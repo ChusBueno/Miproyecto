@@ -43,4 +43,35 @@ if(isset($_GET['verNoticia'])){
     include 'views/main_view.php';
 }
 
+
+if(isset($_POST['enviarComentario'])){
+
+
+    //recoger datos
+
+    $idnoticia = $_GET['verNoticia'];
+
+    $idusuario = $_SESSION['idusuario'];
+
+    $texto = $_POST['texto'];
+
+    $fecha = date("Y-m-d"); 
+
+    $host= $_SERVER["HTTP_HOST"];
+    $uri= $_SERVER["REQUEST_URI"];
+    $url= "http://" . $host . $uri;
+
+    
+    //insertar
+    if($texto != ''){
+        $insertar = modelMain::insertarComentario($idnoticia,$idusuario,$texto,$fecha);
+        header("location:".$url);
+    }else{
+        echo "El comentario no puede estar vacio";
+    }
+    
+
+
+}
+
 ?>

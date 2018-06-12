@@ -63,10 +63,10 @@
 
 				   		
 				       	<label for="Nombre">Nombre:</label>
-				       	<input type="text" name="nombre" id="nombre" />
+				       	<input type="text" name="nombre" required id="nombre" />
 
 						<label for="url">Pagina web:</label>
-				       	<input type="text" name="url" id="url" />
+				       	<input type="text" name="url" required id="url" />
 
 				       	<label for="imagen">Imagen: </label>
 
@@ -97,10 +97,10 @@
 				   		
 				   		<input type="hidden" name="id" value="<?php echo $datosPatrocinador['id'] ?>"/>
 				       	<label for="Nombre">Nombre:</label>
-				       	<input type="text" name="nombreEditar" id="nombreEditar"  value="<?php echo $datosPatrocinador['nombre'] ?>" />
+				       	<input type="text" name="nombreEditar" required id="nombreEditar"  value="<?php echo $datosPatrocinador['nombre'] ?>" />
 
 						<label for="url">Pagina web:</label>
-				       	<input type="text" name="urlEditar" id="urlEditar"  value="<?php echo $datosPatrocinador['url'] ?>"/>
+				       	<input type="text" name="urlEditar" required id="urlEditar"  value="<?php echo $datosPatrocinador['url'] ?>"/>
 
 				       	<label for="imagen">Imagen: </label>
 

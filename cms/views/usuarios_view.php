@@ -88,18 +88,18 @@
 				<form action="admin.php?option=usuarios" method="post">
 				   	
 				       	<label for="nombreUsuario">Nombre de usuario:</label>
-				       	<input type="text" name="nombreUsuario" id="nombreUsuario" />
+				       	<input type="text" name="nombreUsuario" id="nombreUsuario" required/>
 
 						<label for="nombre">Nombre:</label>
-				       	<input type="text" name="nombre" id="nombre" />
+				       	<input type="text" name="nombre" id="nombre" required/>
 
 
 				       	<label for="apellido">Apellido:</label>
-				       	<input type="text" name="apellido" id="apellido" />
+				       	<input type="text" name="apellido" id="apellido" required/>
 
 				       	<label for="contrasenia">Contraseña:</label>
 				       				   					   				  			       
-				       	<input type="password" name="contrasenia" id="contrasenia" />
+				       	<input type="password" name="contrasenia" id="contrasenia" required/>
 
 
 				       	<label for="tlf">Telefono:</label>
@@ -139,18 +139,18 @@
 				   		
 				   		<input type="hidden" name="idEditar" id="idEditar" value="<?php echo $datosUsuario['id'] ?>">
 				       	<label for="nombreUsuario">Nombre de usuario:</label>
-				       	<input type="text" name="nombreUsuarioEditar" id="nombreUsuarioEditar" value="<?php echo $datosUsuario['nombreUsuario'] ?>"/>
+				       	<input type="text" name="nombreUsuarioEditar" id="nombreUsuarioEditar" required value="<?php echo $datosUsuario['nombreUsuario'] ?>"/>
 
 						<label for="nombre">Nombre:</label>
-				       	<input type="text" name="nombreEditar" id="nombreEditar" value="<?php echo $datosUsuario['nombre'] ?>"/>
+				       	<input type="text" name="nombreEditar" id="nombreEditar" required value="<?php echo $datosUsuario['nombre'] ?>"/>
 
 
 				       	<label for="apellido">Apellido:</label>
-				       	<input type="text" name="apellidoEditar" id="apellidoEditar" value="<?php echo $datosUsuario['apellido'] ?>" />
+				       	<input type="text" name="apellidoEditar" id="apellidoEditar" required value="<?php echo $datosUsuario['apellido'] ?>" />
 
 				       	<label for="contrasenia">Contraseña:</label>
 				       				   					   				  			       
-				       	<input type="password" name="contraseniaEditar" id="contraseniaEditar" value="<?php echo $datosUsuario['contrasenia'] ?>"/>
+				       	<input type="password" name="contraseniaEditar" id="contraseniaEditar" required value="<?php echo $datosUsuario['contrasenia'] ?>"/>
 
 
 				       	<label for="tlf">Telefono:</label>

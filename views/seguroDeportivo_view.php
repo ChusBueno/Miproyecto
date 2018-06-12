@@ -28,26 +28,30 @@
 
 			<div id="noticias" class="col-16">
 				
-				<h3>SEGURO DEPORTIVO PARA DEPORTISTAS LIGAS SÉNIOR</h3>
-				<h5>Póliza núm. 5110932 contratada con la compañía MURIMARVIDA </h5>
+				<h3 class="seguro">SEGURO DEPORTIVO PARA DEPORTISTAS LIGAS SÉNIOR </h3>
+				<h5 class="seguro">Póliza núm. 5110932 contratada con la compañía MURIMARVIDA </h5>
 
 
-				<div class="seguroDeportivo col-8">
-					<a href="#" target="_new"><img src="#"/></a>
+				<div class="jornada col-8">
+					<a href="#" target="_new"><img src="css/imagenes/aside/seguro/actuacion.png"/></a>
 				</div>
 
-				<div class="seguroDeportivo col-8">
-					<a href="#" target="_new"><img src="#"/></a>
+				<div class="jornada col-8">
+					<a href="#" target="_new"><img src="css/imagenes/aside/seguro/poliza.png"/></a>
 				</div>
 
 				<hr>
 
-				<div class="seguroDeportivo col-8">
-					<a href="#" target="_new"><img src="#"/></a>
+				<h3 class="seguro">ACCIDENTE DEPORTIVO LIGAS JÚNIOR-CADETE-INFANTIL-ALEVÍN-BENJAMÍN</h3>
+				<h5 class="seguro">A través del Servicio Cántabro de Salud</h5>
+
+
+				<div class="jornada col-8">
+					<a href="#" target="_new"><img src="css/imagenes/aside/seguro/actuacionnosen.png"/></a>
 				</div>
 
-				<div class="seguroDeportivo col-8">
-					<a href="#" target="_new"><img src="#"/></a>
+				<div class="jornada col-8">
+					<a href="#" target="_new"><img src="css/imagenes/aside/seguro/protocolonosen.png"/></a>
 				</div>
 		    
 

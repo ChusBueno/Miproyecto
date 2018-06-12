@@ -62,7 +62,19 @@ class modelMain{
     }
 
 
-
+    public static function insertarComentario($id_noticia,$id_usuario,$texto,$fecha){
+        $db = new database();
+        $sql = 'INSERT INTO comentarios VALUES(NULL,:id_noticia ,:id_usuario, :texto,:fecha)';
+        $params = array(
+            ':id_noticia'   => $id_noticia,
+            ':id_usuario'     => $id_usuario,
+            ':texto'     => $texto,
+            ':fecha'    => $fecha
+        );
+        $db->query($sql, $params);
+        $filas = $db->affectedRows(); 
+        return $filas;
+    }
 
 
 

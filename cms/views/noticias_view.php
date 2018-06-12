@@ -147,10 +147,10 @@
 				<form method="post" enctype="multipart/form-data">
 				   	
 				       	<label for="titulo">Titulo:</label>
-				       	<input type="text" name="tituloNoticia" id="tituloNoticia" />
+				       	<input type="text" name="tituloNoticia" id="tituloNoticia" required />
 
 						<label for="subtitulo">Subtitulo:</label>
-				       	<input type="text" name="subtituloNoticia" id="subtituloNoticia" />
+				       	<input type="text" name="subtituloNoticia" id="subtituloNoticia" required/>
 
 				       	<label for="categoria">Categoria:</label>
 						<select id="categoriasAnadir" name="categoriasAnadir">
@@ -205,10 +205,10 @@
 				   		
 				   		<input type="hidden" name="idNoticia" value="<?php echo $datosNoticia['id'] ?>"/>
 				       	<label for="titulo">Titulo:</label>
-				       	<input type="text" name="tituloNoticiaEditar" id="tituloNoticiaEditar" value="<?php echo $datosNoticia['titulo'] ?>" />
+				       	<input type="text" name="tituloNoticiaEditar" required id="tituloNoticiaEditar" value="<?php echo $datosNoticia['titulo'] ?>" />
 
 						<label for="subtitulo">Subtitulo:</label>
-				       	<input type="text" name="subtituloNoticiaEditar" id="subtituloNoticiaEditar" value="<?php echo $datosNoticia['subtitulo'] ?>" />
+				       	<input type="text" name="subtituloNoticiaEditar" required id="subtituloNoticiaEditar" value="<?php echo $datosNoticia['subtitulo'] ?>" />
 
 				       	<label for="categoria">Categoria:</label>
 						<select id="categoriasEditar" name="categoriasEditar">

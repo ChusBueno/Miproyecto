@@ -30,21 +30,21 @@
 				
 
 				<div class="jornada col-8">
-					<a href="#" target="_new"><img src="#"/></a>
+					<a href="#" target="_new"><img src="css/imagenes/aside/jornada/escolar.png"/></a>
 				</div>
 
 				<div class="jornada col-8">
-					<a href="#" target="_new"><img src="#"/></a>
+					<a href="#" target="_new"><img src="css/imagenes/aside/jornada/federada.png"/></a>
 				</div>
 
 				<hr>
 
 				<div class="jornada col-8">
-					<a href="#" target="_new"><img src="#"/></a>
+					<a href="#" target="_new"><img src="css/imagenes/aside/jornada/proescolar.png"/></a>
 				</div>
 
 				<div class="jornada col-8">
-					<a href="#" target="_new"><img src="#"/></a>
+					<a href="#" target="_new"><img src="css/imagenes/aside/jornada/profederada.png"/></a>
 				</div>
 		    
 

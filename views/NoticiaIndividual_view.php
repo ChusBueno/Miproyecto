@@ -36,7 +36,11 @@
 	            echo "<h3>".$datosNoticia['titulo']."</a></h3>";
 	            echo "<h5>".$datosNoticia['subtitulo']."</h5>";
 	            //echo "<p> <img class='imagenNoticia' src='css/imagenes/noticias/".$noticia['imagen']."' /> ".$noticia['texto']."</p>";
-	            echo "<p> <img class='imagenNoticia' src='css/imagenes/noticias/".$datosNoticia['imagen']."' /> ".$datosNoticia['texto']."</p>";		      
+	            echo "<p> <img class='imagenNoticia' src='css/imagenes/noticias/".$datosNoticia['imagen']."' /> ".$datosNoticia['texto']."</p>";
+	            echo "<p class='siguenos'><span class='textosiguenos'>Siguenos en:</span>";
+	            echo "<a href='https://twitter.com/?status=Me gusta esta página http://www.google.es/' class='twitter'></a>";
+    			echo "<a href='http://www.facebook.com/sharer.php?u=http://www.google.es/'' class='facebook'></a>";	
+    			echo "</p>";
 	            echo "</div>";
 	        	
 				//echo $_SERVER['QUERY_STRING'];
@@ -47,9 +51,7 @@
     				echo "<div class='comentario col-16'>";
 
     				echo "<p>".$comentario['texto']."</p>";
-    				echo "<p> <span class='datos'> Escrito por: ".$comentario['nombreUsuario'].". Fecha: ". $comentario['fecha']."</span></p>";
-
-
+    				echo "<p> <span class='datos'> Escrito por: ".$comentario['nombreUsuario'].". Fecha: ". $comentario['fecha']."</span></p>";																
     				echo "</div>";
 
 
@@ -74,7 +76,7 @@
 
 		    <form class="col-16" method="post">
 		    	<p>Deje su comentario:</p>
-		    	<input type="text" class="col-16" />
+		    	<input type="text" class="col-16" name="texto" />
 		    	<input type="submit" value="Enviar" name="enviarComentario"/>
 		    </form>
 

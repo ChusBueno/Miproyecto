@@ -53,7 +53,8 @@ class modelMain{
 
     public static function comentariosNoticia($id){
         $db = new database();
-        $sql = "SELECT comentarios.id_noticia, comentarios.id_usuario, comentarios.texto, comentarios.fecha, usuarios.id, usuarios.nombreUsuario FROM comentarios,usuarios WHERE comentarios.id_noticia = :id AND comentarios.id_usuario = usuarios.id";
+        $sql = "SELECT comentarios.id ,comentarios.id_noticia, comentarios.id_usuario, comentarios.texto, comentarios.fecha, usuarios.nombreUsuario FROM comentarios,usuarios WHERE comentarios.id_noticia = :id AND comentarios.id_usuario = usuarios.id";
+        //$sql = "SELECT * FROM comentarios WHERE comentarios.id_noticia = :id";
         $params = array(":id" => $id);
         $db->query($sql,$params);
 
@@ -74,6 +75,18 @@ class modelMain{
         $db->query($sql, $params);
         $filas = $db->affectedRows(); 
         return $filas;
+    }
+
+
+    public static function borrarComentario($id_comentario){
+        $db = new database();
+        $sql = "DELETE FROM comentarios WHERE id = :id";
+        $params = array(":id" => $id_comentario);
+        $db->query($sql,$params);
+        $filas = $db->affectedRows();
+        return $filas;
+
+
     }
 
 

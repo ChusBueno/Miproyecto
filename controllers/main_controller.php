@@ -74,4 +74,34 @@ if(isset($_POST['enviarComentario'])){
 
 }
 
+
+if (isset($_GET['borrarComentario'])){
+
+
+    //id patrocinador
+    $id_comentario = $_GET['borrarComentario'];
+
+    $borrar = modelMain::borrarComentario($id_comentario);
+
+    //echo "filas afectadas: ".$borrar;
+
+    $url =  $_SERVER['QUERY_STRING'];
+
+    //corta el string, convirtiendolo en un array, a partir de la ocurrencia
+    $cortada = explode("&",$url);
+
+    $urlbuena = $cortada[0]."&".$cortada[1];
+
+   // echo "index.php?".$url;
+
+    //echo "<br>En teoria url buena: <br>".$urlbuena;
+    //echo "<br> Cortada: ".$cortada;
+
+
+   // var_dump($cortada);
+
+   header("Refresh:1; url= index.php?".$urlbuena."");
+}
+
+
 ?>

@@ -39,7 +39,7 @@
 			<div id="login" class="col-7">
 
 				<?php echo "hola ". $_SESSION['nombre']." ".$_SESSION['apellido']; ?>
-				<a href="index.php?option=logout"><i class='fas fa-power-off'></i>cerrar sesión</a>
+				<a href="index.php?option=logout" class="apagar"><i class='fas fa-power-off'></i>cerrar sesión</a>
 
 			</div>
 		</header>

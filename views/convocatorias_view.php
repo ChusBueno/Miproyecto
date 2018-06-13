@@ -5,63 +5,14 @@
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 		<title> Federación Cántabra de Baloncesto </title>
 		<link rel="stylesheet" href="css/estilos.css">
+		<link rel="stylesheet" href="css/iconos/css/fontawesome-all.min.css">
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 	</head>
 
 	<body onload="play()">
 
 		<!-- header -->
-		<?php //include 'componentes/header.php'; ?>
-
-		<?php /*var_dump($_SESSION);*/ if(isset($_SESSION['idusuario']) == false){?>
-		<header class="offset-3 col-10">
-			<div id="logo" class="col-2">
-					<a href="#"></a>
-			</div>
-
-			<div id="titulo" class="offset-1 col-6">
-				<h1>Federación Cántabra</h1>
-				<h1>de Baloncesto</h1>
-			</div>
-
-			<div id="login" class="col-7">
-
-				<form  method="post">
-
-					<input type="text" name="nombre" placeholder="Usuario">
-					<input type="text" name="contrasenia" placeholder="Contraseña">
-					<input type="submit" name="botonLogin" value="Entrar">
-
-				</form>
-
-
-			</div>
-		</header>
-
-
-		<?php }else{ ?>
-
-		<header class="offset-3 col-10">
-			<div id="logo" class="col-2">
-					<a href="#"></a>
-			</div>
-
-			<div id="titulo" class="offset-1 col-6">
-				<h1>Federación Cántabra</h1>
-				<h1>de Baloncesto</h1>
-			</div>
-
-			<div id="login" class="col-7">
-
-				<?php echo "hola ". $_SESSION['nombre']." ".$_SESSION['apellido']; ?>
-				<a href="index.php?option=logout"><i class='fas fa-power-off'></i>cerrar sesión</a>
-
-			</div>
-		</header>
-
-		<?php } ?>
-
-
+		<?php include 'componentes/header.php'; ?>
 
 		
 		<!-- nav -->
@@ -79,24 +30,30 @@
 			<div id="noticias" class="col-16">
 				
 	        	<?php
-
-	        	if(count($noticias)>1){
+	        	//var_dump($noticias);
+	        		   
+	        	if(count($noticias)>0){
 
 			        foreach($noticias as $noticia){
 			        	//cortar texto para que sean iguales todas
 			        	$textoCortado = substr($noticia['texto'],0,400);
 			            echo "<div class='noticia col-8'>";
-			            echo "<h3>".$noticia['titulo']."</h3>";
+
+			            //<a href="admin.php?option=usuarios&editarUsuario='.$usuarioNivel['id'].'">
+			            echo "<h3><a href='index.php?option=main&verNoticia=".$noticia['id']."'>".$noticia['titulo']."</a></h3>";
 			            echo "<h5>".$noticia['subtitulo']."</h5>";
 			            //echo "<p> <img class='imagenNoticia' src='css/imagenes/noticias/".$noticia['imagen']."' /> ".$noticia['texto']."</p>";
-			            echo "<p> <img class='imagenNoticia' src='css/imagenes/noticias/".$noticia['imagen']."' /> ".$textoCortado."<a href='#'>...</a></p>";		      
+			            echo "<p> <img class='imagenNoticia' src='css/imagenes/noticias/".$noticia['imagen']."' /> ".$textoCortado."<a  href='index.php?option=main&verNoticia=".$noticia['id']."'>...</a></p>";		      
 			            echo "</div>";
-			        }
-			    }else{
-			    	echo "No hay noticias";
-			    }
+				        }
+				}else{
+					echo "No hay noticias";
+				}
+				
 
-		        ?>
+
+
+		         ?>
 
 		    
 

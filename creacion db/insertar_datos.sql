@@ -59,12 +59,12 @@ INSERT INTO noticias (id,id_usuario,id_categoria,id_subcategoria,titulo,subtitul
 (null,3,1,1,'PREMIOS LIBERTY JÚNIOR','Ya se conocen los júniors más valorados','Con motivo de las finales de Liga 2017 fueron entregados los Premios Liberty Seguros a los jugadores/as más valorados de acuerdo a las votaciones que han tenido lugar en los últimos meses, Alba Puente y Arturo Robertson como bases, Laura Portilla y Diego García, escoltas, como aleros Celia Carral y Alvaro Palazuelos, ala-pívots, Inés García y Joel San Martín y pívots Iara Torre y Adolfo Viadero. Inés García y Palazuelos fueron elegidos los MVPS del 2017',curdate(),null),
 (null,4,1,1,'MARTA GUTIÉRREZ','Una conducción segura','Marta Gutiérrez, jugadora formada en una de las canteras del baloncesto femenino cántabro, como es Selaya, Campeona de Cantabria en varias categorías, protagoniza el gesto técnico de la Revista Digital de Diciembre. Su dribling desbordando a las rivales lo hace merecedor de formar parte de los destacados de nuestro baloncesto. Lo empezó a utilizar con frecuencia al enfrentarse a jugadoras más grandes que ella en categoría Sénior. Martita lo practica con maestría y anima a los más jovenes a realizarlo y aprovechar cada momento en las Selecciones Autonómicas, que los califica como inolvidables.',curdate(),null),
 (null,3,1,1,'VENTANAS ARSÁN GANA EL DERBI','1ª Femenina 53-59 en Cueto al Grupo Tirso','Primer derbi de la temporada en 1ª Femenina en el Pabellón de Cueto de Santander, Grupo Tirso Igualatorio Cantabria recibía a Ventanas Arsan Astillero, en un partido que como se presumía resultó igualado en el marcador. El equipo de José Barquín venía con dos derrotas consecutivas ante rivales directospero en este caso impuso su experiencia en la categoría y dominó desde el inicio a las chicas de Luis Manuel Solana, que llegaban al derbi tras conseguir su segunda victoria de la temporada. Hubo un lleno en las gradas del pabellón santanderino en un partido emocionante que no defraudó a la afición cántabra.',curdate(),null),
-(null,3,5,10,'NOTICIA SLIDER','subtitulo slider','texto slider',curdate(),"1.jpg"),
-(null,3,5,10,'NOTICIA SLIDER2','subtitulo slider2','texto slider',curdate(),"calprifem.jpg"),
-(null,3,5,10,'NOTICIA SLIDER3','subtitulo slider3','texto slider',curdate(),"carlomar.jpg"),
-(null,3,5,10,'NOTICIA SLIDER4','subtitulo slider4','texto slider',curdate(),"copaaf18.jpg"),
-(null,3,6,11,'NOTICIA AGENDA','subtitulo agenda','texto agenda',curdate(),null),
-(null,3,6,11,'NOTICIA agenda2','subtitulo agenda2','texto agenda2',curdate(),null);
+(null,3,6,11,'NOTICIA SLIDER','subtitulo slider','texto slider',curdate(),"1.jpg"),
+(null,3,6,11,'NOTICIA SLIDER2','subtitulo slider2','texto slider',curdate(),"calprifem.jpg"),
+(null,3,6,11,'NOTICIA SLIDER3','subtitulo slider3','texto slider',curdate(),"carlomar.jpg"),
+(null,3,6,11,'NOTICIA SLIDER4','subtitulo slider4','texto slider',curdate(),"copaaf18.jpg"),
+(null,3,7,12,'NOTICIA AGENDA','subtitulo agenda','texto agenda',curdate(),null),
+(null,3,7,12,'NOTICIA agenda2','subtitulo agenda2','texto agenda2',curdate(),null);
 
 
 -- INSERCION DATOS TABLA PATROCINADORES

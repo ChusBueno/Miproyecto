@@ -104,14 +104,14 @@ CREATE TABLE IF NOT EXISTS comentarios(
 -- TABLA USUARIOS --
 
 ALTER TABLE usuarios
-	ADD CONSTRAINT usuarios_fk FOREIGN KEY (id_permiso) REFERENCES permisos (id) ON UPDATE CASCADE;
+	ADD CONSTRAINT usuarios_fk FOREIGN KEY (id_permiso) REFERENCES permisos (id) ON UPDATE CASCADE ON DELETE CASCADE;
 
 -- TABLA NOTICIAS --
 
 ALTER TABLE noticias
-	ADD CONSTRAINT noticias_fk1 FOREIGN KEY (id_usuario) REFERENCES usuarios (id) ON UPDATE CASCADE,
-	ADD CONSTRAINT noticias_fk2 FOREIGN KEY (id_categoria) REFERENCES categorias (id) ON UPDATE CASCADE,
-	ADD CONSTRAINT noticias_fk3 FOREIGN KEY (id_subcategoria) REFERENCES subcategorias (id) ON UPDATE CASCADE;
+	ADD CONSTRAINT noticias_fk1 FOREIGN KEY (id_usuario) REFERENCES usuarios (id) ON UPDATE CASCADE ON DELETE CASCADE,
+	ADD CONSTRAINT noticias_fk2 FOREIGN KEY (id_categoria) REFERENCES categorias (id) ON UPDATE CASCADE ON DELETE CASCADE,
+	ADD CONSTRAINT noticias_fk3 FOREIGN KEY (id_subcategoria) REFERENCES subcategorias (id) ON UPDATE CASCADE ON DELETE CASCADE;
 
 
 -- -------------------------------------
@@ -120,8 +120,8 @@ ALTER TABLE noticias
 -- TABLA COMENTARIOS --
 
 ALTER TABLE comentarios
-	ADD CONSTRAINT comentarios_fk1 FOREIGN KEY (id_usuario) REFERENCES usuarios (id) ON UPDATE CASCADE,
-	ADD CONSTRAINT comentarios_fk2 FOREIGN KEY (id_noticia) REFERENCES noticias (id) ON UPDATE CASCADE;
+	ADD CONSTRAINT comentarios_fk1 FOREIGN KEY (id_usuario) REFERENCES usuarios (id) ON UPDATE CASCADE ON DELETE CASCADE,
+	ADD CONSTRAINT comentarios_fk2 FOREIGN KEY (id_noticia) REFERENCES noticias (id) ON UPDATE CASCADE ON DELETE CASCADE;
 
 -- FINAL TABLAS CMS ---------------------------------
 

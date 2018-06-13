@@ -121,8 +121,13 @@ if(isset($_POST['EditarNoticia'])){
 
 	$nombreImagen = $datos['imagen'];
 
+	//SI NO INSERTAN IMAGEN DEJAR LA VIEJA
+	if( $_FILES["fichero"]["name"] == ''){
+		$imagen = $datos['imagen'];
+	}
 
 	/*comprobacion imagen y mover imagen */
+	//si existe la imagen no hago nada
 	if (file_exists("css/imagenes/noticias/" . $_FILES["fichero"]["name"])){
 		//echo "Ya existe una imagen con ese nombre";
 	}else{

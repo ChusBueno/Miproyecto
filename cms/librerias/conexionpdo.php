@@ -91,5 +91,32 @@ class database {
         $this->conexion = null;
     }
 
+    public function beginTransaction(){
+        try{
+            $this->conexion->beginTransaction();
+        }
+        catch(PDOException $e){
+            print $e->getMessage();
+        }
+    }
+
+    public function Commit(){
+        try{
+            $this->conexion->commit();
+        }
+        catch(PDOException $e){
+            print $e->getMessage();
+        }
+    }
+
+    public function Rollback(){
+        try{
+            $this->conexion->rollback();
+        }
+        catch(PDOException $e){
+            print $e->getMessage();
+        }
+    }
+
 }
 ?>

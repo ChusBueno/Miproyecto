@@ -70,7 +70,7 @@
 
 				       	<label for="imagen">Imagen: </label>
 
-				       	<input type="file" name="fichero"/>
+				       	<input type="file" name="fichero" required/>
 
 
 							     

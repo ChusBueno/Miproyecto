@@ -95,7 +95,11 @@ if(isset($_POST['EditarPatrocinador'])){
 	$datos = patrocinadoresModel::datosPatrocinador($id);
 
 	$nombreImagen = $datos['imagen'];
-
+	
+	//SI NO INSERTAN IMAGEN DEJAR LA VIEJA
+	if( $_FILES["fichero"]["name"] == ''){
+		$imagen = $datos['imagen'];
+	}
 
 	/*comprobacion imagen y mover imagen */
 	if (file_exists("css/imagenes/patrocinadores/" . $_FILES["fichero"]["name"])){

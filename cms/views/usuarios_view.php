@@ -188,6 +188,7 @@
 				<h2 style="text-align:center;">Borrar Usuario</h2>
 				<form action="admin.php?option=usuarios" method="post">
 					<p style="text-align:center;">¿Esta seguro de querer borrar el usuario?</p>
+					<p style="text-align: center;color:red">Nota: los comentarios y las noticias creados por el usuario también se borraran!</p>
 					<input type="hidden" name="idBorrar" value="<?php echo $id ?>">
 					<input type="submit" class="borrarAceptar" name="borrarUsuario" value="Borrar Usuario"/>
 					<input type="submit" class="borrarCancelar" name="cancelarBorrar" value="Cancelar">				   				     					

@@ -85,6 +85,36 @@ class usuariosModel{
 
 
 
+    public static function borrarUsuarioTransaccion($id_usuario){
+        $db = new database();
+        $db->beginTransaction();
+        try{
+
+            //borrar comentarios del usuario
+            $sql1 = "DELETE FROM comentarios WHERE id_usuario = :idusuario";   
+            $params = array(":idusuario" => $id_usuario);
+            $db->query($sql1,$params);
+
+            //borrar noticias del usuario con sus respectivos comentarios ON DELETE CASCADE
+            $sql2 = "DELETE FROM noticias WHERE id_usuario = :idusuario";   
+            $params = array(":idusuario" => $id_usuario);
+            $db->query($sql2,$params);
+
+            //borrar el usuario
+            $sql3 = "DELETE FROM usuarios WHERE id = :idusuario";   
+            $params = array(":idusuario" => $id_usuario);
+            $db->query($sql3,$params);
+            $db->Commit();
+            echo "funciono!";
+        }catch (Exception $e) {
+            $db->Rollback();
+            echo 'Ocurrio un error: ',  $e->getMessage(), "\n";
+        }
+    }
+
+
+
+
 
 
 }

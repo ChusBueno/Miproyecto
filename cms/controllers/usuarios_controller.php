@@ -119,7 +119,7 @@ if (isset($_POST['borrarUsuario'])){
 
 	$id = $_POST['idBorrar'];
 
-	$borrar = usuariosModel::borrarUsuario($id);
+	$borrar = usuariosModel::borrarUsuarioTransaccion($id);
 
 	/*
 	if($borrar == 1){

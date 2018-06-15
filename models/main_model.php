@@ -89,6 +89,59 @@ class modelMain{
 
     }
 
+    //probando paginador
+
+
+    public static function contarNoticias($categoria,$subcategoria){
+        $db = new database();
+
+        //$sql = 'SELECT COUNT(*) FROM noticias where id_categoria = :categoria AND id_subcategoria = :subcategoria';
+
+        $sql = 'SELECT COUNT(noticias.id) FROM noticias,categorias,subcategorias WHERE categorias.nombre = :categoria AND subcategorias.nombre = :subcategoria AND noticias.id_categoria = categorias.id AND noticias.id_subcategoria = subcategorias.id';
+        $params = array(
+            ':categoria'   => $categoria,
+            ':subcategoria' => $subcategoria
+        );
+        $db->query($sql,$params);
+        $cuenta = $db->cargaFila();
+        return $cuenta;
+    }
+
+
+        public static function noticiasPaginador($categoria,$subcategoria,$pagina,$limite){
+        $db = new database();
+
+        $sql = 'SELECT noticias.id ,noticias.titulo, noticias.subtitulo, noticias.texto, noticias.fecha, noticias.imagen FROM noticias,categorias,subcategorias WHERE categorias.nombre = :categoria_nombre AND subcategorias.nombre = :subcategoria_nombre AND noticias.id_categoria = categorias.id AND noticias.id_subcategoria = subcategorias.id ORDER BY noticias.id LIMIT :pagina, :limite';
+        $params = array(
+            ':categoria_nombre'   => $categoria,
+            ':subcategoria_nombre' => $subcategoria,
+            ':pagina' => $pagina,
+            ':limite' => $limite
+        );
+        $db->emulacionoff();
+        $db->query($sql,$params);
+        $noticias = $db->cargaMatriz();
+        return $noticias;
+    }
+
+
+        public static function prueba($limite){
+
+        $db = new database();
+        $db->emulacionoff();
+        $sql = 'SELECT * from noticias LIMIT 0,:limite';
+        $params = array(
+            ':limite' => $limite
+        );
+        $db->query($sql,$params);
+        $noticias = $db->cargaMatriz();
+        return $noticias;
+
+       
+    }
+
+
+
 
 
 

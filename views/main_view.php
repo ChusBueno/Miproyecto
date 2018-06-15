@@ -31,6 +31,11 @@
 				
 	        	<?php
 
+	        	//var_dump($noticias);
+
+	        	//die;
+
+
 	        	if(count($noticias)>0){
 
 			        foreach($noticias as $noticia){
@@ -50,6 +55,13 @@
 			    	echo "No hay noticias";
 			    }
 
+
+			    //paginador
+			    	echo "<div class='paginador'>";
+				    for($i=0; $i<$numPaginas;$i++){
+				       echo '<a href="index.php?option=main&pag='.($i+1).'">'.($i+1).'</a> | ';
+				    } 
+				    echo "</div>";
 
 
 

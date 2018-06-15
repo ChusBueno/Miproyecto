@@ -43,6 +43,11 @@ class database {
         $this->stmt->execute($params);
         $this->comprobarQuery();
     }
+
+    public function emulacionoff(){
+        $this->conexion->setAttribute( PDO::ATTR_EMULATE_PREPARES, false );
+    }
+
     
     //comprueba si se ha realizado la consulta correctamente
     public function comprobarQuery(){
@@ -90,6 +95,18 @@ class database {
         $this->stmt = null;
         $this->conexion = null;
     }
+
+    public function prueba($limite){
+        $this->stmt->bindParam(':limite', $limite, PDO::PARAM_INT);
+
+    }
+
+
+
+
+
+
+
 
 }
 ?>

@@ -1,7 +1,33 @@
 <?php 
 include 'models/main_model.php';
 
-$noticias = modelMain::obtenNoticias('inicio','noticias_index');
+//$noticias = modelMain::obtenNoticias('inicio','noticias_index');
+
+//probando paginador
+
+
+$numNoticias = modelMain::contarNoticias('inicio','noticias_index');
+
+$pagina = 1;
+
+
+$numNoticiasMostrar = 6;
+//redondeamos el numero 
+//dividir numero noticias por el numero que quiero mostrar, da el numero de paginas totales
+$numPaginas = round($numNoticias['COUNT(noticias.id)']/$numNoticiasMostrar);
+
+//$prueba = modelMain::prueba(8);
+//obtenemos las primeras 6 noticias 
+
+
+//pagina = 1, pero en la base de datos empieza a contar desde 0
+$noticias = modelMain::noticiasPaginador('inicio','noticias_index',($pagina-1)*$numNoticiasMostrar,$numNoticiasMostrar);
+
+
+if(isset($_GET['pag'])){
+    $pagina = $_GET['pag'];
+    $noticias = modelMain::noticiasPaginador('inicio','noticias_index',($pagina-1)*$numNoticiasMostrar,$numNoticiasMostrar);
+}
 
 
 

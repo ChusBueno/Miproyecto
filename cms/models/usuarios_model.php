@@ -105,10 +105,10 @@ class usuariosModel{
             $params = array(":idusuario" => $id_usuario);
             $db->query($sql3,$params);
             $db->Commit();
-            echo "funciono!";
+            //echo "funciono!";
         }catch (Exception $e) {
             $db->Rollback();
-            echo 'Ocurrio un error: ',  $e->getMessage(), "\n";
+            echo 'Hubo un error: ',  $e->getMessage(), "\n";
         }
     }
 

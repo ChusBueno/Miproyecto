@@ -1,6 +1,6 @@
-<nav class="offset-3 col-10">
-		<div id="menu" class="col-16">
-			<ul class="col-16">
+<nav class="offset-3 col-10 col-lg-16">
+		<div id="menu" class="col-16 col-lg-16">
+			<ul class="col-16 col-lg-16">
 				<li class="principal"><a href="index.php?option=main">INICIO</a></li>
 
 				<li class="principal"><a href="#">EN JUEGO</a>

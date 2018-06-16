@@ -1,22 +1,19 @@
-function prueba(){
 
-	alert("probando!!");
-}
 
-function abrirModal(){
+function abrirModal(id){
 
-	document.getElementById("modalBorrar").style.display="block";
+	document.getElementById(id).style.display="block";
 
 }
 
+
+function cerrarModal(id){
+	document.getElementById(id).style.display = 'none';
+	//cambiar url
+	location.href="index.php?option=main";
+}
 
 function cerrarHover(id){
-	/*
-	document.getElementById("cerrar").classList.remove("far");
-	document.getElementById("cerrar").classList.remove("fa-times-circle");
-	document.getElementById("cerrar").classList.add("fas");
-	document.getElementById("cerrar").classList.add("fa-times-circle");
-	*/
 
 	var icono = document.getElementById(id);
 	icono.classList.remove("far");
@@ -28,12 +25,6 @@ function cerrarHover(id){
 
 
 function cerrarOut(id){
-	/*
-	document.getElementById("cerrar").classList.remove("fas");
-	document.getElementById("cerrar").classList.remove("fa-times-circle");
-	document.getElementById("cerrar").classList.add("far");
-	document.getElementById("cerrar").classList.add("fa-times-circle");
-	*/
 
 	var icono = document.getElementById(id);
 	icono.classList.remove("fas");
@@ -43,3 +34,24 @@ function cerrarOut(id){
 
 
 }
+
+
+function snackbar(texto,color){
+
+    // Get the snackbar DIV
+    var x = document.getElementById("snackbar");
+
+    // Add the "show" class to DIV
+    x.className = "show";
+
+    x.innerHTML = texto;
+
+    x.style.backgroundColor = color;
+
+
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+
+
+}
+

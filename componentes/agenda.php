@@ -1,4 +1,4 @@
-<section class="col-4">
+<section class="col-4 col-lg-6">
 
 <?php 
 
@@ -6,7 +6,7 @@ $agendas = modelMain::obtenNoticias('agenda','noticias_agenda');
 ?>
 
 
-			<div id="agenda" class="col-16">
+			<div id="agenda" class="col-16 col-lg-16">
 
 				<h3 class="agendatitulo">Próximos eventos</h3>
 

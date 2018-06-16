@@ -1,4 +1,4 @@
-<section class="offset-3 col-6">
+<section class="offset-3 col-6 col-lg-10">
 
 <?php 
 
@@ -19,7 +19,7 @@ $imagenes = modelMain::obtenNoticias('slider','noticias_slider');
 
 			var images = <?php echo json_encode($imagenes);?>;
 
-			//console.log(images);
+			console.log(images);
 			
 
 
@@ -27,7 +27,8 @@ $imagenes = modelMain::obtenNoticias('slider','noticias_slider');
 				//console.log(images[contador].imagen);
 				document.getElementById("slider").style.backgroundImage="url(css/imagenes/noticias/"+images[contador].imagen+")";
 				document.getElementById("h1").innerHTML=images[contador].titulo;
-				//document.getElementById("h1").href=direccion[contador];
+				document.getElementById("h1").href='index.php?option=main&verNoticia='+images[contador].id;
+
 			
 							}
 
@@ -94,7 +95,7 @@ $imagenes = modelMain::obtenNoticias('slider','noticias_slider');
 
 
 
-			<div id="slider" class="col-16">
+			<div id="slider" class="col-16 col-lg-16">
 
 			<!-- SLIDER -->
 

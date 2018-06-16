@@ -28,7 +28,7 @@
 		<article class="col-8">
 
 			<div id="noticias" class="col-16">
-				<a href="javascript:window.history.back();">&laquo; Volver atrás</a>			
+				<a class="volverAtras" href="javascript:window.history.back();">&laquo; Volver atrás</a>			
 	        	<?php
 	        	//var_dump($datosNoticia);
 	        	//var_dump($comentarios);
@@ -47,38 +47,48 @@
 	        	
 				$url =  $_SERVER['QUERY_STRING'];
 	            echo "<div class='comentarios col-16'>";
-	            echo "<h5>Comentarios</h5>";
+	            echo "<h5 class='tituloComentarios'>Comentarios</h5>";
 	           // echo $_SESSION['permiso'];
 	            //var_dump($comentarios);
 
-    			foreach($comentarios as $comentario){
+	            //si no hay comentarios nos ahorramos hacer el bucle y mostramos que no hay
+	            //utilizo la misma clase del errorComentario, solo centra y añade color rojo
+	           	if(empty($comentarios)){
+    				echo "<p class='errorComentario'>No hay comentarios</p>";
+    			}else{
 
-    				if(isset($_SESSION['permiso']) AND $_SESSION['permiso'] != 'Usuario'){
-    					//var_dump($comentario);
-    					echo "<div class='comentario col-16'>";
+	    			foreach($comentarios as $comentario){
 
-	    				echo "<p>".$comentario['texto']."<a class='icono' href='index.php?".$url."&borrarComentario=".$comentario['id']."'><i class='fas fa-trash-alt'></i></a></p>";
-	    				//echo "<p>".$comentario['texto']."<i value=".$comentario['id']." onclick='abrirModal()' class='fas fa-trash-alt icono'></i></p>";
-	    				//echo "<input type='hidden' id='idcomentario' name='idcomentario' value=".$comentario['id'].">";
-	    				echo "<p> <span class='datos'> Escrito por: ".$comentario['nombreUsuario'].". Fecha: ". $comentario['fecha']."</span></p>";																
-	    				echo "</div>";
+	    				if(isset($_SESSION['permiso']) AND $_SESSION['permiso'] != 'Usuario'){
+	    					//var_dump($comentario);
+	    					echo "<div class='comentario col-16'>";
 
+		    				echo "<p>".$comentario['texto']."<a class='icono' href='index.php?".$url."&borrarComentario=".$comentario['id']."'><i class='fas fa-trash-alt'></i></a></p>";
+		    				//echo "<p>".$comentario['texto']."<i value=".$comentario['id']." onclick='abrirModal()' class='fas fa-trash-alt icono'></i></p>";
+		    				//echo "<input type='hidden' id='idcomentario' name='idcomentario' value=".$comentario['id'].">";
+		    				echo "<p> <span class='datos'> Escrito por: ".$comentario['nombreUsuario'].". Fecha: ". $comentario['fecha']."</span></p>";																
+		    				echo "</div>";
 
-
-    				}else{
-    					//los usuarios solo pueden ver los comentarios
-
-	    				echo "<div class='comentario col-16'>";
-
-	    				echo "<p>".$comentario['texto']."</p>";
-	    				echo "<p> <span class='datos'> Escrito por: ".$comentario['nombreUsuario'].". Fecha: ". $comentario['fecha']."</span></p>";																
-	    				echo "</div>";
-    				}
+		    				echo "<hr class='hrComentarios'>";
 
 
 
+	    				}else{
+	    					//los usuarios solo pueden ver los comentarios
+
+		    				echo "<div class='comentario col-16'>";
+
+		    				echo "<p>".$comentario['texto']."</p>";
+		    				echo "<p> <span class='datos'> Escrito por: ".$comentario['nombreUsuario'].". Fecha: ". $comentario['fecha']."</span></p>";																
+		    				echo "</div>";
+		    				echo "<hr class='hrComentarios'>";
+	    				}
 
 
+
+
+
+	    			}
     			}
 
     			echo "</table>";
@@ -94,14 +104,15 @@
 
 		    <?php 
 		    	if(isset($_SESSION['idusuario']) == false){
-		    		echo "<p style='text-align:center;color:red;'>!Para poder escribir un comentario debe iniciar sesion!</p>";
+		    		echo "<p class='errorComentario'>!Para poder escribir un comentario debe iniciar sesión!</p>";
 		    	}else{
 		    ?>
 
-		    <form class="col-16" method="post">
+		    <form id="insertarComentario" class="col-16" method="post">
 		    	<p>Deje su comentario:</p>
-		    	<input type="text" class="col-16" required name="texto" />
-		    	<input type="submit" value="Enviar" name="enviarComentario"/>
+		    	<textarea name="texto" required class="col-16" rows="2"></textarea>
+		    	<!-- <input type="text" class="col-16" required name="texto" /> -->
+		    	<input type="submit" class='botonComentario' value="Enviar" name="enviarComentario"/>
 		    </form>
 
 

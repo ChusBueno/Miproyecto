@@ -108,7 +108,7 @@ class modelMain{
     }
 
 
-        public static function noticiasPaginador($categoria,$subcategoria,$pagina,$limite){
+    public static function noticiasPaginador($categoria,$subcategoria,$pagina,$limite){
         $db = new database();
 
         $sql = 'SELECT noticias.id ,noticias.titulo, noticias.subtitulo, noticias.texto, noticias.fecha, noticias.imagen FROM noticias,categorias,subcategorias WHERE categorias.nombre = :categoria_nombre AND subcategorias.nombre = :subcategoria_nombre AND noticias.id_categoria = categorias.id AND noticias.id_subcategoria = subcategorias.id ORDER BY noticias.id LIMIT :pagina, :limite';
@@ -125,21 +125,22 @@ class modelMain{
     }
 
 
-        public static function prueba($limite){
 
+    public static function crearCuenta($nombreUsuario,$nombre, $apellido,$contrasenia,$tlf){
         $db = new database();
-        $db->emulacionoff();
-        $sql = 'SELECT * from noticias LIMIT 0,:limite';
+        //el permiso numero 4 es el de usuario
+        $sql = 'INSERT INTO usuarios VALUES(NULL,:nombreUsuario ,:nombre, :apellido,:contrasenia, :tlf, 4)';
         $params = array(
-            ':limite' => $limite
+            ':nombreUsuario'   => $nombreUsuario,
+            ':nombre'     => $nombre,
+            ':apellido'     => $apellido,
+            ':contrasenia'    => $contrasenia,
+            ':tlf' => $tlf
         );
-        $db->query($sql,$params);
-        $noticias = $db->cargaMatriz();
-        return $noticias;
-
-       
+        $db->query($sql, $params);
+        $filas = $db->affectedRows(); 
+        return $filas;
     }
-
 
 
 

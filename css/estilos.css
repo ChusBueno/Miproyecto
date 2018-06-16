@@ -39,6 +39,58 @@ body{
 }
 
 
+/*LOGIN*/
+
+#login a{margin-left:20px;text-decoration: none;color:blue;}
+
+#login a:hover{text-decoration: underline;font-weight: bold;}
+
+#login input{margin-top:5%;padding: 3px;width:130px;}
+
+.botonLogin{
+	width:60px !important;
+    color: #ffffff;
+    background-color: #1883ba;
+    border: 2px solid #0016b0;
+    margin-left: 5px;
+}
+
+.botonLogin:hover{
+	color: #1d06ad;
+    background-color: #ffffff;
+}
+#login{float:right;}
+#login img{
+	height:50px;
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+
+#login form{float: right;}
+
+#login p{clear: both;float:right;}
+
+
+
+.apagar{
+	clear: both;
+	text-decoration: none;
+	color:red;
+	float:right;
+	margin-right:20px;
+}
+
+.apagar i{
+	float:right;
+	margin-left: 5px;
+	color:red;
+}
+
+
+
+
+
 
 /******************FIN HEADER******************************************/
 
@@ -426,7 +478,7 @@ aside{
 	text-align: center;
 }
 
-
+/*
 .comentarios div:nth-child(odd) {
 	 background-color:#7b7b7b;
 }
@@ -436,8 +488,19 @@ aside{
 }
 
 
+
+.comentarios div{background-color: #dadada;border:1px solid black;}
+*/
+.tituloComentarios{
+	border-top:1px solid black;
+	border-bottom:1px solid black;
+	padding:5px;
+	border-radius:0px;
+}
+
+.hrComentarios{width:70%;color:#6f6f6f;clear:both;}
 .comentario {
-	margin-bottom:10px;
+	margin-bottom:30px;
 }
 
 .comentario p{
@@ -447,10 +510,30 @@ aside{
 }
 
 
+.leerMas{
+	float:left;
+	text-decoration: none;
+	color:blue;
+
+}
+
+.leerMas:hover{
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.volverAtras{
+	text-decoration: none;
+}
+.volverAtras:hover{text-decoration: underline;font-weight: bold;}
+
+
 span.datos{
-	color:white !important;
+	color:gray !important;
 	float:right !important;
 }
+
+span.negro{color:black;}
 
 span.textosiguenos{
 	margin-right:20px;
@@ -464,17 +547,29 @@ span.textosiguenos{
 	cursor:pointer;
 }
 
-.apagar{
-	float:right;
-	text-decoration: none;
-	color: black;
+.errorComentario{text-align:center;color:red;}
+
+#insertarComentario p{font-weight: bold;}
+
+#insertarComentario textarea{resize:none;}
+
+
+.botonComentario{
+	width:60px !important;
+    color: #ffffff;
+    background-color: #1883ba;
+    border: 2px solid #0016b0;
+    margin-top: 10px;
 }
 
-.apagar i{
-	float:right;
-	color:red;
-	margin-left:10px;
+.botonComentario:hover{
+	color: #1d06ad;
+    background-color: #ffffff;
 }
+
+
+
+
 
 .siguenos{
 	clear:both;
@@ -602,6 +697,29 @@ h5.seguro{
 }
 
 
+.cerrar{
+	float:right;
+	font-size:1.5em;
+}
+
+
+.aceptar{
+	background-color: #06af20;
+	border:1px solid #cccccc;
+	margin-top:50px !important;
+	clear:both;
+	width:30% !important;
+	margin-left:35%;
+	border:3px solid black;
+	border-radius: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.aceptar:hover{
+	opacity: 0.8;
+}
+
 
 /**************FIN NOTICIAS (CENTRO PAGINA)*********************************/
 
@@ -678,7 +796,55 @@ footer{
 /************************************FOOTER*********************************/
 
 
+/****SNACKBAR****/
 
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+    z-index:999999;
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+
+/* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+/****FIN SNACKBAR***/
 
 
 
@@ -707,10 +873,9 @@ footer{
 
 /*NO TOCAR*/
 
-
-@media only screen and (min-width: 1400px){
-    /* 1920 */
- 
+/*portatiles grandes*/
+@media only screen and (min-width: 1401px){
+   
 	.col-1 {width: 6.23%;}
 	.col-2 {width: 12.5%;}
 	.col-3 {width: 18.75%;}
@@ -745,4 +910,81 @@ footer{
 	.offset-13 {margin-left: 81.25%;}
 	.offset-14 {margin-left: 87.5%;}
 	.offset-15 {margin-left: 93.75%;}
+}
+
+/*portatiles pequeños */
+@media (min-width: 1025px) and (max-width: 1400px) {
+	.col-lg-1 {width: 6.23%;}
+	.col-lg-2 {width: 12.5%;}
+	.col-lg-3 {width: 18.75%;}
+	.col-lg-4 {width: 24.92%;}
+	.col-lg-5 {width: 31.15%;}
+	.col-lg-6 {width: 37.38%;}
+	.col-lg-7 {width: 43.61%;}
+	.col-lg-8 {width: 49.84%;}
+	.col-lg-9 {width: 56.07%;}
+	.col-lg-10 {width: 62.3%;}
+	.col-lg-11 {width: 68.53%;}
+	.col-lg-12 {width: 74.76%;}
+	.col-lg-13 {width: 80.99%;}
+	.col-lg-14 {width: 87.22%;}
+	.col-lg-15 {width: 93.45%;}
+	.col-lg-16 {width: 100%;}
+
+	.offset-lg-1 {margin-left: 6.25%;}
+	.offset-lg-2 {margin-left: 12.5%;}
+	.offset-lg-3 {margin-left: 18.75%;}
+	.offset-lg-4 {margin-left: 25%;}
+	.offset-lg-5 {margin-left: 31.25%;}
+	.offset-lg-6 {margin-left: 37.50%;}
+	.offset-lg-7 {margin-left: 43.75%;}
+	.offset-lg-8 {margin-left: 50%;}
+	.offset-lg-9 {margin-left: 56.25%;}
+	.offset-lg-10 {margin-left: 62.5%;}
+	.offset-lg-11 {margin-left: 68.75%;}
+	.offset-lg-12 {margin-left: 75%;}
+	.offset-lg-13 {margin-left: 81.25%;}
+	.offset-lg-14 {margin-left: 87.5%;}
+	.offset-lg-15 {margin-left: 93.75%;}
+
+	.noticia{height:320px;}
+}
+
+/*tablets*/
+
+/*por debajo de 870 width el menu queda en 2 lineas */
+@media (min-width: 768px) and (max-width: 1024px) {
+	.col-md-1 {width: 6.23%;}
+	.col-md-2 {width: 12.5%;}
+	.col-md-3 {width: 18.75%;}
+	.col-md-4 {width: 24.92%;}
+	.col-md-5 {width: 31.15%;}
+	.col-md-6 {width: 37.38%;}
+	.col-md-7 {width: 43.61%;}
+	.col-md-8 {width: 49.84%;}
+	.col-md-9 {width: 56.07%;}
+	.col-md-10 {width: 62.3%;}
+	.col-md-11 {width: 68.53%;}
+	.col-md-12 {width: 74.76%;}
+	.col-md-13 {width: 80.99%;}
+	.col-md-14 {width: 87.22%;}
+	.col-md-15 {width: 93.45%;}
+	.col-md-16 {width: 100%;}
+
+	.offset-md-1 {margin-left: 6.25%;}
+	.offset-md-2 {margin-left: 12.5%;}
+	.offset-md-3 {margin-left: 18.75%;}
+	.offset-md-4 {margin-left: 25%;}
+	.offset-md-5 {margin-left: 31.25%;}
+	.offset-md-6 {margin-left: 37.50%;}
+	.offset-md-7 {margin-left: 43.75%;}
+	.offset-md-8 {margin-left: 50%;}
+	.offset-md-9 {margin-left: 56.25%;}
+	.offset-md-10 {margin-left: 62.5%;}
+	.offset-md-11 {margin-left: 68.75%;}
+	.offset-md-12 {margin-left: 75%;}
+	.offset-md-13 {margin-left: 81.25%;}
+	.offset-md-14 {margin-left: 87.5%;}
+	.offset-md-15 {margin-left: 93.75%;}
+
 }

@@ -130,4 +130,24 @@ if (isset($_GET['borrarComentario'])){
 }
 
 
+if(isset($_POST['CrearCuenta'])){
+
+//recoger datos
+
+    $nombreUsuario = $_POST['nombreUsuario'];
+    $nombre = $_POST['nombre'];
+    $apellido = $_POST['apellido'];
+    $contrasenia = $_POST['contrasenia'];
+    $tlf = $_POST['tlf'];
+
+    $insertar = modelMain::crearCuenta($nombreUsuario,$nombre,$apellido,$contrasenia,$tlf);
+
+
+    header("Refresh:1; url= index.php?option=main");
+
+
+
+}
+
+
 ?>

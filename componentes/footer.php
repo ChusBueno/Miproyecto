@@ -1,4 +1,4 @@
-<footer class="offset-3 col-10 col-lg-16">
+<footer class="offset-3 col-10 col-lg-16 col-md-16">
 
 <!--pie de pagina-->
 
@@ -30,7 +30,7 @@
 
 
 
-		<div id="avisoLegal" class="col-10 col-lg-16">
+		<div id="avisoLegal" class="col-10 col-lg-16 col-md-16">
 			<a href="pdfs/avisolegal.pdf" target="_new">LOPD AVISO LEGAL</a>
 		</div>
 

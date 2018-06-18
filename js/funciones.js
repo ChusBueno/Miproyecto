@@ -1,4 +1,15 @@
 
+var bandera = false;
+
+function abrirMenu(){
+	if(bandera == false){
+		document.getElementById("menu").style.display = "block";
+		bandera = true;
+	}else{
+		document.getElementById("menu").style.display = "none";
+		bandera = false;
+	}
+}
 
 function abrirModal(id){
 

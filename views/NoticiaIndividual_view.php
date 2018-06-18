@@ -25,14 +25,14 @@
 		<!-- aside -->
 		<?php  include 'componentes/aside.php'; ?>
 		
-		<article class="col-8">
+		<article class="col-8 col-lg-13 col-md-13 col-sm-16">
 
-			<div id="noticias" class="col-16">
+			<div id="noticias" class="col-16 col-lg-16 col-md-16 col-sm-16">
 				<a class="volverAtras" href="javascript:window.history.back();">&laquo; Volver atrás</a>			
 	        	<?php
 	        	//var_dump($datosNoticia);
 	        	//var_dump($comentarios);
-        		echo "<div class='noticiaInd col-16'>";
+        		echo "<div class='noticiaInd col-16 col-lg-16 col-md-16 col-sm-16'>";
 
 	            //<a href="admin.php?option=usuarios&editarUsuario='.$usuarioNivel['id'].'">
 	            echo "<h3>".$datosNoticia['titulo']."</a></h3>";
@@ -46,7 +46,7 @@
 	            echo "</div>";
 	        	
 				$url =  $_SERVER['QUERY_STRING'];
-	            echo "<div class='comentarios col-16'>";
+	            echo "<div class='comentarios col-16 col-lg-16 col-md-16 col-sm-16'>";
 	            echo "<h5 class='tituloComentarios'>Comentarios</h5>";
 	           // echo $_SESSION['permiso'];
 	            //var_dump($comentarios);
@@ -61,7 +61,7 @@
 
 	    				if(isset($_SESSION['permiso']) AND $_SESSION['permiso'] != 'Usuario'){
 	    					//var_dump($comentario);
-	    					echo "<div class='comentario col-16'>";
+	    					echo "<div class='comentario col-16 col-lg-16 col-md-16 col-sm-16'>";
 
 		    				echo "<p>".$comentario['texto']."<a class='icono' href='index.php?".$url."&borrarComentario=".$comentario['id']."'><i class='fas fa-trash-alt'></i></a></p>";
 		    				//echo "<p>".$comentario['texto']."<i value=".$comentario['id']." onclick='abrirModal()' class='fas fa-trash-alt icono'></i></p>";
@@ -76,7 +76,7 @@
 	    				}else{
 	    					//los usuarios solo pueden ver los comentarios
 
-		    				echo "<div class='comentario col-16'>";
+		    				echo "<div class='comentario col-16 col-lg-16 col-md-16 col-sm-16'>";
 
 		    				echo "<p>".$comentario['texto']."</p>";
 		    				echo "<p> <span class='datos'> Escrito por: ".$comentario['nombreUsuario'].". Fecha: ". $comentario['fecha']."</span></p>";																
@@ -108,9 +108,9 @@
 		    	}else{
 		    ?>
 
-		    <form id="insertarComentario" class="col-16" method="post">
+		    <form id="insertarComentario" class="col-16 col-lg-16 col-md-16 col-sm-16" method="post">
 		    	<p>Deje su comentario:</p>
-		    	<textarea name="texto" required class="col-16" rows="2"></textarea>
+		    	<textarea name="texto" required class="col-16 col-lg-16 col-md-16 col-sm-16" rows="2"></textarea>
 		    	<!-- <input type="text" class="col-16" required name="texto" /> -->
 		    	<input type="submit" class='botonComentario' value="Enviar" name="enviarComentario"/>
 		    </form>

@@ -1,8 +1,34 @@
 <?php 
-
 include 'models/main_model.php';
 
-$noticias = modelMain::obtenNoticias('arbitros','charlas_arbitros');
+//$noticias = modelMain::obtenNoticias('inicio','noticias_index');
+
+//probando paginador
+
+
+$numNoticias = modelMain::contarNoticias('arbitros','charlas_arbitros');
+
+$pagina = 1;
+
+
+$numNoticiasMostrar = 6;
+//redondeamos el numero 
+//dividir numero noticias por el numero que quiero mostrar, da el numero de paginas totales
+$numPaginas = round($numNoticias['COUNT(noticias.id)']/$numNoticiasMostrar);
+
+//$prueba = modelMain::prueba(8);
+//obtenemos las primeras 6 noticias 
+
+
+//pagina = 1, pero en la base de datos empieza a contar desde 0
+$noticias = modelMain::noticiasPaginador('arbitros','charlas_arbitros',($pagina-1)*$numNoticiasMostrar,$numNoticiasMostrar);
+
+
+if(isset($_GET['pag'])){
+    $pagina = $_GET['pag'];
+    $noticias = modelMain::noticiasPaginador('arbitros','charlas_arbitros',($pagina-1)*$numNoticiasMostrar,$numNoticiasMostrar);
+}
+
 
 
 
@@ -11,20 +37,20 @@ if (isset($_POST['botonLogin'])){
     $password = $_POST['contrasenia'];
     $verifLogin = modelMain::verifLog($usuario,$password);
     if($verifLogin == 1){
-    	//si el login es correcto guardo los datos del usuario en la sesion
-    	$datos = modelMain::datosUsuario($usuario);
+        //si el login es correcto guardo los datos del usuario en la sesion
+        $datos = modelMain::datosUsuario($usuario);
 
-    	 //variables de sesion
+         //variables de sesion
         $_SESSION['idusuario'] = $datos['id'];
-    	$_SESSION['nombre'] = $datos['nombre'];
-    	$_SESSION['apellido'] = $datos['apellido'];
-    	$_SESSION['permiso'] = $datos['descripcion'];
+        $_SESSION['nombre'] = $datos['nombre'];
+        $_SESSION['apellido'] = $datos['apellido'];
+        $_SESSION['permiso'] = $datos['descripcion'];
 
 
     }else{
         $error = "Has introducido mal tu usuario o tu contraseña";
     }
-	
+    
 }
 
 
@@ -101,6 +127,26 @@ if (isset($_GET['borrarComentario'])){
    // var_dump($cortada);
 
    header("Refresh:1; url= index.php?".$urlbuena."");
+}
+
+
+if(isset($_POST['CrearCuenta'])){
+
+//recoger datos
+
+    $nombreUsuario = $_POST['nombreUsuario'];
+    $nombre = $_POST['nombre'];
+    $apellido = $_POST['apellido'];
+    $contrasenia = $_POST['contrasenia'];
+    $tlf = $_POST['tlf'];
+
+    $insertar = modelMain::crearCuenta($nombreUsuario,$nombre,$apellido,$contrasenia,$tlf);
+
+
+    header("Refresh:1; url= index.php?option=main");
+
+
+
 }
 
 

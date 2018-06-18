@@ -1,4 +1,4 @@
-<aside class="offset-3 col-2 col-lg-3">
+<aside class="offset-3 col-2 col-lg-3 col-md-3">
 <!-- Menu izquierda-->
 		
 			<div id="menulateral">

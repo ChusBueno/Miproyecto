@@ -1,4 +1,4 @@
-.paginador{clear:both;text-align: center;}
+.paginador{clear:both;text-align: center;margin-top:10px;}
 
 /*IMAGEN FONDO BODY*/
 body{
@@ -8,7 +8,6 @@ body{
 
 
 /**********************HEADER***************************/
-
 
 /*Logo federacion*/
 #logo {
@@ -50,7 +49,7 @@ body{
 .botonLogin{
 	width:60px !important;
     color: #ffffff;
-    background-color: #1883ba;
+    background-color: #0066d0;
     border: 2px solid #0016b0;
     margin-left: 5px;
 }
@@ -60,16 +59,21 @@ body{
     background-color: #ffffff;
 }
 #login{float:right;}
+
 #login img{
+	float:left;
 	height:50px;
-	display: block;
-	float: left;
+	display: inline-block;
 	margin-right: 10px;
+	
 }
 
-#login form{float: right;}
+#login p{display:inline-block; float:right;margin:0px;line-height: 50px;}
 
-#login p{clear: both;float:right;}
+
+#login form{float: right;}
+	
+
 
 
 
@@ -78,7 +82,6 @@ body{
 	text-decoration: none;
 	color:red;
 	float:right;
-	margin-right:20px;
 }
 
 .apagar i{
@@ -102,13 +105,12 @@ nav{
 
 }
 
+.menuMovil{display:block; padding:10px; padding-left: 0px; visibility: hidden;font-size: 1.5em;color:#0F30B5;}
 
 /*MENU*/
 
-/***************************NO TOCAR NADA******************/
-#menumovil{
-	display:none;
-}
+
+
 
 #menu {
 	padding:0px;
@@ -154,7 +156,7 @@ nav{
 
 #menu ul li a{
 	text-decoration:none;
-	color:white;/*COLOR DE LA LETRA DE LOS MENUS, PUEDES CAMBIARLO SI QUIERES*/
+	color:white;
 	display:block;
 	padding:10px;
 	margin-bottom:1px;
@@ -163,7 +165,6 @@ nav{
 #menu ul li a:hover{
 	opacity:0.5;
 }
-/*******HASTA AQUI NO TOCAR*********/
 
 
 
@@ -389,18 +390,25 @@ aside{
 
 
 /*caja grande noticias*/
-#noticias{
+#noticias, #jornada{
 	background-color:white;
 	border:1px solid #C8C2BC;
 }
 
+
+
 .noticia{
 	text-align:center;
 	margin:0 auto;
-	margin-bottom:0px;
 	/*probando*/
-	height:400px;
+
 }
+
+/*para que no se descuadre*/
+#noticias div:nth-child(3), #noticias div:nth-child(5){clear:both;}
+
+
+
 
 .noticiaInd{
 	text-align:center;
@@ -500,7 +508,8 @@ aside{
 
 .hrComentarios{width:70%;color:#6f6f6f;clear:both;}
 .comentario {
-	margin-bottom:30px;
+	margin-top:10px;
+	margin-bottom:10px;
 }
 
 .comentario p{
@@ -913,7 +922,7 @@ However, delay the fade out process for 2.5 seconds */
 }
 
 /*portatiles pequeños */
-@media (min-width: 1025px) and (max-width: 1400px) {
+@media (min-width: 1023px) and (max-width: 1400px) {
 	.col-lg-1 {width: 6.23%;}
 	.col-lg-2 {width: 12.5%;}
 	.col-lg-3 {width: 18.75%;}
@@ -947,13 +956,13 @@ However, delay the fade out process for 2.5 seconds */
 	.offset-lg-14 {margin-left: 87.5%;}
 	.offset-lg-15 {margin-left: 93.75%;}
 
-	.noticia{height:320px;}
+	.modal-Data{width:80%;}
 }
 
 /*tablets*/
 
-/*por debajo de 870 width el menu queda en 2 lineas */
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (min-width: 768px) and (max-width: 1023px) {
 	.col-md-1 {width: 6.23%;}
 	.col-md-2 {width: 12.5%;}
 	.col-md-3 {width: 18.75%;}
@@ -987,4 +996,183 @@ However, delay the fade out process for 2.5 seconds */
 	.offset-md-14 {margin-left: 87.5%;}
 	.offset-md-15 {margin-left: 93.75%;}
 
+
+
+	#login input{width:100px;}
+
+	.botonLogin{width:50px !important;}
+
+	.modal-Data{width:80%;}
+
+	.cajalateral img{height: 60px;}
+
+	#slider a{color:white;}
+
+
 }
+
+
+/*MOVIL GRANDE*/
+@media (min-width: 448px) and (max-width: 767px) {
+	
+	.col-sm-1 {width: 6.23%;}
+	.col-sm-2 {width: 12.5%;}
+	.col-sm-3 {width: 18.75%;}
+	.col-sm-4 {width: 24.92%;}
+	.col-sm-5 {width: 31.15%;}
+	.col-sm-6 {width: 37.38%;}
+	.col-sm-7 {width: 43.61%;}
+	.col-sm-8 {width: 49.84%;}
+	.col-sm-9 {width: 56.07%;}
+	.col-sm-10 {width: 62.3%;}
+	.col-sm-11 {width: 68.53%;}
+	.col-sm-12 {width: 74.76%;}
+	.col-sm-13 {width: 80.99%;}
+	.col-sm-14 {width: 87.22%;}
+	.col-sm-15 {width: 93.45%;}
+	.col-sm-16 {width: 100%;}
+
+	.offset-sm-1 {margin-left: 6.25%;}
+	.offset-sm-2 {margin-left: 12.5%;}
+	.offset-sm-3 {margin-left: 18.75%;}
+	.offset-sm-4 {margin-left: 25%;}
+	.offset-sm-5 {margin-left: 31.25%;}
+	.offset-sm-6 {margin-left: 37.50%;}
+	.offset-sm-7 {margin-left: 43.75%;}
+	.offset-sm-8 {margin-left: 50%;}
+	.offset-sm-9 {margin-left: 56.25%;}
+	.offset-sm-10 {margin-left: 62.5%;}
+	.offset-sm-11 {margin-left: 68.75%;}
+	.offset-sm-12 {margin-left: 75%;}
+	.offset-sm-13 {margin-left: 81.25%;}
+	.offset-sm-14 {margin-left: 87.5%;}
+	.offset-sm-15 {margin-left: 93.75%;}
+
+
+	.menuMovil{visibility:visible;}
+
+	#menu{display:none;position:absolute;}
+
+	#menu ul{width:auto;}
+	#menu ul li{float:none;}
+
+	#menu ul li ul{
+		width: auto;
+		margin-top:-25px;
+		margin-left:110px;
+	}
+
+	/*separacion boton menu slider*/
+
+	nav{padding-bottom: 0px !important;}
+
+	#logo a{height:110px;}
+
+	/*#login p{float:none;text-align: center;display: block;}*/
+
+	#login p{float:left;display: inline-block;}
+
+	.apagar{clear:none;}
+
+	#login form{float:none; margin:0 auto;text-align: center;}
+
+	#login input{width:auto;margin:0px;}
+
+	.botonLogin{margin-left:10px !important;}
+
+	/*para que quede a la misma altura todo*/
+	.apagar, .apagar i{line-height: 50px;}
+
+	#agenda{height: auto;}
+
+	aside{display: none;}
+
+	/*modal*/
+
+	.modal-data{width:80%;}
+
+	.aceptar{width:50% !important; margin-left:25% !important;}
+
+	.agenda p{text-align: center;}
+
+	#slider a{color:white;}
+
+
+	.imagenNoticiaInd{height: 150px;}
+
+	.jornada img{height:120px;}
+
+}
+
+
+@media (min-width: 0px) and (max-width: 447px) {
+
+	[class*="col-"]{
+		float:left;
+		padding:15px;
+		width:100%;
+	}
+
+
+	#logo a{background-position: 50%;height:150px;}
+
+	#login p{float:right;display: inline-block;}
+	.menuMovil{visibility:visible;}
+
+	#menu{display:none;position:absolute;}
+	#menu ul{width:auto;}
+	#menu ul li{float:none;}
+
+	#menu ul li ul{
+		width: auto;
+		margin-top:-25px;
+		margin-left:110px;
+	}
+
+	/*separacion boton menu slider*/
+
+	nav{padding-bottom: 0px !important;}
+
+
+	#login p{float:left;line-height: 40px;}
+
+	#login img{height:40px;}
+
+	#login form{float:none; margin:0 auto;text-align: center;}
+
+	#login input{width:100%;margin-top:10px;}
+
+	.botonLogin{margin-top:10px !important;}
+
+	/*para que quede a la misma altura todo*/
+	.apagar, .apagar i{line-height: 50px;}
+
+	#agenda{height: auto;}
+
+	aside{display: none;}
+
+	.modal-data{width:80%;}
+
+
+	.modal-data label{width:100%;}
+
+	.modal-data input, .modal-data select, .modal-data textarea{width:100%;}
+
+
+	.aceptar{width:80% !important; margin-left:10% !important;}
+
+	.imagenNoticia{height:100px;}
+
+	.agenda p{text-align: center;}
+
+	#slider a{color:white;}
+
+	.imagenNoticiaInd{height: 120px;}
+
+	.jornada img{height:120px;}
+
+
+
+
+}
+

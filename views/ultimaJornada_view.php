@@ -24,26 +24,26 @@
 		<!-- aside -->
 		<?php  include 'componentes/aside.php'; ?>
 		
-		<article class="col-8">
+		<article class="col-8 col-lg-13 col-md-13 col-sm-16">
 
-			<div id="noticias" class="col-16">
+			<div id="jornada" class="col-16 col-lg-16 col-md-16 col-sm-16">
 				
 
-				<div class="jornada col-8">
+				<div class="jornada col-8 col-lg-8 col-md-8 col-sm-8">
 					<a href="#" target="_new"><img src="css/imagenes/aside/resultados/resescolar.png"/></a>
 				</div>
 
-				<div class="jornada col-8">
+				<div class="jornada col-8 col-lg-8 col-md-8 col-sm-8">
 					<a href="#" target="_new"><img src="css/imagenes/aside/resultados/resfederada.png"/></a>
 				</div>
 
 				<hr>
 
-				<div class="jornada col-8">
+				<div class="jornada col-8 col-lg-8 col-md-8 col-sm-8">
 					<a href="#" target="_new"><img src="css/imagenes/aside/resultados/reseba.png"/></a>
 				</div>
 
-				<div class="jornada col-8">
+				<div class="jornada col-8 col-lg-8 col-md-8 col-sm-8">
 					<a href="#" target="_new"><img src="css/imagenes/aside/resultados/resprifem.png"/></a>
 				</div>
 		    

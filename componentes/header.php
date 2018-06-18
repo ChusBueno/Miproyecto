@@ -1,15 +1,15 @@
 		<?php /*var_dump($_SESSION);*/ if(isset($_SESSION['idusuario']) == false){?>
-		<header class="offset-3 col-10 col-lg-16">
-			<div id="logo" class="col-2 col-lg-2">
-					<a href="#"></a>
+		<header class="offset-3 col-10 col-lg-16 col-md-16 col-sm-16">
+			<div id="logo" class="col-2 col-lg-2 col-md-2 col-sm-4">
+					<a href="index.php?option=main"></a>
 			</div>
 
-			<div id="titulo" class="offset-1 col-6 col-lg-6">
+			<div id="titulo" class="offset-1 col-6 col-lg-6 col-md-6 col-sm-12">
 				<h1>Federación Cántabra</h1>
 				<h1>de Baloncesto</h1>
 			</div>
 
-			<div id="login" class="col-7 col-lg-7 offset-lg-1">
+			<div id="login" class="col-7 col-lg-7 offset-lg-1 col-md-7 offset-md-1 col-sm-16">
 
 				<form  method="post">
 
@@ -67,19 +67,20 @@
 
 		<?php }else{ ?>
 
-		<header class="offset-3 col-10 col-lg-16">
-			<div id="logo" class="col-2 col-lg-2">
+		<header class="offset-3 col-10 col-lg-16 col-md-16 col-sm-16">
+			<div id="logo" class="col-2 col-lg-2 col-md-2 col-sm-3"> 
 					<a href="#"></a>
 			</div>
 
-			<div id="titulo" class="offset-1 col-6 col-lg-6">
+			<div id="titulo" class="offset-1 col-6 col-lg-6 col-md-6 col-sm-13">
 				<h1>Federación Cántabra</h1>
 				<h1>de Baloncesto</h1>
 			</div>
 
-			<div id="login" class="offset-2 col-5 col-lg-5 offset-lg-3">
+			<div id="login" class="offset-2 col-5 col-lg-5 offset-lg-3 col-md-6 offset-md-2 col-sm-16">				
+				<?php echo "<p><b>Bienvenido</b> ". $_SESSION['nombre']." ".$_SESSION['apellido']; ?>
 				<img src="css/imagenes/login/user.svg"/>
-				<?php echo "<p><b>Bienvenido</b> ". $_SESSION['nombre']." ".$_SESSION['apellido']."</p>"; ?>
+			</p>
 				<a href="index.php?option=logout" class="apagar"><i class='fas fa-power-off'></i>cerrar sesión</a>
 				<?php // echo "</p>"; ?>
 

@@ -1,4 +1,4 @@
-<section class="offset-3 col-6 col-lg-10">
+<section class="offset-3 col-6 col-lg-10 col-md-10 col-sm-16">
 
 <?php 
 
@@ -19,7 +19,7 @@ $imagenes = modelMain::obtenNoticias('slider','noticias_slider');
 
 			var images = <?php echo json_encode($imagenes);?>;
 
-			console.log(images);
+			//console.log(images);
 			
 
 
@@ -95,7 +95,7 @@ $imagenes = modelMain::obtenNoticias('slider','noticias_slider');
 
 
 
-			<div id="slider" class="col-16 col-lg-16">
+			<div id="slider" class="col-16 col-lg-16 col-md-16 col-sm-16">
 
 			<!-- SLIDER -->
 

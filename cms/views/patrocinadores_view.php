@@ -20,7 +20,7 @@
 		<?php include 'cms/componentes/aside.php'; ?>
 
 
-		<div id="patrocinadores" class="col-13">
+		<div id="patrocinadores" class="col-13 col-lg-13 col-md-13">
 		<i  onclick='abrirModal("modalAnadir")' class='add fas fa-plus'> <span class="left">Añadir Patrocinador</span></i>
 
 

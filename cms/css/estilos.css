@@ -380,17 +380,17 @@ However, delay the fade out process for 2.5 seconds */
 }
 
 
-/*NO TOCAR*/
 
-/*
-@media only screen and (min-width: 1400px){
-    /* 1920 */
- 
+/*portatiles grandes*/
+@media only screen and (min-width: 1401px){
+   
 	.col-1 {width: 6.23%;}
 	.col-2 {width: 12.5%;}
 	.col-3 {width: 18.75%;}
 	.col-4 {width: 24.92%;}
+
 	.col-5 {width: 31.15%;}
+
 	.col-6 {width: 37.38%;}
 	.col-7 {width: 43.61%;}
 	.col-8 {width: 49.84%;}
@@ -418,9 +418,120 @@ However, delay the fade out process for 2.5 seconds */
 	.offset-13 {margin-left: 81.25%;}
 	.offset-14 {margin-left: 87.5%;}
 	.offset-15 {margin-left: 93.75%;}
+}
 
-/*TABLETS*/
+/*portatiles pequeños */
+@media (min-width: 1023px) and (max-width: 1400px) {
+	.col-lg-1 {width: 6.23%;}
+	.col-lg-2 {width: 12.5%;}
+	.col-lg-3 {width: 18.75%;}
+	.col-lg-4 {width: 24.92%;}
+	.col-lg-5 {width: 31.15%;}
+	.col-lg-6 {width: 37.38%;}
+	.col-lg-7 {width: 43.61%;}
+	.col-lg-8 {width: 49.84%;}
+	.col-lg-9 {width: 56.07%;}
+	.col-lg-10 {width: 62.3%;}
+	.col-lg-11 {width: 68.53%;}
+	.col-lg-12 {width: 74.76%;}
+	.col-lg-13 {width: 80.99%;}
+	.col-lg-14 {width: 87.22%;}
+	.col-lg-15 {width: 93.45%;}
+	.col-lg-16 {width: 100%;}
+
+	.offset-lg-1 {margin-left: 6.25%;}
+	.offset-lg-2 {margin-left: 12.5%;}
+	.offset-lg-3 {margin-left: 18.75%;}
+	.offset-lg-4 {margin-left: 25%;}
+	.offset-lg-5 {margin-left: 31.25%;}
+	.offset-lg-6 {margin-left: 37.50%;}
+	.offset-lg-7 {margin-left: 43.75%;}
+	.offset-lg-8 {margin-left: 50%;}
+	.offset-lg-9 {margin-left: 56.25%;}
+	.offset-lg-10 {margin-left: 62.5%;}
+	.offset-lg-11 {margin-left: 68.75%;}
+	.offset-lg-12 {margin-left: 75%;}
+	.offset-lg-13 {margin-left: 81.25%;}
+	.offset-lg-14 {margin-left: 87.5%;}
+	.offset-lg-15 {margin-left: 93.75%;}
 
 
-/*MOVILES*/
+}
+
+/*tablets*/
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.col-md-1 {width: 6.23%;}
+	.col-md-2 {width: 12.5%;}
+	.col-md-3 {width: 18.75%;}
+	.col-md-4 {width: 24.92%;}
+	.col-md-5 {width: 31.15%;}
+	.col-md-6 {width: 37.38%;}
+	.col-md-7 {width: 43.61%;}
+	.col-md-8 {width: 49.84%;}
+	.col-md-9 {width: 56.07%;}
+	.col-md-10 {width: 62.3%;}
+	.col-md-11 {width: 68.53%;}
+	.col-md-12 {width: 74.76%;}
+	.col-md-13 {width: 80.99%;}
+	.col-md-14 {width: 87.22%;}
+	.col-md-15 {width: 93.45%;}
+	.col-md-16 {width: 100%;}
+
+	.offset-md-1 {margin-left: 6.25%;}
+	.offset-md-2 {margin-left: 12.5%;}
+	.offset-md-3 {margin-left: 18.75%;}
+	.offset-md-4 {margin-left: 25%;}
+	.offset-md-5 {margin-left: 31.25%;}
+	.offset-md-6 {margin-left: 37.50%;}
+	.offset-md-7 {margin-left: 43.75%;}
+	.offset-md-8 {margin-left: 50%;}
+	.offset-md-9 {margin-left: 56.25%;}
+	.offset-md-10 {margin-left: 62.5%;}
+	.offset-md-11 {margin-left: 68.75%;}
+	.offset-md-12 {margin-left: 75%;}
+	.offset-md-13 {margin-left: 81.25%;}
+	.offset-md-14 {margin-left: 87.5%;}
+	.offset-md-15 {margin-left: 93.75%;}
+
+
+	#logo a{height: 100px;}
+
+	.modal-data{width:70%;}
+
+}
+
+
+/*MOVIL GRANDE*/
+@media (min-width: 0px) and (max-width: 767px) {
+	
+	[class*="col-"]{
+		width:100%;
+	}
+
+	#logo a{background-position: 50%;height:150px;}
+
+	#titulo{text-align: center;}
+	.dato{margin-left: 0px;}
+
+	form{text-align: center;}
+
+
+	.modal-data{width: 80%;}
+
+	.aceptar{margin-left:0px;width: auto !important; padding:10px;}
+
+	.modal-data form label, .modal-data form input, .modal-data form select, .modal-data form textarea{width:100%;}
+
+	#login form input{width: 80%;margin-bottom:20px;}
+
+	/*el clear:both no esta funcionando*/
+
+	#login form input:last-child{width: auto !important;clear:both !important;}
+
+
+
+
+}
 

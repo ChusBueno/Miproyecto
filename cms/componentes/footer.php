@@ -1,4 +1,4 @@
-<footer class="col-16">
+<footer class="col-16 col-lg-16 col-md-16">
 
 	<div>
 		<i class="far fa-copyright"> 2018 </i><a href="#">Federación Cántabra de Baloncesto</a>

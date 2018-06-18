@@ -19,7 +19,7 @@
 		<?php include 'cms/componentes/aside.php'; ?>
 
 
-		<div id="usuarios" class="col-13">
+		<div id="usuarios" class="col-13 col-lg-13 col-md-13">
 
 			
 			<form action="admin.php?option=usuarios" method="post">

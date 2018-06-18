@@ -20,7 +20,7 @@
 		<?php include 'cms/componentes/aside.php'; ?>
 
 
-		<div id="noticias" class="col-13">
+		<div id="noticias" class="col-13 col-lg-13 col-md-13">
 
 
 			<?php 

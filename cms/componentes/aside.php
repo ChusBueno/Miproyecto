@@ -1,4 +1,4 @@
-<aside class="col-3">
+<aside class="col-3 col-lg-3 col-md-3">
 
 <?php
 

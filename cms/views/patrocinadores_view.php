@@ -52,6 +52,19 @@
 
 		</div>
 
+			<?php
+			
+					//paginador
+			    	echo "<div class='paginador'>";
+				    for($i=0; $i<$numPaginas;$i++){
+				       echo '<a href="admin.php?option=patrocinadores&pag='.($i+1).'">'.($i+1).'</a> | ';
+				    } 
+				    echo "</div>";
+
+	
+
+		         ?>
+
 
 		<div id="modalAnadir" class="modal">
 
@@ -66,7 +79,7 @@
 				       	<input type="text" name="nombre" required id="nombre" />
 
 						<label for="url">Pagina web:</label>
-				       	<input type="text" name="url" required id="url" />
+				       	<input type="text" name="url" required id="url"  pattern="https?://.+" title="Debe empezar por:  http://" />
 
 				       	<label for="imagen">Imagen: </label>
 
@@ -100,7 +113,7 @@
 				       	<input type="text" name="nombreEditar" required id="nombreEditar"  value="<?php echo $datosPatrocinador['nombre'] ?>" />
 
 						<label for="url">Pagina web:</label>
-				       	<input type="text" name="urlEditar" required id="urlEditar"  value="<?php echo $datosPatrocinador['url'] ?>"/>
+				       	<input type="text" name="urlEditar" required id="urlEditar"  pattern="https?://.+" title="Debe empezar por:  http://"  value="<?php echo $datosPatrocinador['url'] ?>"/>
 
 				       	<label for="imagen">Imagen: </label>
 

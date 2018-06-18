@@ -2,7 +2,33 @@
 
 include 'cms/models/patrocinadores_model.php';
 
-$patrocinadores = patrocinadoresModel::patrocinadores();
+
+$numPatrocinadores = patrocinadoresModel::contarPatrocinadores();
+
+$pagina = 1;
+
+
+$numNoticiasMostrar = 6;
+
+
+//redondeamos el numero 
+//dividir numero noticias por el numero que quiero mostrar, da el numero de paginas totales
+//ceil mejor que round, ceil redondea hacia arriba siempre
+$numPaginas = ceil($numPatrocinadores['COUNT(id)']/$numNoticiasMostrar);
+
+
+//pagina = 1, pero en la base de datos empieza a contar desde 0
+$patrocinadores = patrocinadoresModel::patrocinadoresPaginador(($pagina-1)*$numNoticiasMostrar,$numNoticiasMostrar);
+
+
+
+
+if(isset($_GET['pag'])){
+    $pagina = $_GET['pag'];
+    $patrocinadores = patrocinadoresModel::patrocinadoresPaginador(($pagina-1)*$numNoticiasMostrar,$numNoticiasMostrar);
+}
+
+
 
 
 //para comprobar que es administrador, en caso de q cambien la url

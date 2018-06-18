@@ -96,14 +96,6 @@ class database {
         $this->conexion = null;
     }
 
-    public function prueba($limite){
-        $this->stmt->bindParam(':limite', $limite, PDO::PARAM_INT);
-
-    }
-
-
-
-
 
 
 

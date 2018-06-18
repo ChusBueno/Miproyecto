@@ -65,6 +65,32 @@ class patrocinadoresModel{
     }
 
 
+
+
+
+    public static function patrocinadoresPaginador($pagina,$limite){
+        $db = new database();
+        $sql = "SELECT * FROM patrocinadores LIMIT :pagina, :limite";
+        $params = array(":pagina" => $pagina, ':limite' => $limite);
+        $db->emulacionoff();
+        $db->query($sql,$params);
+        $patrocinadores = $db->cargaMatriz();
+        return $patrocinadores;
+    }
+
+
+    public static function contarPatrocinadores(){
+        $db = new database();
+        $sql = 'SELECT COUNT(id) FROM patrocinadores';
+        $db->query($sql);
+        $cuenta = $db->cargaFila();
+        return $cuenta;
+    }
+
+
+
+
+
 }
 
 

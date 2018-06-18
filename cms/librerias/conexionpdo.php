@@ -118,5 +118,11 @@ class database {
         }
     }
 
+
+
+    public function emulacionoff(){
+        $this->conexion->setAttribute( PDO::ATTR_EMULATE_PREPARES, false );
+    }
+
 }
 ?>

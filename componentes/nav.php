@@ -9,7 +9,7 @@
 						<li class="submenu"><a href="#">Horarios-Resultados</a></li>
 						<li class="submenu"><a href="#">Liga EBA</a></li>
 						<li class="submenu"><a href="#">Primera Femenina</a></li>
-						<li class="submenu"><a href="#">Jornada</a></li>
+						<li class="submenu"><a href="index.php?option=verpdf&nombre=jornada">Jornada</a></li>
 						<li class="submenu"><a href="#">Baby</a></li>
 					</ul>
 				</li>

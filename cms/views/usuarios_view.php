@@ -92,6 +92,7 @@
 
 						<label for="nombre">Nombre:</label>
 				       	<input type="text" name="nombre" id="nombre" required/>
+				       	<div id="resultado"></div>
 
 
 				       	<label for="apellido">Apellido:</label>
@@ -99,11 +100,11 @@
 
 				       	<label for="contrasenia">Contraseña:</label>
 				       				   					   				  			       
-				       	<input type="password" name="contrasenia" id="contrasenia" required/>
+				       	<input type="password" name="contrasenia" id="contrasenia" pattern=".{6,}" title="Tiene que tener más de 6 caracteres!" required/>
 
 
 				       	<label for="tlf">Telefono:</label>
-				       	<input type="tel" name="tlf" id="tlf" />
+				       	<input type="tel" name="tlf" id="tlf" pattern="[0-9]{9}" title="Los 9 digitos seguidos"/>
 
 				       	<label for="permiso">Permiso:</label>
 
@@ -150,11 +151,11 @@
 
 				       	<label for="contrasenia">Contraseña:</label>
 				       				   					   				  			       
-				       	<input type="password" name="contraseniaEditar" id="contraseniaEditar" required value="<?php echo $datosUsuario['contrasenia'] ?>"/>
+				       	<input type="password" name="contraseniaEditar" id="contraseniaEditar" pattern=".{6,}" title="Tiene que tener más de 6 caracteres!" required value="<?php echo $datosUsuario['contrasenia'] ?>"/>
 
 
 				       	<label for="tlf">Telefono:</label>
-				       	<input type="tel" name="tlfEditar" id="tlfEditar" value="<?php echo $datosUsuario['telefono'] ?>"	/>
+				       	<input type="tel" name="tlfEditar" id="tlfEditar" pattern="[0-9]{9}" title="Los 9 digitos seguidos" value="<?php echo $datosUsuario['telefono'] ?>"	/>
 
 				       	<label for="permiso">Permiso:</label>
 
@@ -294,35 +295,8 @@
 
 
 
-		
-
-
-
-
-
-
-		<!--
-
-		<div style="text-align: center;">
-
-			<form action="#" method="post">
-
-				<input type="submit" name="crearUsuario" value="Crear Usuario"/>
-
-			</form>
-
-		</div>
-
-	-->
 		<!-- footer-->
 		<?php include 'cms/componentes/footer.php'; ?>
-
-
-
-
-			<script>
-				
-			</script>
 
 
 	</body>

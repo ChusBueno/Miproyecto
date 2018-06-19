@@ -14,7 +14,7 @@ $pagina = 1;
 $numNoticiasMostrar = 6;
 //redondeamos el numero 
 //dividir numero noticias por el numero que quiero mostrar, da el numero de paginas totales
-$numPaginas = round($numNoticias['COUNT(noticias.id)']/$numNoticiasMostrar);
+$numPaginas = ceil($numNoticias['COUNT(noticias.id)']/$numNoticiasMostrar);
 
 //$prueba = modelMain::prueba(8);
 //obtenemos las primeras 6 noticias 
@@ -143,11 +143,34 @@ if(isset($_POST['CrearCuenta'])){
     $insertar = modelMain::crearCuenta($nombreUsuario,$nombre,$apellido,$contrasenia,$tlf);
 
 
-    header("Refresh:1; url= index.php?option=main");
+    if ($insertar == 1){
+
+        ?>
+        <script type="text/javascript">
+            //alert("Cuenta creada");
+            var respuesta = document.getElementById("respuesta");
+            respuesta.classList.add("correcto");
+            respuesta.innerHTML = "Cuenta creada!";   
+
+        </script> <?php
+    }else{
+        ?>
+        <script type="text/javascript">
+            var respuesta = document.getElementById("respuesta");
+            respuesta.classList.add("incorrecto");
+            respuesta.innerHTML = "No se ha podido crear la cuenta!";
+           
+            
+        </script>
+        <?php
+    }
+
+    //var_dump($insertar);die;
+
+    header("Refresh:2; url= index.php?option=main");
 
 
 
 }
-
 
 ?>

@@ -31,7 +31,7 @@
 
 
 		<div id="avisoLegal" class="col-10 col-lg-16 col-md-16">
-			<a href="pdfs/avisolegal.pdf" target="_new">LOPD AVISO LEGAL</a>
+			<a href="index.php?option=verpdf&nombre=avisolegal">LOPD AVISO LEGAL</a>
 		</div>
 
 		<!--Final pie de pagina-->

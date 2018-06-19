@@ -32,6 +32,8 @@
 	            <?php } ?>
 
 	        </div>
+
+	        <div><p id="respuesta"></p></div>
 			<!---------------- MODAL -->
 			<div id="modalAnadir" class="modal">
 
@@ -71,6 +73,7 @@
 
 
 			</div>
+
 
 
 		</header>

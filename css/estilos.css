@@ -1,5 +1,6 @@
 .paginador{clear:both;text-align: center;margin-top:10px;}
 
+
 /*IMAGEN FONDO BODY*/
 body{
 	background-color:rgb(231, 223, 215);
@@ -90,7 +91,10 @@ body{
 	color:red;
 }
 
+#respuesta{text-align: center;}
 
+.correcto{color:green;}
+.incorrecto{color:red;}
 
 
 
@@ -107,6 +111,8 @@ nav{
 
 .menuMovil{display:block; visibility: hidden;}
 
+
+.oculto{display: none;}
 
 /*MENU*/
 
@@ -391,7 +397,7 @@ aside{
 
 
 /*caja grande noticias*/
-#noticias, #jornada, #anuario{
+#noticias, #jornada, #anuario,#equipo,#club{
 	background-color:white;
 	border:1px solid #C8C2BC;
 }
@@ -399,11 +405,11 @@ aside{
 
 #anuario form{text-align: center;margin-top:10px;margin-bottom:30px;}
 
-#anuario h3{text-align: center;clear:both;}
+#anuario h3,#equipo h3, #club h3{text-align: center;clear:both;}
 
 
 
-#anuario{text-align: center;}
+#anuario,#club,#equipo{text-align: center;}
 
 .imgequipo{width:80%;margin-bottom: 20px; margin-top:20px;}
 
@@ -411,7 +417,7 @@ aside{
 
 .equipo p, .club p{
 	color:#434242;
-	text-align:justify;
+	text-align:left;
 	font-size:1em;
 }
 
@@ -451,6 +457,10 @@ aside{
 
 /*para que no se descuadre*/
 #noticias div:nth-child(3), #noticias div:nth-child(5){clear:both;}
+
+#anuario div:nth-child(4), #anuario div:nth-child(6){clear:both;}
+
+
 
 
 
@@ -1155,6 +1165,8 @@ However, delay the fade out process for 2.5 seconds */
 
 	.jornada img{height:120px;}
 
+	.oculto{display: block;}
+
 }
 
 
@@ -1224,7 +1236,7 @@ However, delay the fade out process for 2.5 seconds */
 
 	.jornada img{height:120px;}
 
-
+	.oculto{display: block;}
 
 }
 

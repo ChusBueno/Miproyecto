@@ -33,11 +33,11 @@
 
 
 				<div class="jornada col-8 col-lg-8 col-md-8 col-sm-8">
-					<a href="#" target="_new"><img src="css/imagenes/aside/seguro/actuacion.png"/></a>
+					<a href="index.php?option=verpdf&nombre=protocolosenior"><img src="css/imagenes/aside/seguro/actuacion.png"/></a>
 				</div>
 
 				<div class="jornada col-8 col-lg-8 col-md-8 col-sm-8">
-					<a href="#" target="_new"><img src="css/imagenes/aside/seguro/poliza.png"/></a>
+					<a href="index.php?option=verpdf&nombre=poliza"><img src="css/imagenes/aside/seguro/poliza.png"/></a>
 				</div>
 
 				<hr>
@@ -47,11 +47,11 @@
 
 
 				<div class="jornada col-8 col-lg-8 col-md-8 col-sm-8">
-					<a href="#" target="_new"><img src="css/imagenes/aside/seguro/actuacionnosen.png"/></a>
+					<a href="index.php?option=verpdf&nombre=actuacionescolar"><img src="css/imagenes/aside/seguro/actuacionnosen.png"/></a>
 				</div>
 
 				<div class="jornada col-8 col-lg-8 col-md-8 col-sm-8">
-					<a href="#" target="_new"><img src="css/imagenes/aside/seguro/protocolonosen.png"/></a>
+					<a href="index.php?option=verpdf&nombre=protocolo"><img src="css/imagenes/aside/seguro/protocolonosen.png"/></a>
 				</div>
 		    
 

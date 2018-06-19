@@ -152,7 +152,7 @@
 				       	<input type="text" name="tituloNoticia" id="tituloNoticia" required />
 
 						<label for="subtitulo">Subtitulo:</label>
-				       	<input type="text" name="subtituloNoticia" id="subtituloNoticia" required/>
+				       	<input type="text" name="subtituloNoticia" id="subtituloNoticia" />
 
 				       	<label for="categoria">Categoria:</label>
 						<select id="categoriasAnadir" name="categoriasAnadir">
@@ -173,13 +173,13 @@
 					       	
 
 				       	<label for="texto">Texto:</label>
-				       	<textarea name="texto" id="texto" maxlength="400" rows="10"></textarea>
+				       	<textarea name="texto" id="texto" maxlength="1000" rows="10"></textarea>
 
 				       	</textarea>
 
 				       	<label for="imagen">Imagen: </label>
 
-				       	<input type="file" name="fichero" required/>
+				       	<input type="file" name="fichero"/>
 
 
 							     

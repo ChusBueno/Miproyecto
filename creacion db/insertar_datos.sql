@@ -92,18 +92,18 @@ INSERT INTO patrocinadores (id,nombre,url,imagen) VALUES
 -- TABLA CLUBES 
 
 INSERT INTO anuario_clubes (id, responsable, nombreclub, imagen, localidad) VALUES
-(null, 'Daniel Celorrio', 'Cantbasket 04', null, 'Santander'),
-(null, 'Julio', 'Calasanz', null, 'Santander'),
-(null, 'Panta', 'Solares', null, 'Solares'),
-(null, 'Pepito', 'CBT Torrelavega', null, 'Torrelavega'),
-(null, 'Nacho', 'Pielagos', null, 'Renedo de Pielagos'),
-(null, 'Pepito', 'Amide', null, 'Maliaño'),
-(null, 'Raul', 'Castrobasket', null, 'Castro-Urdiales'),
-(null, 'Pepito', 'La Paz', null, 'Torrelavega'),
-(null, 'Pepito', 'Ventanas Arsan', null, 'Maliaño'),
-(null, 'Pepito', 'Tirso Igualatorio', null, 'Santander'),
-(null, 'Pepito', 'Daygon', null, 'Santander'),
-(null, 'Maria', 'Bezana', null, 'Bezana');
+(null, 'Daniel Celorrio', 'Cantbasket 04', 'cantbasket.png', 'Santander'),
+(null, 'Julio', 'Calasanz', 'calasanz.png', 'Santander'),
+(null, 'Panta', 'Solares', 'solares.jpg', 'Solares'),
+(null, 'Pepito', 'CBT Torrelavega', 'cbt.png', 'Torrelavega'),
+(null, 'Nacho', 'Pielagos', 'pielagos.jpg', 'Renedo de Pielagos'),
+(null, 'Pepito', 'Amide', 'amide.jpeg', 'Maliaño'),
+(null, 'Raul', 'Castrobasket', 'castrobasket.png', 'Castro-Urdiales'),
+(null, 'Pepito', 'La Paz', 'lapaz.png', 'Torrelavega'),
+(null, 'Pepito', 'Ventanas Arsan', 'ventanasarsan.png', 'Maliaño'),
+(null, 'Pepito', 'Tirso Igualatorio', 'tirso.jpeg', 'Santander'),
+(null, 'Pepito', 'Daygon', 'daygon.jpg', 'Santander'),
+(null, 'Maria', 'Bezana', 'bezana.jpg', 'Bezana');
 
 -- TABLA CATEGORIAS 
 

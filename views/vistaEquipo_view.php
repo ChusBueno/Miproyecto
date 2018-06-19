@@ -27,7 +27,7 @@
 		
 		<article class="col-8 col-lg-13 col-md-13 col-sm-16">
 
-			<div id="anuario" class="col-16 col-lg-16 col-md-16 col-sm-16">
+			<div id="equipo" class="col-16 col-lg-16 col-md-16 col-sm-16">
 				<a class="volverAtras" href="index.php?option=anuario">&laquo; Volver atrás</a>
 				<?php
 

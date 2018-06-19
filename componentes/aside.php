@@ -9,28 +9,28 @@
 				</div>
 
 				<div class="cajalateral " align="center">
-					<a class="texto"  href="index.php?option=verpdf&nombre=jornada">Jornada Completa</a>
+					<a class="texto"  href="index.php?option=jornada">Jornada Completa</a>
 					<hr>
-					<a href="index.php?option=verpdf&nombre=jornada"><img src="css/imagenes/aside/horarios-de-juego.gif" alt="Noticias" /></a>
+					<a href="index.php?option=jornada"><img src="css/imagenes/aside/horarios-de-juego.gif" alt="Noticias" /></a>
 				</div>
 
 				<div class="cajalateral " align="center">
-					<a class="texto"  href="index.php?option=verpdf&nombre=jornada">Última Jornada resultados</a>
+					<a class="texto"  href="index.php?option=ultimaJornada">Última Jornada resultados</a>
 					<hr>
-					<a href="index.php?option=verpdf&nombre=jornada"><img src="css/imagenes/aside/resultados.gif" alt="Resultados" /></a>
+					<a href="index.php?option=ultimaJornada""><img src="css/imagenes/aside/resultados.gif" alt="Resultados" /></a>
 				</div>
 
 
 				<div class="cajalateral " align="center">
-					<a class="texto"  href="index.php?option=verpdf&nombre=jornada" target="_new">Hazte árbitro</a>
+					<a class="texto"  href="index.php?option=verpdf&nombre=haztearbitro">Hazte árbitro</a>
 					<hr>
-					<a href="index.php?option=verpdf&nombre=jornada" target="_new"><img src="css/imagenes/aside/designaciones.gif" alt="Designaciones" /></a>
+					<a href="index.php?option=verpdf&nombre=haztearbitro"><img src="css/imagenes/aside/designaciones.gif" alt="Designaciones" /></a>
 				</div>
 
 				<div class="cajalateral " align="center">
-					<a class="texto"  href="index.php?option=verpdf&nombre=jornada">Seguro deportivo</a>
+					<a class="texto"  href="index.php?option=seguroDeportivo">Seguro deportivo</a>
 					<hr>
-					<a href="index.php?option=verpdf&nombre=jornada"><img src="css/imagenes/aside/seguro-deportivo.gif" alt="Seguro Deportivo" /></a>
+					<a href="index.php?option=seguroDeportivo"><img src="css/imagenes/aside/seguro-deportivo.gif" alt="Seguro Deportivo" /></a>
 
 				</div>
 

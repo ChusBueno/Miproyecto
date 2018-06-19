@@ -49,7 +49,6 @@ if (isset($_POST['botonLogin'])){
 
 
 
-
 if(isset($_POST['CrearCuenta'])){
 
 //recoger datos
@@ -63,7 +62,31 @@ if(isset($_POST['CrearCuenta'])){
     $insertar = modelMain::crearCuenta($nombreUsuario,$nombre,$apellido,$contrasenia,$tlf);
 
 
-    header("Refresh:1; url= index.php?option=main");
+    if ($insertar == 1){
+
+        ?>
+        <script type="text/javascript">
+            //alert("Cuenta creada");
+            var respuesta = document.getElementById("respuesta");
+            respuesta.classList.add("correcto");
+            respuesta.innerHTML = "Cuenta creada!";   
+
+        </script> <?php
+    }else{
+        ?>
+        <script type="text/javascript">
+            var respuesta = document.getElementById("respuesta");
+            respuesta.classList.add("incorrecto");
+            respuesta.innerHTML = "No se ha podido crear la cuenta!";
+           
+            
+        </script>
+        <?php
+    }
+
+    //var_dump($insertar);die;
+
+    header("Refresh:2; url= index.php?option=main");
 
 
 

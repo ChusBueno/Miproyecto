@@ -8,7 +8,7 @@ $numPatrocinadores = patrocinadoresModel::contarPatrocinadores();
 $pagina = 1;
 
 
-$numNoticiasMostrar = 6;
+$numNoticiasMostrar = 10;
 
 
 //redondeamos el numero 
@@ -61,7 +61,7 @@ if(isset($_POST['crearPatrocinador'])){
 
 	/*comprobacion imagen y mover imagen */
 	if (file_exists("css/imagenes/patrocinadores/" . $_FILES["fichero"]["name"])){
-		echo "Ya existe una imagen con ese nombre";
+		//echo "Ya existe una imagen con ese nombre";
 	}else{
 		move_uploaded_file($_FILES["fichero"]["tmp_name"], "css/imagenes/patrocinadores/".$_FILES['fichero']['name']);
 	}

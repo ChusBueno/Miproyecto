@@ -30,21 +30,21 @@
 				
 
 				<div class="jornada col-8 col-lg-8 col-md-8 col-sm-8">
-					<a href="#" target="_new"><img src="css/imagenes/aside/jornada/escolar.png"/></a>
+					<a href="index.php?option=verpdf&nombre=jorescolar"><img src="css/imagenes/aside/jornada/escolar.png"/></a>
 				</div>
 
 				<div class="jornada col-8 col-lg-8 col-md-8 col-sm-8">
-					<a href="#" target="_new"><img src="css/imagenes/aside/jornada/federada.png"/></a>
+					<a href="index.php?option=verpdf&nombre=jorfederada"><img src="css/imagenes/aside/jornada/federada.png"/></a>
 				</div>
 
 				<hr>
 
 				<div class="jornada col-8 col-lg-8 col-md-8 col-sm-8">
-					<a href="#" target="_new"><img src="css/imagenes/aside/jornada/proescolar.png"/></a>
+					<a href="index.php?option=verpdf&nombre=proescolar"><img src="css/imagenes/aside/jornada/proescolar.png"/></a>
 				</div>
 
 				<div class="jornada col-8 col-lg-8 col-md-8 col-sm-8">
-					<a href="#" target="_new"><img src="css/imagenes/aside/jornada/profederada.png"/></a>
+					<a href="index.php?option=verpdf&nombre=profederada"><img src="css/imagenes/aside/jornada/profederada.png"/></a>
 				</div>
 		    
 

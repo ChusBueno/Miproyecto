@@ -174,7 +174,7 @@ if(isset($_POST['crearNoticia'])){
 
 	/*comprobacion imagen y mover imagen */
 	if (file_exists("css/imagenes/noticias/" . $_FILES["fichero"]["name"])){
-		echo "Ya existe una imagen con ese nombre";
+		//echo "Ya existe una imagen con ese nombre";
 	}else{
 		move_uploaded_file($_FILES["fichero"]["tmp_name"], "css/imagenes/noticias/".$_FILES['fichero']['name']);
 	}

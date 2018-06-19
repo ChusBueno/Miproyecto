@@ -6,11 +6,13 @@
 
 				<li class="principal"><a href="#">EN JUEGO</a>
 					<ul>
-						<li class="submenu"><a href="#">Horarios-Resultados</a></li>
-						<li class="submenu"><a href="#">Liga EBA</a></li>
-						<li class="submenu"><a href="#">Primera Femenina</a></li>
-						<li class="submenu"><a href="index.php?option=verpdf&nombre=jornada">Jornada</a></li>
-						<li class="submenu"><a href="#">Baby</a></li>
+						<li class="submenu"><a href="https://iframefecan.optimalwayconsulting.com/">Horarios-Resultados</a></li>
+						<li class="submenu"><a href="http://competiciones.feb.es/autonomicas/?a=7">Liga EBA</a></li>
+						<li class="submenu"><a href="http://competiciones.feb.es/autonomicas/?a=7">Primera Femenina</a></li>
+						<li class="submenu"><a href="index.php?option=verpdf&nombre=baby">Baby</a></li>
+						<li class="submenu oculto"><a href="index.php?option=jornada">Jornada Completa</a></li>
+						<li class="submenu oculto"><a href="index.php?option=ultimaJornada">Resultados ultima jornada</a></li>
+						<li class="submenu oculto"><a href="index.php?option=seguroDeportivo">Seguro deportivo</a></li>
 					</ul>
 				</li>
 
@@ -31,38 +33,29 @@
 				</li>
 
 
-				<li class="principal"><a href="#">ENTREVISTAS</a>
-					<ul>
-						<li class="submenu"><a href="index.php?option=entrenadoresEntrevistas">Entrenadores</a></li>
-						<li class="submenu"><a href="index.php?option=jugadoresEntrevistas">Jugadores</a></li>					
-					</ul>
-				</li>
-
-
 				<li class="principal"><a href="#">ARBITROS</a>
 					<ul>
 						<li class="submenu"><a href="index.php?option=charlasArbitros">Cursos y Charlas</a></li>
-						<li class="submenu"><a href="#">Club del árbitro</a></li>
-						<li class="submenu"><a href="#" target="_new">Hazte árbitro</a></li>
+						<li class="submenu"><a href="http://cantabria.clubdelarbitro.com/">Club del árbitro</a></li>
+						<li class="submenu"><a href="index.php?option=verpdf&nombre=haztearbitro">Hazte árbitro</a></li>
 					</ul>
 				</li>
 
 
 				<li class="principal"><a href="#">NORMATIVA</a>
 					<ul>
-						<li class="submenu"><a href="#" target="_new">Bases</a></li>
-						<li class="submenu"><a href="#" target="_new">Formas de juego</a></li>					
-						<li class="submenu"><a href="#" target="_new">Reglas FIBA</a></li>
-						<li class="submenu"><a href="#" target="_new">Medidas Campos</a></li>
+						<li class="submenu"><a href="index.php?option=verpdf&nombre=bases">Bases</a></li>										
+						<li class="submenu"><a href="index.php?option=verpdf&nombre=reglasfiba">Reglas FIBA</a></li>
+						<li class="submenu"><a href="index.php?option=verpdf&nombre=medidascampos">Medidas Campos</a></li>
 					</ul>
 				</li>
 
 
 				<li class="principal"><a href="#">PREGUNTAS</a>
 					<ul>
-					<li class="submenu"><a href="#" target="_new">Crear un club</a></li>			
-						<li class="submenu"><a href="#">Accidente deportivo</a></li>
-						<li class="submenu"><a href="#">Contacto</a></li>
+					<li class="submenu"><a href="index.php?option=verpdf&nombre=crearclub">Crear un club</a></li>			
+						<li class="submenu"><a href="index.php?option=seguroDeportivo">Accidente deportivo</a></li>
+						<li class="submenu"><a href="index.php?option=verpdf&nombre=horario">Horario al público</a></li>
 					</ul>
 				</li>
 

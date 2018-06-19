@@ -1,4 +1,8 @@
-		<?php /*var_dump($_SESSION);*/ if(isset($_SESSION['idusuario']) == false){?>
+		<?php 
+
+		/*var_dump($_SESSION);*/ 
+
+		if(isset($_SESSION['idusuario']) == false){?>
 		<header class="offset-3 col-10 col-lg-16 col-md-16 col-sm-16">
 			<div id="logo" class="col-2 col-lg-2 col-md-2 col-sm-4">
 					<a href="index.php?option=main"></a>
@@ -21,6 +25,13 @@
 				<p>¿No tienes cuenta?<a href="#" onclick="abrirModal('modalAnadir')">Registrate!</a></p>
 
 			</div>
+
+			<div class="error">
+	            <?php if(isset($error)){ ?>
+	                <p><?php echo $error; ?></p>
+	            <?php } ?>
+
+	        </div>
 			<!---------------- MODAL -->
 			<div id="modalAnadir" class="modal">
 

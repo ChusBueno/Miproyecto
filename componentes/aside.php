@@ -9,36 +9,36 @@
 				</div>
 
 				<div class="cajalateral " align="center">
-					<a class="texto"  href="index.php?option=jornada">Jornada Completa</a>
+					<a class="texto"  href="index.php?option=verpdf&nombre=jornada">Jornada Completa</a>
 					<hr>
-					<a href="index.php?option=jornada"><img src="css/imagenes/aside/horarios-de-juego.gif" alt="Noticias" /></a>
+					<a href="index.php?option=verpdf&nombre=jornada"><img src="css/imagenes/aside/horarios-de-juego.gif" alt="Noticias" /></a>
 				</div>
 
 				<div class="cajalateral " align="center">
-					<a class="texto"  href="index.php?option=ultimaJornada">Última Jornada resultados</a>
+					<a class="texto"  href="index.php?option=verpdf&nombre=jornada">Última Jornada resultados</a>
 					<hr>
-					<a href="index.php?option=ultimaJornada"><img src="css/imagenes/aside/resultados.gif" alt="Resultados" /></a>
-				</div>
-
-
-				<div class="cajalateral " align="center">
-					<a class="texto"  href="pdfs/haztearbitro.pdf" target="_new">Hazte árbitro</a>
-					<hr>
-					<a href="#" target="_new"><img src="css/imagenes/aside/designaciones.gif" alt="Designaciones" /></a>
-				</div>
-
-				<div class="cajalateral " align="center">
-					<a class="texto"  href="index.php?option=seguroDeportivo">Seguro deportivo</a>
-					<hr>
-					<a href="index.php?option=seguroDeportivo"><img src="css/imagenes/aside/seguro-deportivo.gif" alt="Seguro Deportivo" /></a>
-
+					<a href="index.php?option=verpdf&nombre=jornada"><img src="css/imagenes/aside/resultados.gif" alt="Resultados" /></a>
 				</div>
 
 
 				<div class="cajalateral " align="center">
-					<a class="texto"  href="menuizdo/anuarios.html">Anuario</a>
+					<a class="texto"  href="index.php?option=verpdf&nombre=jornada" target="_new">Hazte árbitro</a>
 					<hr>
-					<a href="#"><img src="css/imagenes/aside/anuario.gif" alt="anuario" /></a>
+					<a href="index.php?option=verpdf&nombre=jornada" target="_new"><img src="css/imagenes/aside/designaciones.gif" alt="Designaciones" /></a>
+				</div>
+
+				<div class="cajalateral " align="center">
+					<a class="texto"  href="index.php?option=verpdf&nombre=jornada">Seguro deportivo</a>
+					<hr>
+					<a href="index.php?option=verpdf&nombre=jornada"><img src="css/imagenes/aside/seguro-deportivo.gif" alt="Seguro Deportivo" /></a>
+
+				</div>
+
+
+				<div class="cajalateral " align="center">
+					<a class="texto"  href="index.php?option=anuario">Anuario</a>
+					<hr>
+					<a href="index.php?option=anuario"><img src="css/imagenes/aside/anuario.gif" alt="anuario" /></a>
 				</div>
 
 			</div>

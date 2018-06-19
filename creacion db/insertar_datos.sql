@@ -84,3 +84,824 @@ INSERT INTO patrocinadores (id,nombre,url,imagen) VALUES
 (null,"patrocinador12","http://www.google.es","lupefer.png"),
 (null,"patrocinador13","http://www.google.es","seur.png");
 
+
+
+-- INSERCION DATOS ANUARIO --------------------------------
+
+
+-- TABLA CLUBES 
+
+INSERT INTO anuario_clubes (id, responsable, nombreclub, imagen, localidad) VALUES
+(null, 'Daniel Celorrio', 'Cantbasket 04', null, 'Santander'),
+(null, 'Julio', 'Calasanz', null, 'Santander'),
+(null, 'Panta', 'Solares', null, 'Solares'),
+(null, 'Pepito', 'CBT Torrelavega', null, 'Torrelavega'),
+(null, 'Nacho', 'Pielagos', null, 'Renedo de Pielagos'),
+(null, 'Pepito', 'Amide', null, 'Maliaño'),
+(null, 'Raul', 'Castrobasket', null, 'Castro-Urdiales'),
+(null, 'Pepito', 'La Paz', null, 'Torrelavega'),
+(null, 'Pepito', 'Ventanas Arsan', null, 'Maliaño'),
+(null, 'Pepito', 'Tirso Igualatorio', null, 'Santander'),
+(null, 'Pepito', 'Daygon', null, 'Santander'),
+(null, 'Maria', 'Bezana', null, 'Bezana');
+
+-- TABLA CATEGORIAS 
+
+INSERT INTO anuario_categorias (id, nombre) VALUES
+(null, 'Senior'),
+(null, 'Junior'),
+(null, 'Cadete'),
+(null, 'Infantil'),
+(null, 'Alevin'),
+(null, 'Benjamin');
+
+-- TABLA LIGAS 
+
+INSERT INTO anuario_ligas (id, nombre) VALUES
+(null, 'Primera'),
+(null, 'Segunda'),
+(null, 'Tercera');
+
+-- TABLA RELACION 
+
+INSERT INTO anuario_relacion (id, id_categoria, id_liga, nombre,genero) VALUES
+(null, 1,1,'Primera Senior', 'masculino'),
+(null, 1,2,'Segunda Senior', 'masculino'),
+(null, 1,3,'Tercera Senior', 'masculino'),
+(null, 1,1,'Primera Senior', 'femenino'),
+(null, 1,2,'Segunda Senior', 'femenino'),
+
+(null, 2,1,'Primera junior', 'masculino'),
+(null, 2,2,'Segunda junior', 'masculino'),
+(null, 2,3,'Tercera junior', 'masculino'),
+(null, 2,1,'Primera junior', 'femenino'),
+(null, 2,2,'Segunda junior', 'femenino'),
+(null, 2,3,'Tercera junior', 'femenino'),
+
+(null, 3,1,'Primera cadete', 'masculino'),
+(null, 3,2,'Segunda cadete', 'masculino'),
+(null, 3,3,'Tercera cadete', 'masculino'),
+(null, 3,1,'Primera cadete', 'femenino'),
+(null, 3,2,'Segunda cadete', 'femenino'),
+(null, 3,3,'Tercera cadete', 'femenino'),
+
+(null, 4,1,'Primera infantil', 'masculino'),
+(null, 4,2,'Segunda infantil', 'masculino'),
+(null, 4,3,'Tercera infantil', 'masculino'),
+(null, 4,1,'Primera infantil', 'femenino'),
+(null, 4,2,'Segunda infantil', 'femenino'),
+(null, 4,3,'Tercera infantil', 'femenino'),
+
+(null, 5,1,'Primera alevin', 'masculino'),
+(null, 5,2,'Segunda alevin', 'masculino'),
+(null, 5,3,'Tercera alevin', 'masculino'),
+(null, 5,1,'Primera alevin', 'femenino'),
+(null, 5,2,'Segunda alevin', 'femenino'),
+(null, 5,3,'Tercera alevin', 'femenino'),
+
+(null, 6,1,'Primera benjamin', 'masculino'),
+(null, 6,2,'Segunda benjamin', 'masculino'),
+(null, 6,3,'Tercera benjamin', 'masculino'),
+(null, 6,1,'Primera benjamin', 'femenino'),
+(null, 6,2,'Segunda benjamin', 'femenino'),
+(null, 6,3,'Tercera benjamin', 'femenino');
+
+
+
+-- TABLA EQUIPOS 
+
+INSERT INTO anuario_equipos (id,id_club,id_relacion,entrenador,nombre,imagen,pabellon) VALUES
+(null, 1,1,'Amador','Uc gallofa sub22','equipo.jpg','Manuel Llano'),
+(null, 1,1,'Joaquin','Uc gallofa 04','equipo.jpg','Universidad de Cantabria'),
+(null, 3,1,'Pablo','Cb solares','equipo.jpg','Mies del corro'),
+(null, 4,1,'Javier','Cbt Torrelavega A','equipo.jpg','Vicente Trueba'),
+(null, 8,1,'David','La paz torrelavega','equipo.jpg','Vicente Trueba'),
+(null, 11,1,'Mario','Daygon Baloncesto Santander A','equipo.jpg','Cueto'),
+
+-- PRIMERA SEN FE --
+
+(null, 8,4,'Dani','La paz torrelavega','equipo.jpg','Maria Pardo'),
+(null, 10,4,'Juan','Tirso Igualatorio','equipo.jpg','Cueto'),
+(null, 9,4,'Jose','Ventanas Arsan Astillero','equipo.jpg','La cantabrica'),
+
+-- SEGUNDA SENIOR MAS --
+(null, 6,2,'Aitor','Sayme Amide','equipo.jpg','Matilde de la Torre'),
+(null, 11,2,'Jesus','Daygon Baloncesto Santander b','equipo.jpg','Numancia'),
+(null, 4,2,'Francisco','Cbt Torrelavega B','equipo.jpg','Vicente Trueba'),
+(null, 7,2,'Alvaro','Cbcastro.com','equipo.jpg','Pachi Torre'),
+(null, 3,2,'Marcos','Cb solares B','equipo.jpg','Mies del corro'),
+
+
+-- SEGUNDA SENIOR FEM --
+
+(null, 9,5,'Jose','Ventanas Arsan Astillero','equipo.jpg','La cantabrica'),
+(null, 11,5,'Gonzalo','Daygon Pub la pecera','equipo.jpg','Numancia'),
+(null, 3,5,'Marcos','CB Solares','equipo.jpg','Mies del Corro'),
+(null, 4,5,'Luis','CBT winchester saloon','equipo.jpg','Habana Vieja'),
+
+
+-- PRIMERA JUN MAS --
+(null, 12,6,'Jesus','Animallago bezana','equipo.jpg','Pabellon bezana'),
+(null, 4,6,'Samuel','CBT Torrelavega A','equipo.jpg','Habana Vieja'),
+(null, 1,6,'Alvaro','Gallofa A','equipo.jpg','Cueto'),
+(null, 5,6,'Antonio','Em Pielagos Parbayon','equipo.jpg','Parbayon'),
+(null, 3,6,'Angel','Cb Solares A','equipo.jpg','Mies del Corro'),
+(null, 2,6,'Vicente','Calasanz A','equipo.jpg','Calasanz'),
+
+
+-- SEGUNDA JUN MAS --
+
+(null, 5,7,'Pedro','Em Pielagos Renedo','equipo.jpg','Fernando Exposito'),
+(null, 1,7,'Pedro','Gallofa B','equipo.jpg','Cueto'),
+(null, 2,7,'Julio','Calasanz B','equipo.jpg','Calasanz'),
+(null, 12,7,'Hugo','Bezana B','equipo.jpg','Pabellon bezana'),
+(null, 5,7,'Jose','Em Pielagos Liencres','equipo.jpg','Pabellon Liencres'),
+(null, 7,7,'Arturo','Castrobasket','equipo.jpg','Pachi Torre'),
+
+
+
+-- PRIMERA JUN FEM --
+
+(null, 2,9,'Ana','Calasanz','equipo.jpg','Calasanz'),
+(null, 8,9,'Saul','La paz torrelavega','equipo.jpg','Maria Pardo'),
+(null, 4,9,'Alejandro','CBT jardin de moneche','equipo.jpg','Habana Vieja'),
+(null, 9,9,'Pablo','Ventanas Arsan Astillero','equipo.jpg','La cantabrica'),
+
+
+-- SEGUNDA JUN FEM --
+(null, 2,10,'Diego','Calasanz B','equipo.jpg','Calasanz'),
+(null, 8,10,'Saul','La paz torrelavega B ','equipo.jpg','Maria Pardo'),
+(null, 4,10,'Alejandro','CBT jardin de moneche B','equipo.jpg','Habana Vieja'),
+(null, 9,10,'Pablo','Ventanas Arsan Astillero B','equipo.jpg','La cantabrica'),
+
+
+
+-- ------------------------------------------------- 
+
+-- PRIMERA CAD MAS --
+
+(null, 12,12,'Jesus','Animallago bezana','equipo.jpg','Pabellon bezana'),
+(null, 4,12,'Samuel','CBT Torrelavega A','equipo.jpg','Habana Vieja'),
+(null, 1,12,'Alvaro','Gallofa A','equipo.jpg','Cueto'),
+(null, 5,12,'Antonio','Em Pielagos Parbayon','equipo.jpg','Parbayon'),
+(null, 3,12,'Angel','Cb Solares A','equipo.jpg','Mies del Corro'),
+(null, 2,12,'Vicente','Calasanz A','equipo.jpg','Calasanz'),
+
+
+-- SEGUNDA CAD MAS --
+(null, 5,13,'Pedro','Em Pielagos Renedo','equipo.jpg','Fernando Exposito'),
+(null, 1,13,'Pedro','Gallofa B','equipo.jpg','Cueto'),
+(null, 2,13,'Julio','Calasanz B','equipo.jpg','Calasanz'),
+(null, 12,13,'Hugo','Bezana B','equipo.jpg','Pabellon bezana'),
+(null, 5,13,'Jose','Em Pielagos Liencres','equipo.jpg','Pabellon Liencres'),
+(null, 7,13,'Arturo','Castrobasket','equipo.jpg','Pachi Torre'),
+
+
+
+-- PRIMERA CAD FEM --
+
+(null, 2,15,'Ana','Calasanz','equipo.jpg','Calasanz'),
+(null, 8,15,'Saul','La paz torrelavega','equipo.jpg','Maria Pardo'),
+(null, 4,15,'Alejandro','CBT jardin de moneche','equipo.jpg','Habana Vieja'),
+(null, 9,15,'Pablo','Ventanas Arsan Astillero','equipo.jpg','La cantabrica'),
+
+
+-- SEGUNDA CAD FEM --
+(null, 2,16,'Diego','Calasanz B','equipo.jpg','Calasanz'),
+(null, 8,16,'Saul','La paz torrelavega B ','equipo.jpg','Maria Pardo'),
+(null, 4,16,'Alejandro','CBT jardin de moneche B','equipo.jpg','Habana Vieja'),
+(null, 9,16,'Pablo','Ventanas Arsan Astillero B','equipo.jpg','La cantabrica'),
+
+
+
+-- PRIMERA INF MAS -- 
+(null, 12,18,'Jesus','Animallago bezana','equipo.jpg','Pabellon bezana'),
+(null, 4,18,'Samuel','CBT Torrelavega A','equipo.jpg','Habana Vieja'),
+(null, 1,18,'Alvaro','Gallofa A','equipo.jpg','Cueto'),
+(null, 5,18,'Antonio','Em Pielagos Parbayon','equipo.jpg','Parbayon'),
+(null, 3,18,'Angel','Cb Solares A','equipo.jpg','Mies del Corro'),
+(null, 2,18,'Vicente','Calasanz A','equipo.jpg','Calasanz'),
+
+
+-- SEGUNDA INF MAS -- 
+(null, 5,19,'Pedro','Em Pielagos Renedo','equipo.jpg','Fernando Exposito'),
+(null, 1,19,'Pedro','Gallofa B','equipo.jpg','Cueto'),
+(null, 2,19,'Julio','Calasanz B','equipo.jpg','Calasanz'),
+(null, 12,19,'Hugo','Bezana B','equipo.jpg','Pabellon bezana'),
+(null, 5,19,'Jose','Em Pielagos Liencres','equipo.jpg','Pabellon Liencres'),
+(null, 7,19,'Arturo','Castrobasket','equipo.jpg','Pachi Torre'),
+
+
+-- PRIMERA INF FEM --
+(null, 2,21,'Ana','Calasanz','equipo.jpg','Calasanz'),
+(null, 8,21,'Saul','La paz torrelavega','equipo.jpg','Maria Pardo'),
+(null, 4,21,'Alejandro','CBT jardin de moneche','equipo.jpg','Habana Vieja'),
+(null, 9,21,'Pablo','Ventanas Arsan Astillero','equipo.jpg','La cantabrica'),
+
+
+-- SEGUNDA INF FEM
+(null, 2,22,'Diego','Calasanz B','equipo.jpg','Calasanz'),
+(null, 8,22,'Saul','La paz torrelavega B ','equipo.jpg','Maria Pardo'),
+(null, 4,22,'Alejandro','CBT jardin de moneche B','equipo.jpg','Habana Vieja'),
+(null, 9,22,'Pablo','Ventanas Arsan Astillero B','equipo.jpg','La cantabrica'),
+
+
+-- PRIMERA ALEV MAS -- 
+(null, 12,24,'Jesus','Animallago bezana','equipo.jpg','Pabellon bezana'),
+(null, 4,24,'Samuel','CBT Torrelavega A','equipo.jpg','Habana Vieja'),
+(null, 1,24,'Alvaro','Gallofa A','equipo.jpg','Cueto'),
+(null, 5,24,'Antonio','Em Pielagos Parbayon','equipo.jpg','Parbayon'),
+(null, 3,24,'Angel','Cb Solares A','equipo.jpg','Mies del Corro'),
+(null, 2,24,'Vicente','Calasanz A','equipo.jpg','Calasanz'),
+
+
+-- SEGUNDA ALEV MAS --
+(null, 5,25,'Pedro','Em Pielagos Renedo','equipo.jpg','Fernando Exposito'),
+(null, 1,25,'Pedro','Gallofa B','equipo.jpg','Cueto'),
+(null, 2,25,'Julio','Calasanz B','equipo.jpg','Calasanz'),
+(null, 12,25,'Hugo','Bezana B','equipo.jpg','Pabellon bezana'),
+(null, 5,25,'Jose','Em Pielagos Liencres','equipo.jpg','Pabellon Liencres'),
+(null, 7,25,'Arturo','Castrobasket','equipo.jpg','Pachi Torre'),
+
+
+
+-- PIMERA ALEV FEM --
+(null, 2,27,'Ana','Calasanz','equipo.jpg','Calasanz'),
+(null, 8,27,'Saul','La paz torrelavega','equipo.jpg','Maria Pardo'),
+(null, 4,27,'Alejandro','CBT jardin de moneche','equipo.jpg','Habana Vieja'),
+(null, 9,27,'Pablo','Ventanas Arsan Astillero','equipo.jpg','La cantabrica'),
+
+
+-- SEGUNDA ALEV FEM --
+(null, 2,28,'Diego','Calasanz B','equipo.jpg','Calasanz'),
+(null, 8,28,'Saul','La paz torrelavega B ','equipo.jpg','Maria Pardo'),
+(null, 4,28,'Alejandro','CBT jardin de moneche B','equipo.jpg','Habana Vieja'),
+(null, 9,28,'Pablo','Ventanas Arsan Astillero B','equipo.jpg','La cantabrica'),
+
+
+-- PRIMERA BEN MAS --
+(null, 12,30,'Jesus','Animallago bezana','equipo.jpg','Pabellon bezana'),
+(null, 4,30,'Samuel','CBT Torrelavega A','equipo.jpg','Habana Vieja'),
+(null, 1,30,'Alvaro','Gallofa A','equipo.jpg','Cueto'),
+(null, 5,30,'Antonio','Em Pielagos Parbayon','equipo.jpg','Parbayon'),
+(null, 3,30,'Angel','Cb Solares A','equipo.jpg','Mies del Corro'),
+(null, 2,30,'Vicente','Calasanz A','equipo.jpg','Calasanz'),
+
+
+-- SEGUNDA BEN MAS --
+(null, 5,31,'Pedro','Em Pielagos Renedo','equipo.jpg','Fernando Exposito'),
+(null, 1,31,'Pedro','Gallofa B','equipo.jpg','Cueto'),
+(null, 2,31,'Julio','Calasanz B','equipo.jpg','Calasanz'),
+(null, 12,31,'Hugo','Bezana B','equipo.jpg','Pabellon bezana'),
+(null, 5,31,'Jose','Em Pielagos Liencres','equipo.jpg','Pabellon Liencres'),
+(null, 7,31,'Arturo','Castrobasket','equipo.jpg','Pachi Torre'),
+
+
+-- PIMERA BEN FEM --
+(null, 2,33,'Ana','Calasanz','equipo.jpg','Calasanz'),
+(null, 8,33,'Saul','La paz torrelavega','equipo.jpg','Maria Pardo'),
+(null, 4,33,'Alejandro','CBT jardin de moneche','equipo.jpg','Habana Vieja'),
+(null, 9,33,'Pablo','Ventanas Arsan Astillero','equipo.jpg','La cantabrica'),
+
+
+-- SEGUNDA BEN FEM --
+(null, 2,34,'Diego','Calasanz B','equipo.jpg','Calasanz'),
+(null, 8,34,'Saul','La paz torrelavega B ','equipo.jpg','Maria Pardo'),
+(null, 4,34,'Alejandro','CBT jardin de moneche B','equipo.jpg','Habana Vieja'),
+(null, 9,34,'Pablo','Ventanas Arsan Astillero B','equipo.jpg','La cantabrica');
+
+
+
+
+
+
+
+
+-- TABLA JUGADORES 
+
+INSERT INTO anuario_jugadores (id, id_equipo, nombre, apellidos, fecha, imagen) VALUES
+
+-- JUGADORES INVENTADOS, SOLO CAMBIA EL EQUIPO AL QUE PERTENECEN -- 
+(null,1,"Jugador", "Inventado1", curdate(),'pau.jpg'),
+(null,1,"Jugador", "Inventado2", curdate(),'llul.jpg'),
+(null,1,"Jugador", "Inventado3", curdate(),'pau.jpg'),
+(null,1,"Jugador", "Inventado4", curdate(),'marc.jpg'),
+(null,1,"Jugador", "Inventado5", curdate(),'llul.jpg'),
+(null,1,"Jugador", "Inventado6", curdate(),'pau.jpg'),
+(null,1,"Jugador", "Inventado7", curdate(),'marc.jpg'),
+(null,1,"Jugador", "Inventado8", curdate(),'llul.jpg'),
+(null,1,"Jugador", "Inventado9", curdate(),'pau.jpg'),
+(null,1,"Jugador", "Inventado10", curdate(),'sanemeterio.jpg'),
+(null,1,"Jugador", "Inventado11", curdate(),'marc.jpg'),
+(null,1,"Jugador", "Inventado12", curdate(),'pau.jpg'),
+
+(null,2,"Jugador", "Inventado1", curdate(),'sanemeterio.jpg'),
+(null,2,"Jugador", "Inventado2", curdate(),'pau.jpg'),
+(null,2,"Jugador", "Inventado3", curdate(),'llul.jpg'),
+(null,2,"Jugador", "Inventado4", curdate(),'sanemeterio.jpg'),
+(null,2,"Jugador", "Inventado5", curdate(),'pau.jpg'),
+(null,2,"Jugador", "Inventado6", curdate(),'llul.jpg'),
+(null,2,"Jugador", "Inventado7", curdate(),'pau.jpg'),
+(null,2,"Jugador", "Inventado8", curdate(),'marc.jpg'),
+(null,2,"Jugador", "Inventado9", curdate(),'llul.jpg'),
+(null,2,"Jugador", "Inventado10", curdate(),'sanemeterio.jpg'),
+(null,2,"Jugador", "Inventado11", curdate(),'pau.jpg'),
+(null,2,"Jugador", "Inventado12", curdate(),'sanemeterio.jpg'),
+
+(null,3,"Jugador", "Inventado1", curdate(),'pau.jpg'),
+(null,3,"Jugador", "Inventado2", curdate(),'llul.jpg'),
+(null,3,"Jugador", "Inventado3", curdate(),'marc.jpg'),
+(null,3,"Jugador", "Inventado4", curdate(),'pau.jpg'),
+(null,3,"Jugador", "Inventado5", curdate(),'llul.jpg'),
+(null,3,"Jugador", "Inventado6", curdate(),'sanemeterio.jpg'),
+(null,3,"Jugador", "Inventado7", curdate(),'pau.jpg'),
+(null,3,"Jugador", "Inventado8", curdate(),'llul.jpg'),
+(null,3,"Jugador", "Inventado9", curdate(),'sanemeterio.jpg'),
+(null,3,"Jugador", "Inventado10", curdate(),'marc.jpg'),
+(null,3,"Jugador", "Inventado11", curdate(),'pau.jpg'),
+(null,3,"Jugador", "Inventado12", curdate(),'sanemeterio.jpg'),
+
+(null,4,"Jugador", "Inventado1", curdate(),'pau.jpg'),
+(null,4,"Jugador", "Inventado2", curdate(),'llul.jpg'),
+(null,4,"Jugador", "Inventado3", curdate(),'sanemeterio.jpg'),
+(null,4,"Jugador", "Inventado4", curdate(),'llul.jpg'),
+(null,4,"Jugador", "Inventado5", curdate(),'sanemeterio.jpg'),
+(null,4,"Jugador", "Inventado6", curdate(),'pau.jpg'),
+(null,4,"Jugador", "Inventado7", curdate(),'llul.jpg'),
+(null,4,"Jugador", "Inventado8", curdate(),'sanemeterio.jpg'),
+(null,4,"Jugador", "Inventado9", curdate(),'pau.jpg'),
+(null,4,"Jugador", "Inventado10", curdate(),'marc.jpg'),
+(null,4,"Jugador", "Inventado11", curdate(),'sanemeterio.jpg'),
+(null,4,"Jugador", "Inventado12", curdate(),'pau.jpg'),
+
+(null,5,"Jugador", "Inventado1", curdate(),'sanemeterio.jpg'),
+(null,5,"Jugador", "Inventado2", curdate(),'pau.jpg'),
+(null,5,"Jugador", "Inventado3", curdate(),'marc.jpg'),
+(null,5,"Jugador", "Inventado4", curdate(),'pau.jpg'),
+(null,5,"Jugador", "Inventado5", curdate(),'llul.jpg'),
+(null,5,"Jugador", "Inventado6", curdate(),'sanemeterio.jpg'),
+(null,5,"Jugador", "Inventado7", curdate(),'pau.jpg'),
+(null,5,"Jugador", "Inventado8", curdate(),'marc.jpg'),
+(null,5,"Jugador", "Inventado9", curdate(),'pau.jpg'),
+(null,5,"Jugador", "Inventado10", curdate(),'marc.jpg'),
+(null,5,"Jugador", "Inventado11", curdate(),'pau.jpg'),
+(null,5,"Jugador", "Inventado12", curdate(),'sanemeterio.jpg'),
+
+(null,6,"Jugador", "Inventado1", curdate(),'pau.jpg'),
+(null,6,"Jugador", "Inventado2", curdate(),'llul.jpg'),
+(null,6,"Jugador", "Inventado3", curdate(),'sanemeterio.jpg'),
+(null,6,"Jugador", "Inventado4", curdate(),'pau.jpg'),
+(null,6,"Jugador", "Inventado5", curdate(),'llul.jpg'),
+(null,6,"Jugador", "Inventado6", curdate(),'marc.jpg'),
+(null,6,"Jugador", "Inventado7", curdate(),'pau.jpg'),
+(null,6,"Jugador", "Inventado8", curdate(),'sanemeterio.jpg'),
+(null,6,"Jugador", "Inventado9", curdate(),'pau.jpg'),
+(null,6,"Jugador", "Inventado10", curdate(),'llul.jpg'),
+(null,6,"Jugador", "Inventado11", curdate(),'sanemeterio.jpg'),
+(null,6,"Jugador", "Inventado12", curdate(),'pau.jpg'),
+
+(null,7,"Jugador", "Inventado1", curdate(),'marc.jpg'),
+(null,7,"Jugador", "Inventado2", curdate(),'llul.jpg'),
+(null,7,"Jugador", "Inventado3", curdate(),'pau.jpg'),
+(null,7,"Jugador", "Inventado4", curdate(),'sanemeterio.jpg'),
+(null,7,"Jugador", "Inventado5", curdate(),'pau.jpg'),
+(null,7,"Jugador", "Inventado6", curdate(),'marc.jpg'),
+(null,7,"Jugador", "Inventado7", curdate(),'sanemeterio.jpg'),
+(null,7,"Jugador", "Inventado8", curdate(),'pau.jpg'),
+(null,7,"Jugador", "Inventado9", curdate(),'sanemeterio.jpg'),
+(null,7,"Jugador", "Inventado10", curdate(),'pau.jpg'),
+(null,7,"Jugador", "Inventado11", curdate(),'marc.jpg'),
+(null,7,"Jugador", "Inventado12", curdate(),'sanemeterio.jpg'),
+
+(null,8,"Jugador", "Inventado1", curdate(),'sanemeterio.jpg'),
+(null,8,"Jugador", "Inventado2", curdate(),'pau.jpg'),
+(null,8,"Jugador", "Inventado3", curdate(),'sanemeterio.jpg'),
+(null,8,"Jugador", "Inventado4", curdate(),'llul.jpg'),
+(null,8,"Jugador", "Inventado5", curdate(),'pau.jpg'),
+(null,8,"Jugador", "Inventado6", curdate(),'marc.jpg'),
+(null,8,"Jugador", "Inventado7", curdate(),'pau.jpg'),
+(null,8,"Jugador", "Inventado8", curdate(),'sanemeterio.jpg'),
+(null,8,"Jugador", "Inventado9", curdate(),'llul.jpg'),
+(null,8,"Jugador", "Inventado10", curdate(),'marc.jpg'),
+(null,8,"Jugador", "Inventado11", curdate(),'pau.jpg'),
+(null,8,"Jugador", "Inventado12", curdate(),'sanemeterio.jpg'),
+
+(null,9,"Jugador", "Inventado1", curdate(),'marc.jpg'),
+(null,9,"Jugador", "Inventado2", curdate(),'llul.jpg'),
+(null,9,"Jugador", "Inventado3", curdate(),'pau.jpg'),
+(null,9,"Jugador", "Inventado4", curdate(),'sanemeterio.jpg'),
+(null,9,"Jugador", "Inventado5", curdate(),'pau.jpg'),
+(null,9,"Jugador", "Inventado6", curdate(),'marc.jpg'),
+(null,9,"Jugador", "Inventado7", curdate(),'pau.jpg'),
+(null,9,"Jugador", "Inventado8", curdate(),'sanemeterio.jpg'),
+(null,9,"Jugador", "Inventado9", curdate(),'llul.jpg'),
+(null,9,"Jugador", "Inventado10", curdate(),'sanemeterio.jpg'),
+(null,9,"Jugador", "Inventado11", curdate(),'pau.jpg'),
+(null,9,"Jugador", "Inventado12", curdate(),'sanemeterio.jpg'),
+
+(null,10,"Jugador", "Inventado1", curdate(),'sanemeterio.jpg'),
+(null,10,"Jugador", "Inventado2", curdate(),'pau.jpg'),
+(null,10,"Jugador", "Inventado3", curdate(),'marc.jpg'),
+(null,10,"Jugador", "Inventado4", curdate(),'pau.jpg'),
+(null,10,"Jugador", "Inventado5", curdate(),'llul.jpg'),
+(null,10,"Jugador", "Inventado6", curdate(),'sanemeterio.jpg'),
+(null,10,"Jugador", "Inventado7", curdate(),'pau.jpg'),
+(null,10,"Jugador", "Inventado8", curdate(),'marc.jpg'),
+(null,10,"Jugador", "Inventado9", curdate(),'pau.jpg'),
+(null,10,"Jugador", "Inventado10", curdate(),'llul.jpg'),
+(null,10,"Jugador", "Inventado11", curdate(),'sanemeterio.jpg'),
+(null,10,"Jugador", "Inventado12", curdate(),'pau.jpg'),
+
+(null,11,"Jugador", "Inventado1", curdate(),'pau.jpg'),
+(null,11,"Jugador", "Inventado2", curdate(),'marc.jpg'),
+(null,11,"Jugador", "Inventado3", curdate(),'pau.jpg'),
+(null,11,"Jugador", "Inventado4", curdate(),'sanemeterio.jpg'),
+(null,11,"Jugador", "Inventado5", curdate(),'pau.jpg'),
+(null,11,"Jugador", "Inventado6", curdate(),'sanemeterio.jpg'),
+(null,11,"Jugador", "Inventado7", curdate(),'pau.jpg'),
+(null,11,"Jugador", "Inventado8", curdate(),'marc.jpg'),
+(null,11,"Jugador", "Inventado9", curdate(),'pau.jpg'),
+(null,11,"Jugador", "Inventado10", curdate(),'llul.jpg'),
+(null,11,"Jugador", "Inventado11", curdate(),'sanemeterio.jpg'),
+(null,11,"Jugador", "Inventado12", curdate(),'pau.jpg'),
+
+(null,12,"Jugador", "Inventado1", curdate(),'pau.jpg'),
+(null,12,"Jugador", "Inventado2", curdate(),'sanemeterio.jpg'),
+(null,12,"Jugador", "Inventado3", curdate(),'llul.jpg'),
+(null,12,"Jugador", "Inventado4", curdate(),'pau.jpg'),
+(null,12,"Jugador", "Inventado5", curdate(),'llul.jpg'),
+(null,12,"Jugador", "Inventado6", curdate(),'sanemeterio.jpg'),
+(null,12,"Jugador", "Inventado7", curdate(),'pau.jpg'),
+(null,12,"Jugador", "Inventado8", curdate(),'marc.jpg'),
+(null,12,"Jugador", "Inventado9", curdate(),'llul.jpg'),
+(null,12,"Jugador", "Inventado10", curdate(),'pau.jpg'),
+(null,12,"Jugador", "Inventado11", curdate(),'sanemeterio.jpg'),
+(null,12,"Jugador", "Inventado12", curdate(),'pau.jpg'),
+
+(null,13,"Jugador", "Inventado1", curdate(),'pau.jpg'),
+(null,13,"Jugador", "Inventado2", curdate(),'marc.jpg'),
+(null,13,"Jugador", "Inventado3", curdate(),'llul.jpg'),
+(null,13,"Jugador", "Inventado4", curdate(),'pau.jpg'),
+(null,13,"Jugador", "Inventado5", curdate(),'marc.jpg'),
+(null,13,"Jugador", "Inventado6", curdate(),'pau.jpg'),
+(null,13,"Jugador", "Inventado7", curdate(),'sanemeterio.jpg'),
+(null,13,"Jugador", "Inventado8", curdate(),'pau.jpg'),
+(null,13,"Jugador", "Inventado9", curdate(),'sanemeterio.jpg'),
+(null,13,"Jugador", "Inventado10", curdate(),'pau.jpg'),
+(null,13,"Jugador", "Inventado11", curdate(),'llul.jpg'),
+(null,13,"Jugador", "Inventado12", curdate(),'sanemeterio.jpg'),
+
+(null,14,"Jugador", "Inventado1", curdate(),'sanemeterio.jpg'),
+(null,14,"Jugador", "Inventado2", curdate(),'pau.jpg'),
+(null,14,"Jugador", "Inventado3", curdate(),'sanemeterio.jpg'),
+(null,14,"Jugador", "Inventado4", curdate(),'marc.jpg'),
+(null,14,"Jugador", "Inventado5", curdate(),'pau.jpg'),
+(null,14,"Jugador", "Inventado6", curdate(),'sanemeterio.jpg'),
+(null,14,"Jugador", "Inventado7", curdate(),'pau.jpg'),
+(null,14,"Jugador", "Inventado8", curdate(),'llul.jpg'),
+(null,14,"Jugador", "Inventado9", curdate(),'sanemeterio.jpg'),
+(null,14,"Jugador", "Inventado10", curdate(),'pau.jpg'),
+(null,14,"Jugador", "Inventado11", curdate(),'marc.jpg'),
+(null,14,"Jugador", "Inventado12", curdate(),'pau.jpg'),
+
+(null,15,"Jugador", "Inventado1", curdate(),'sanemeterio.jpg'),
+(null,15,"Jugador", "Inventado2", curdate(),'pau.jpg'),
+(null,15,"Jugador", "Inventado3", curdate(),'marc.jpg'),
+(null,15,"Jugador", "Inventado4", curdate(),'pau.jpg'),
+(null,15,"Jugador", "Inventado5", curdate(),'sanemeterio.jpg'),
+(null,15,"Jugador", "Inventado6", curdate(),'pau.jpg'),
+(null,15,"Jugador", "Inventado7", curdate(),'sanemeterio.jpg'),
+(null,15,"Jugador", "Inventado8", curdate(),'llul.jpg'),
+(null,15,"Jugador", "Inventado9", curdate(),'pau.jpg'),
+(null,15,"Jugador", "Inventado10", curdate(),'marc.jpg'),
+(null,15,"Jugador", "Inventado11", curdate(),'llul.jpg'),
+(null,15,"Jugador", "Inventado12", curdate(),'pau.jpg'),
+
+(null,16,"Jugador", "Inventado1", curdate(),'sanemeterio.jpg'),
+(null,16,"Jugador", "Inventado2", curdate(),'pau.jpg'),
+(null,16,"Jugador", "Inventado3", curdate(),'sanemeterio.jpg'),
+(null,16,"Jugador", "Inventado4", curdate(),'pau.jpg'),
+(null,16,"Jugador", "Inventado5", curdate(),'marc.jpg'),
+(null,16,"Jugador", "Inventado6", curdate(),'pau.jpg'),
+(null,16,"Jugador", "Inventado7", curdate(),'llul.jpg'),
+(null,16,"Jugador", "Inventado8", curdate(),'pau.jpg'),
+(null,16,"Jugador", "Inventado9", curdate(),'sanemeterio.jpg'),
+(null,16,"Jugador", "Inventado10", curdate(),'pau.jpg'),
+(null,16,"Jugador", "Inventado11", curdate(),'sanemeterio.jpg'),
+(null,16,"Jugador", "Inventado12", curdate(),'marc.jpg'),
+
+(null,17,"Jugador", "Inventado1", curdate(),'marc.jpg'),
+(null,17,"Jugador", "Inventado2", curdate(),'pau.jpg'),
+(null,17,"Jugador", "Inventado3", curdate(),'sanemeterio.jpg'),
+(null,17,"Jugador", "Inventado4", curdate(),'llul.jpg'),
+(null,17,"Jugador", "Inventado5", curdate(),'pau.jpg'),
+(null,17,"Jugador", "Inventado6", curdate(),'sanemeterio.jpg'),
+(null,17,"Jugador", "Inventado7", curdate(),'marc.jpg'),
+(null,17,"Jugador", "Inventado8", curdate(),'pau.jpg'),
+(null,17,"Jugador", "Inventado9", curdate(),'sanemeterio.jpg'),
+(null,17,"Jugador", "Inventado10", curdate(),'llul.jpg'),
+(null,17,"Jugador", "Inventado11", curdate(),'pau.jpg'),
+(null,17,"Jugador", "Inventado12", curdate(),'sanemeterio.jpg'),
+
+(null,18,"Jugador", "Inventado1", curdate(),'pau.jpg'),
+(null,18,"Jugador", "Inventado2", curdate(),'marc.jpg'),
+(null,18,"Jugador", "Inventado3", curdate(),'pau.jpg'),
+(null,18,"Jugador", "Inventado4", curdate(),'sanemeterio.jpg'),
+(null,18,"Jugador", "Inventado5", curdate(),'pau.jpg'),
+(null,18,"Jugador", "Inventado6", curdate(),'sanemeterio.jpg'),
+(null,18,"Jugador", "Inventado7", curdate(),'llul.jpg'),
+(null,18,"Jugador", "Inventado8", curdate(),'pau.jpg'),
+(null,18,"Jugador", "Inventado9", curdate(),'marc.jpg'),
+(null,18,"Jugador", "Inventado10", curdate(),'sanemeterio.jpg'),
+(null,18,"Jugador", "Inventado11", curdate(),'pau.jpg'),
+(null,18,"Jugador", "Inventado12", curdate(),'llul.jpg'),
+
+(null,19,"Jugador", "Inventado1", curdate(),'pau.jpg'),
+(null,19,"Jugador", "Inventado2", curdate(),'sanemeterio.jpg'),
+(null,19,"Jugador", "Inventado3", curdate(),'llul.jpg'),
+(null,19,"Jugador", "Inventado4", curdate(),'marc.jpg'),
+(null,19,"Jugador", "Inventado5", curdate(),'pau.jpg'),
+(null,19,"Jugador", "Inventado6", curdate(),'marc.jpg'),
+(null,19,"Jugador", "Inventado7", curdate(),'pau.jpg'),
+(null,19,"Jugador", "Inventado8", curdate(),'sanemeterio.jpg'),
+(null,19,"Jugador", "Inventado9", curdate(),'marc.jpg'),
+(null,19,"Jugador", "Inventado10", curdate(),'pau.jpg'),
+(null,19,"Jugador", "Inventado11", curdate(),'llul.jpg'),
+(null,19,"Jugador", "Inventado12", curdate(),'sanemeterio.jpg'),
+
+(null,20,"Jugador", "Inventado1", curdate(),'pau.jpg'),
+(null,20,"Jugador", "Inventado2", curdate(),'sanemeterio.jpg'),
+(null,20,"Jugador", "Inventado3", curdate(),'pau.jpg'),
+(null,20,"Jugador", "Inventado4", curdate(),'llul.jpg'),
+(null,20,"Jugador", "Inventado5", curdate(),'sanemeterio.jpg'),
+(null,20,"Jugador", "Inventado6", curdate(),'pau.jpg'),
+(null,20,"Jugador", "Inventado7", curdate(),'sanemeterio.jpg'),
+(null,20,"Jugador", "Inventado8", curdate(),'pau.jpg'),
+(null,20,"Jugador", "Inventado9", curdate(),'marc.jpg'),
+(null,20,"Jugador", "Inventado10", curdate(),'marc.jpg'),
+(null,20,"Jugador", "Inventado11", curdate(),'sanemeterio.jpg'),
+(null,20,"Jugador", "Inventado12", curdate(),'pau.jpg'),
+
+(null,21,"Jugador", "Inventado1", curdate(),'pau.jpg'),
+(null,21,"Jugador", "Inventado2", curdate(),'sanemeterio.jpg'),
+(null,21,"Jugador", "Inventado3", curdate(),'pau.jpg'),
+(null,21,"Jugador", "Inventado4", curdate(),'marc.jpg'),
+(null,21,"Jugador", "Inventado5", curdate(),'pau.jpg'),
+(null,21,"Jugador", "Inventado6", curdate(),'llul.jpg'),
+(null,21,"Jugador", "Inventado7", curdate(),'llul.jpg'),
+(null,21,"Jugador", "Inventado8", curdate(),'pau.jpg'),
+(null,21,"Jugador", "Inventado9", curdate(),'sanemeterio.jpg'),
+(null,21,"Jugador", "Inventado10", curdate(),'marc.jpg'),
+(null,21,"Jugador", "Inventado11", curdate(),'pau.jpg'),
+(null,21,"Jugador", "Inventado12", curdate(),'sanemeterio.jpg'),
+
+(null,22,"Jugador", "Inventado1", curdate(),'marc.jpg'),
+(null,22,"Jugador", "Inventado2", curdate(),'pau.jpg'),
+(null,22,"Jugador", "Inventado3", curdate(),'sanemeterio.jpg'),
+(null,22,"Jugador", "Inventado4", curdate(),'pau.jpg'),
+(null,22,"Jugador", "Inventado5", curdate(),'sanemeterio.jpg'),
+(null,22,"Jugador", "Inventado6", curdate(),'pau.jpg'),
+(null,22,"Jugador", "Inventado7", curdate(),'marc.jpg'),
+(null,22,"Jugador", "Inventado8", curdate(),'pau.jpg'),
+(null,22,"Jugador", "Inventado9", curdate(),'sanemeterio.jpg'),
+(null,22,"Jugador", "Inventado10", curdate(),'llul.jpg'),
+(null,22,"Jugador", "Inventado11", curdate(),'pau.jpg'),
+(null,22,"Jugador", "Inventado12", curdate(),'sanemeterio.jpg'),
+
+(null,23,"Jugador", "Inventado1", curdate(),'pau.jpg'),
+(null,23,"Jugador", "Inventado2", curdate(),'sanemeterio.jpg'),
+(null,23,"Jugador", "Inventado3", curdate(),'pau.jpg'),
+(null,23,"Jugador", "Inventado4", curdate(),'marc.jpg'),
+(null,23,"Jugador", "Inventado5", curdate(),'pau.jpg'),
+(null,23,"Jugador", "Inventado6", curdate(),'sanemeterio.jpg'),
+(null,23,"Jugador", "Inventado7", curdate(),'pau.jpg'),
+(null,23,"Jugador", "Inventado8", curdate(),'llul.jpg'),
+(null,23,"Jugador", "Inventado9", curdate(),'pau.jpg'),
+(null,23,"Jugador", "Inventado10", curdate(),'marc.jpg'),
+(null,23,"Jugador", "Inventado11", curdate(),'pau.jpg'),
+(null,23,"Jugador", "Inventado12", curdate(),'sanemeterio.jpg'),
+
+(null,24,"Jugador", "Inventado1", curdate(),'pau.jpg'),
+(null,24,"Jugador", "Inventado2", curdate(),'marc.jpg'),
+(null,24,"Jugador", "Inventado3", curdate(),'pau.jpg'),
+(null,24,"Jugador", "Inventado4", curdate(),'pau.jpg'),
+(null,24,"Jugador", "Inventado5", curdate(),'sanemeterio.jpg'),
+(null,24,"Jugador", "Inventado6", curdate(),'llul.jpg'),
+(null,24,"Jugador", "Inventado7", curdate(),'pau.jpg'),
+(null,24,"Jugador", "Inventado8", curdate(),'marc.jpg'),
+(null,24,"Jugador", "Inventado9", curdate(),'sanemeterio.jpg'),
+(null,24,"Jugador", "Inventado10", curdate(),'pau.jpg'),
+(null,24,"Jugador", "Inventado11", curdate(),'marc.jpg'),
+(null,24,"Jugador", "Inventado12", curdate(),'sanemeterio.jpg'),
+
+(null,25,"Jugador", "Inventado1", curdate(),'pau.jpg'),
+(null,25,"Jugador", "Inventado2", curdate(),'llul.jpg'),
+(null,25,"Jugador", "Inventado3", curdate(),'sanemeterio.jpg'),
+(null,25,"Jugador", "Inventado4", curdate(),'pau.jpg'),
+(null,25,"Jugador", "Inventado5", curdate(),'llul.jpg'),
+(null,25,"Jugador", "Inventado6", curdate(),'marc.jpg'),
+(null,25,"Jugador", "Inventado7", curdate(),'sanemeterio.jpg'),
+(null,25,"Jugador", "Inventado8", curdate(),'pau.jpg'),
+(null,25,"Jugador", "Inventado9", curdate(),'marc.jpg'),
+(null,25,"Jugador", "Inventado10", curdate(),'sanemeterio.jpg'),
+(null,25,"Jugador", "Inventado11", curdate(),'sanemeterio.jpg'),
+(null,25,"Jugador", "Inventado12", curdate(),'pau.jpg'),
+
+(null,26,"Jugador", "Inventado1", curdate(),'pau.jpg'),
+(null,26,"Jugador", "Inventado2", curdate(),'sanemeterio.jpg'),
+(null,26,"Jugador", "Inventado3", curdate(),'pau.jpg'),
+(null,26,"Jugador", "Inventado4", curdate(),'sanemeterio.jpg'),
+(null,26,"Jugador", "Inventado5", curdate(),'pau.jpg'),
+(null,26,"Jugador", "Inventado6", curdate(),'marc.jpg'),
+(null,26,"Jugador", "Inventado7", curdate(),'sanemeterio.jpg'),
+(null,26,"Jugador", "Inventado8", curdate(),'pau.jpg'),
+(null,26,"Jugador", "Inventado9", curdate(),'pau.jpg'),
+(null,26,"Jugador", "Inventado10", curdate(),'llul.jpg'),
+(null,26,"Jugador", "Inventado11", curdate(),'marc.jpg'),
+(null,26,"Jugador", "Inventado12", curdate(),'pau.jpg'),
+
+(null,27,"Jugador", "Inventado1", curdate(),'marc.jpg'),
+(null,27,"Jugador", "Inventado2", curdate(),'pau.jpg'),
+(null,27,"Jugador", "Inventado3", curdate(),'sanemeterio.jpg'),
+(null,27,"Jugador", "Inventado4", curdate(),'pau.jpg'),
+(null,27,"Jugador", "Inventado5", curdate(),'marc.jpg'),
+(null,27,"Jugador", "Inventado6", curdate(),'pau.jpg'),
+(null,27,"Jugador", "Inventado7", curdate(),'sanemeterio.jpg'),
+(null,27,"Jugador", "Inventado8", curdate(),'llul.jpg'),
+(null,27,"Jugador", "Inventado9", curdate(),'pau.jpg'),
+(null,27,"Jugador", "Inventado10", curdate(),'sanemeterio.jpg'),
+(null,27,"Jugador", "Inventado11", curdate(),'pau.jpg'),
+(null,27,"Jugador", "Inventado12", curdate(),'sanemeterio.jpg'),
+
+(null,28,"Jugador", "Inventado1", curdate(),'marc.jpg'),
+(null,28,"Jugador", "Inventado2", curdate(),'pau.jpg'),
+(null,28,"Jugador", "Inventado3", curdate(),'sanemeterio.jpg'),
+(null,28,"Jugador", "Inventado4", curdate(),'llul.jpg'),
+(null,28,"Jugador", "Inventado5", curdate(),'pau.jpg'),
+(null,28,"Jugador", "Inventado6", curdate(),'marc.jpg'),
+(null,28,"Jugador", "Inventado7", curdate(),'sanemeterio.jpg'),
+(null,28,"Jugador", "Inventado8", curdate(),'pau.jpg'),
+(null,28,"Jugador", "Inventado9", curdate(),'sanemeterio.jpg'),
+(null,28,"Jugador", "Inventado10", curdate(),'pau.jpg'),
+(null,28,"Jugador", "Inventado11", curdate(),'marc.jpg'),
+(null,28,"Jugador", "Inventado12", curdate(),'pau.jpg'),
+
+(null,29,"Jugador", "Inventado1", curdate(),'sanemeterio.jpg'),
+(null,29,"Jugador", "Inventado2", curdate(),'pau.jpg'),
+(null,29,"Jugador", "Inventado3", curdate(),'sanemeterio.jpg'),
+(null,29,"Jugador", "Inventado4", curdate(),'llul.jpg'),
+(null,29,"Jugador", "Inventado5", curdate(),'pau.jpg'),
+(null,29,"Jugador", "Inventado6", curdate(),'marc.jpg'),
+(null,29,"Jugador", "Inventado7", curdate(),'marc.jpg'),
+(null,29,"Jugador", "Inventado8", curdate(),'pau.jpg'),
+(null,29,"Jugador", "Inventado9", curdate(),'sanemeterio.jpg'),
+(null,29,"Jugador", "Inventado10", curdate(),'pau.jpg'),
+(null,29,"Jugador", "Inventado11", curdate(),'marc.jpg'),
+(null,29,"Jugador", "Inventado12", curdate(),'pau.jpg'),
+
+(null,30,"Jugador", "Inventado1", curdate(),'sanemeterio.jpg'),
+(null,30,"Jugador", "Inventado2", curdate(),'pau.jpg'),
+(null,30,"Jugador", "Inventado3", curdate(),'llul.jpg'),
+(null,30,"Jugador", "Inventado4", curdate(),'pau.jpg'),
+(null,30,"Jugador", "Inventado5", curdate(),'marc.jpg'),
+(null,30,"Jugador", "Inventado6", curdate(),'marc.jpg'),
+(null,30,"Jugador", "Inventado7", curdate(),'pau.jpg'),
+(null,30,"Jugador", "Inventado8", curdate(),'pau.jpg'),
+(null,30,"Jugador", "Inventado9", curdate(),'sanemeterio.jpg'),
+(null,30,"Jugador", "Inventado10", curdate(),'marc.jpg'),
+(null,30,"Jugador", "Inventado11", curdate(),'pau.jpg'),
+(null,30,"Jugador", "Inventado12", curdate(),'sanemeterio.jpg'),
+
+(null,31,"Jugador", "Inventado1", curdate(),'sanemeterio.jpg'),
+(null,31,"Jugador", "Inventado2", curdate(),'pau.jpg'),
+(null,31,"Jugador", "Inventado3", curdate(),'llul.jpg'),
+(null,31,"Jugador", "Inventado4", curdate(),'marc.jpg'),
+(null,31,"Jugador", "Inventado5", curdate(),'pau.jpg'),
+(null,31,"Jugador", "Inventado6", curdate(),'sanemeterio.jpg'),
+(null,31,"Jugador", "Inventado7", curdate(),'pau.jpg'),
+(null,31,"Jugador", "Inventado8", curdate(),'marc.jpg'),
+(null,31,"Jugador", "Inventado9", curdate(),'sanemeterio.jpg'),
+(null,31,"Jugador", "Inventado10", curdate(),'pau.jpg'),
+(null,31,"Jugador", "Inventado11", curdate(),'sanemeterio.jpg'),
+(null,31,"Jugador", "Inventado12", curdate(),'pau.jpg'),
+
+(null,32,"Jugador", "Inventado1", curdate(),'pau.jpg'),
+(null,32,"Jugador", "Inventado2", curdate(),'llul.jpg'),
+(null,32,"Jugador", "Inventado3", curdate(),'sanemeterio.jpg'),
+(null,32,"Jugador", "Inventado4", curdate(),'pau.jpg'),
+(null,32,"Jugador", "Inventado5", curdate(),'marc.jpg'),
+(null,32,"Jugador", "Inventado6", curdate(),'pau.jpg'),
+(null,32,"Jugador", "Inventado7", curdate(),'sanemeterio.jpg'),
+(null,32,"Jugador", "Inventado8", curdate(),'pau.jpg'),
+(null,32,"Jugador", "Inventado9", curdate(),'marc.jpg'),
+(null,32,"Jugador", "Inventado10", curdate(),'pau.jpg'),
+(null,32,"Jugador", "Inventado11", curdate(),'sanemeterio.jpg'),
+(null,32,"Jugador", "Inventado12", curdate(),'pau.jpg'),
+
+(null,33,"Jugador", "Inventado1", curdate(),'pau.jpg'),
+(null,33,"Jugador", "Inventado2", curdate(),'sanemeterio.jpg'),
+(null,33,"Jugador", "Inventado3", curdate(),'pau.jpg'),
+(null,33,"Jugador", "Inventado4", curdate(),'marc.jpg'),
+(null,33,"Jugador", "Inventado5", curdate(),'pau.jpg'),
+(null,33,"Jugador", "Inventado6", curdate(),'sanemeterio.jpg'),
+(null,33,"Jugador", "Inventado7", curdate(),'pau.jpg'),
+(null,33,"Jugador", "Inventado8", curdate(),'marc.jpg'),
+(null,33,"Jugador", "Inventado9", curdate(),'pau.jpg'),
+(null,33,"Jugador", "Inventado10", curdate(),'marc.jpg'),
+(null,33,"Jugador", "Inventado11", curdate(),'pau.jpg'),
+(null,33,"Jugador", "Inventado12", curdate(),'sanemeterio.jpg'),
+
+(null,34,"Jugador", "Inventado1", curdate(),'pau.jpg'),
+(null,34,"Jugador", "Inventado2", curdate(),'llul.jpg'),
+(null,34,"Jugador", "Inventado3", curdate(),'sanemeterio.jpg'),
+(null,34,"Jugador", "Inventado4", curdate(),'pau.jpg'),
+(null,34,"Jugador", "Inventado5", curdate(),'marc.jpg'),
+(null,34,"Jugador", "Inventado6", curdate(),'pau.jpg'),
+(null,34,"Jugador", "Inventado7", curdate(),'sanemeterio.jpg'),
+(null,34,"Jugador", "Inventado8", curdate(),'pau.jpg'),
+(null,34,"Jugador", "Inventado9", curdate(),'marc.jpg'),
+(null,34,"Jugador", "Inventado10", curdate(),'pau.jpg'),
+(null,34,"Jugador", "Inventado11", curdate(),'sanemeterio.jpg'),
+(null,34,"Jugador", "Inventado12", curdate(),'pau.jpg'),
+
+(null,35,"Jugador", "Inventado1", curdate(),'pau.jpg'),
+(null,35,"Jugador", "Inventado2", curdate(),'sanemeterio.jpg'),
+(null,35,"Jugador", "Inventado3", curdate(),'pau.jpg'),
+(null,35,"Jugador", "Inventado4", curdate(),'sanemeterio.jpg'),
+(null,35,"Jugador", "Inventado5", curdate(),'pau.jpg'),
+(null,35,"Jugador", "Inventado6", curdate(),'marc.jpg'),
+(null,35,"Jugador", "Inventado7", curdate(),'pau.jpg'),
+(null,35,"Jugador", "Inventado8", curdate(),'sanemeterio.jpg'),
+(null,35,"Jugador", "Inventado9", curdate(),'pau.jpg'),
+(null,35,"Jugador", "Inventado10", curdate(),'marc.jpg'),
+(null,35,"Jugador", "Inventado11", curdate(),'pau.jpg'),
+(null,35,"Jugador", "Inventado12", curdate(),'sanemeterio.jpg'),
+
+(null,36,"Jugador", "Inventado1", curdate(),'pau.jpg'),
+(null,36,"Jugador", "Inventado2", curdate(),'sanemeterio.jpg'),
+(null,36,"Jugador", "Inventado3", curdate(),'marc.jpg'),
+(null,36,"Jugador", "Inventado4", curdate(),'pau.jpg'),
+(null,36,"Jugador", "Inventado5", curdate(),'pau.jpg'),
+(null,36,"Jugador", "Inventado6", curdate(),'sanemeterio.jpg'),
+(null,36,"Jugador", "Inventado7", curdate(),'marc.jpg'),
+(null,36,"Jugador", "Inventado8", curdate(),'pau.jpg'),
+(null,36,"Jugador", "Inventado9", curdate(),'sanemeterio.jpg'),
+(null,36,"Jugador", "Inventado10", curdate(),'pau.jpg'),
+(null,36,"Jugador", "Inventado11", curdate(),'marc.jpg'),
+(null,36,"Jugador", "Inventado12", curdate(),'pau.jpg'),
+
+(null,37,"Jugador", "Inventado1", curdate(),'pau.jpg'),
+(null,37,"Jugador", "Inventado2", curdate(),'sanemeterio.jpg'),
+(null,37,"Jugador", "Inventado3", curdate(),'pau.jpg'),
+(null,37,"Jugador", "Inventado4", curdate(),'pau.jpg'),
+(null,37,"Jugador", "Inventado5", curdate(),'llul.jpg'),
+(null,37,"Jugador", "Inventado6", curdate(),'pau.jpg'),
+(null,37,"Jugador", "Inventado7", curdate(),'pau.jpg'),
+(null,37,"Jugador", "Inventado8", curdate(),'sanemeterio.jpg'),
+(null,37,"Jugador", "Inventado9", curdate(),'pau.jpg'),
+(null,37,"Jugador", "Inventado10", curdate(),'sanemeterio.jpg'),
+(null,37,"Jugador", "Inventado11", curdate(),'pau.jpg'),
+(null,37,"Jugador", "Inventado12", curdate(),'marc.jpg'),
+
+(null,38,"Jugador", "Inventado1", curdate(),'pau.jpg'),
+(null,38,"Jugador", "Inventado2", curdate(),'sanemeterio.jpg'),
+(null,38,"Jugador", "Inventado3", curdate(),'pau.jpg'),
+(null,38,"Jugador", "Inventado4", curdate(),'marc.jpg'),
+(null,38,"Jugador", "Inventado5", curdate(),'pau.jpg'),
+(null,38,"Jugador", "Inventado6", curdate(),'sanemeterio.jpg'),
+(null,38,"Jugador", "Inventado7", curdate(),'llul.jpg'),
+(null,38,"Jugador", "Inventado8", curdate(),'pau.jpg'),
+(null,38,"Jugador", "Inventado9", curdate(),'sanemeterio.jpg'),
+(null,38,"Jugador", "Inventado10", curdate(),'marc.jpg'),
+(null,38,"Jugador", "Inventado11", curdate(),'pau.jpg'),
+(null,38,"Jugador", "Inventado12", curdate(),'sanemeterio.jpg'),
+
+(null,39,"Jugador", "Inventado1", curdate(),'llul.jpg'),
+(null,39,"Jugador", "Inventado2", curdate(),'pau.jpg'),
+(null,39,"Jugador", "Inventado3", curdate(),'pau.jpg'),
+(null,39,"Jugador", "Inventado4", curdate(),'marc.jpg'),
+(null,39,"Jugador", "Inventado5", curdate(),'pau.jpg'),
+(null,39,"Jugador", "Inventado6", curdate(),'marc.jpg'),
+(null,39,"Jugador", "Inventado7", curdate(),'llul.jpg'),
+(null,39,"Jugador", "Inventado8", curdate(),'pau.jpg'),
+(null,39,"Jugador", "Inventado9", curdate(),'sanemeterio.jpg'),
+(null,39,"Jugador", "Inventado10", curdate(),'marc.jpg'),
+(null,39,"Jugador", "Inventado11", curdate(),'pau.jpg'),
+(null,39,"Jugador", "Inventado12", curdate(),'sanemeterio.jpg'),
+
+
+(null,40,"Jugador", "Inventado1", curdate(),'pau.jpg'),
+(null,40,"Jugador", "Inventado2", curdate(),'sanemeterio.jpg'),
+(null,40,"Jugador", "Inventado3", curdate(),'pau.jpg'),
+(null,40,"Jugador", "Inventado4", curdate(),'sanemeterio.jpg'),
+(null,40,"Jugador", "Inventado5", curdate(),'pau.jpg'),
+(null,40,"Jugador", "Inventado6", curdate(),'marc.jpg'),
+(null,40,"Jugador", "Inventado7", curdate(),'pau.jpg'),
+(null,40,"Jugador", "Inventado8", curdate(),'llul.jpg'),
+(null,40,"Jugador", "Inventado9", curdate(),'sanemeterio.jpg'),
+(null,40,"Jugador", "Inventado10", curdate(),'pau.jpg'),
+(null,40,"Jugador", "Inventado11", curdate(),'sanemeterio.jpg'),
+(null,40,"Jugador", "Inventado12", curdate(),'pau.jpg');
+
+
+

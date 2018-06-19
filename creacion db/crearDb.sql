@@ -125,3 +125,99 @@ ALTER TABLE comentarios
 
 -- FINAL TABLAS CMS ---------------------------------
 
+
+
+-- -----------------------------------------------------------------------------------------------------------------------------------------------
+
+-- ANUARIO ------------------------------------------------
+
+-- TABLA CLUBES --
+
+CREATE TABLE IF NOT EXISTS anuario_clubes(
+	id int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	responsable varchar (50) NOT NULL,
+	nombreclub varchar (50) NOT NULL,
+	imagen varchar(255),
+	localidad varchar (100) NOT NULL
+)ENGINE =InnoDB DEFAULT CHARSET = utf8;
+
+-- TABLA EQUIPOS --
+
+CREATE TABLE IF NOT EXISTS anuario_equipos(
+	id int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	id_club int(10) NOT NULL,
+	id_relacion int(10) NOT NULL,
+	entrenador varchar (50) NOT NULL,
+	nombre varchar (50) NOT NULL,
+	imagen varchar(255),
+	pabellon varchar(255) NOT NULL
+)ENGINE =InnoDB DEFAULT CHARSET = utf8;
+
+
+
+-- TABLA JUGADORES --
+
+CREATE TABLE IF NOT EXISTS anuario_jugadores(
+	id int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	id_equipo int(10) NOT NULL,
+	nombre varchar(50) NOT NULL,
+	apellidos varchar(100) NOT NULL,
+	fecha date NOT NULL,
+	imagen varchar(255)
+)ENGINE =InnoDB DEFAULT CHARSET = utf8;
+
+
+-- TABLA CATEGORIAS --
+
+CREATE TABLE IF NOT EXISTS anuario_categorias(
+	id int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	nombre varchar(50) NOT NULL
+)ENGINE =InnoDB DEFAULT CHARSET = utf8;
+
+
+-- TABLA LIGAS --
+
+CREATE TABLE IF NOT EXISTS anuario_ligas(
+	id int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	nombre varchar(50) NOT NULL
+)ENGINE =InnoDB DEFAULT CHARSET = utf8;
+
+
+
+-- TABLA RELACION LIGA-CATEGORA --
+
+CREATE TABLE IF NOT EXISTS anuario_relacion(
+	id int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	id_categoria int(10) NOT NULL,
+	id_liga int(10) NOT NULL,
+	nombre varchar(50) NOT NULL,
+	genero varchar(50) NOT NULL
+)ENGINE =InnoDB DEFAULT CHARSET = utf8;
+
+
+
+-- ---------------------------------------------------
+
+
+-- FOREIGN KEYS --
+
+-- TABLA EQUIPOS --
+
+ALTER TABLE anuario_equipos
+	ADD CONSTRAINT equipos_fk1 FOREIGN KEY (id_club) REFERENCES anuario_clubes (id) ON UPDATE CASCADE ON DELETE CASCADE,
+	ADD CONSTRAINT equipos_fk2 FOREIGN KEY (id_relacion) REFERENCES anuario_relacion (id) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+-- TABLA JUGADORES --
+
+ALTER TABLE anuario_jugadores
+	ADD CONSTRAINT jugadores_fk1 FOREIGN KEY (id_equipo) REFERENCES anuario_equipos (id) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+-- TABLA RELACION --
+
+ALTER TABLE anuario_relacion
+	ADD CONSTRAINT relacion_fk1 FOREIGN KEY (id_categoria) REFERENCES anuario_categorias (id) ON UPDATE CASCADE ON DELETE CASCADE,
+	ADD CONSTRAINT relacion_fk2 FOREIGN KEY (id_liga) REFERENCES anuario_ligas (id) ON UPDATE CASCADE ON DELETE CASCADE;
+
+

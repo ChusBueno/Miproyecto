@@ -15,7 +15,7 @@ body{
 }
 #logo a{
 	background-image:url("imagenes/logo/fcb.png");
-	height: 100px;
+	height: 130px;
 	display:block;
 	background-size:contain;
 	background-repeat:no-repeat;
@@ -105,7 +105,8 @@ nav{
 
 }
 
-.menuMovil{display:block; padding:10px; padding-left: 0px; visibility: hidden;font-size: 1.5em;color:#0F30B5;}
+.menuMovil{display:block; visibility: hidden;}
+
 
 /*MENU*/
 
@@ -390,14 +391,58 @@ aside{
 
 
 /*caja grande noticias*/
-#noticias, #jornada{
+#noticias, #jornada, #anuario{
 	background-color:white;
 	border:1px solid #C8C2BC;
 }
 
 
+#anuario form{text-align: center;margin-top:10px;margin-bottom:30px;}
 
-.noticia{
+#anuario h3{text-align: center;clear:both;}
+
+
+
+#anuario{text-align: center;}
+
+.imgequipo{width:80%;margin-bottom: 20px; margin-top:20px;}
+
+.jugador{text-align: center;margin-top: 20px;}
+
+.equipo p, .club p{
+	color:#434242;
+	text-align:justify;
+	font-size:1em;
+}
+
+.equipo a{text-decoration: none;color:black;}
+
+.equipo a:hover{color:blue;font-weight: bold;}
+
+.azul{color: blue !important;}
+
+.club{clear:both;}
+
+
+.club img {display:block; height: 100px;float:left;margin-right: 30px;}
+
+
+
+.imagenEquipo{
+	height: 60px;
+	border-radius: 0px;
+	float:left;
+	margin-right: 10px;
+}
+
+.imagenEquipo:hover{opacity: 0.8;}
+
+.imagenJugador{
+	height: 100px;
+	border-radius: 0px;
+}
+
+.noticia, .equipo{
 	text-align:center;
 	margin:0 auto;
 	/*probando*/
@@ -425,7 +470,7 @@ aside{
 	color:#242323;
 }
 
-.noticiaInd h3{
+.noticiaInd h3, .equipo h3{
 	margin:0px;
 	font-size: 1.3em;
 	text-align:center;
@@ -462,6 +507,7 @@ aside{
 	float:left;
 	margin-right:5px;
 }
+
 
 
 
@@ -532,6 +578,7 @@ aside{
 }
 
 .volverAtras{
+	float:left;
 	text-decoration: none;
 }
 .volverAtras:hover{text-decoration: underline;font-weight: bold;}
@@ -554,6 +601,12 @@ span.textosiguenos{
 	color:#ce2828;
 	text-decoration: none;
 	cursor:pointer;
+}
+
+.error{
+	text-align: center;
+	clear:both;
+	color:#ff0000;
 }
 
 .errorComentario{text-align:center;color:red;}
@@ -1049,7 +1102,7 @@ However, delay the fade out process for 2.5 seconds */
 	.offset-sm-15 {margin-left: 93.75%;}
 
 
-	.menuMovil{visibility:visible;}
+	.menuMovil{padding:10px; padding-left: 0px; visibility: visible;font-size: 1.5em;color:#0F30B5;}
 
 	#menu{display:none;position:absolute;}
 
@@ -1117,7 +1170,7 @@ However, delay the fade out process for 2.5 seconds */
 	#logo a{background-position: 50%;height:150px;}
 
 	#login p{float:right;display: inline-block;}
-	.menuMovil{visibility:visible;}
+	.menuMovil{padding:10px; padding-left: 0px; visibility: visible;font-size: 1.5em;color:#0F30B5;}
 
 	#menu{display:none;position:absolute;}
 	#menu ul{width:auto;}
@@ -1170,7 +1223,6 @@ However, delay the fade out process for 2.5 seconds */
 	.imagenNoticiaInd{height: 120px;}
 
 	.jornada img{height:120px;}
-
 
 
 

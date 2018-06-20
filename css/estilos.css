@@ -705,6 +705,7 @@ h5.seguro{
 /*MODAL*/
 
 .modal{
+	overflow-y:scroll;
 	position:fixed;
 	width:100%;
 	height:100%;
